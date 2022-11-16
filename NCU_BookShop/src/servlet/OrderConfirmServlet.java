@@ -28,7 +28,11 @@ public class OrderConfirmServlet extends HttpServlet {
             e.printStackTrace();
         }
         o.setDatetime(new Date());
-        o.setStatus(2);
+        if(o.getPaytype() == 3){ //假如是貨到付款
+            o.setStatus(1); //未付款
+        }else{
+            o.setStatus(0); //已付款
+        }
         o.setUser((User) request.getSession().getAttribute("user"));
         oService.addOrder(o);
         request.getSession().removeAttribute("order");

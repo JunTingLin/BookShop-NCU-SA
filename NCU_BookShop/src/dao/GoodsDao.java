@@ -12,17 +12,20 @@ import java.util.*;
 
 public class GoodsDao {
     //select g.id,g.name,g.cover,g.price,t.name typename from recommend r,goods g,type t where type=2 and r.goods_id=g.id and g.type_id=t.id
+    // 橫幅列表(1)、熱銷列表(2)、新品列列表(3)
     public List<Map<String,Object>> getGoodsList(int recommendType) throws SQLException {
         QueryRunner r = new QueryRunner(DBUtil.getDataSource());
         String sql="select g.id,g.name,g.cover,g.price,t.name typename from recommend r,goods g,type t where type=? and r.goods_id=g.id and g.type_id=t.id";
         return r.query(sql, new MapListHandler(),recommendType);
     }
 
+    // 橫幅
     public Map<String,Object> getScrollGood()throws SQLException{
         QueryRunner r = new QueryRunner(DBUtil.getDataSource());
         String sql="select g.id,g.name,g.cover,g.price  from recommend r,goods g where type=1 and r.goods_id=g.id";
         return r.query(sql, new MapHandler());
     }
+
     public List<Goods> selectGoodsByTypeID(int typeID,int pageNumber,int pageSize) throws SQLException {
         if(typeID==0)
         {
