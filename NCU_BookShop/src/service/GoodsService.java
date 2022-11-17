@@ -6,6 +6,7 @@ import model.Page;
 import sun.nio.cs.ext.IBM037;
 
 import javax.management.monitor.StringMonitorMBean;
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
@@ -154,6 +155,14 @@ public class GoodsService {
             e.printStackTrace();
         }
     }
+    public void update(Connection con,Goods goods) throws SQLException{ //追加含有連線con的更新
+//        try {
+            gDao.update(con,goods);
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//改成往外拋，這樣OrderService.addOrder(Order order)才會有機會捕捉到
+    }
     public void delete(int id) {
         try {
             gDao.delete(id);
@@ -162,4 +171,9 @@ public class GoodsService {
             e.printStackTrace();
         }
     }
+    public void lessenStock(Connection con,Goods goods, int num) throws SQLException{
+        goods.setStock(goods.getStock()-num);
+        update(con,goods);
+    }
+
 }

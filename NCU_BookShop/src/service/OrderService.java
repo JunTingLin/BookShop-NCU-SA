@@ -9,6 +9,7 @@ import java.util.List;
 
 public class OrderService {
     private OrderDao oDao = new OrderDao();
+    private GoodsService goodsService = new GoodsService();
     public void addOrder(Order order) {
         Connection con = null;
         try {
@@ -20,8 +21,9 @@ public class OrderService {
             order.setId(id);
             for(OrderItem item : order.getItemMap().values()) {
                 oDao.insertOrderItem(con, item);
+                goodsService.lessenStock(con,item.getGoods(),item.getAmount());  //刪減庫存
+//                item.getGoods().setStock(item.getGoods().getStock()-item.getAmount());
             }
-
             con.commit();
         } catch (SQLException e) {
             // TODO Auto-generated catch block

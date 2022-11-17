@@ -7,6 +7,7 @@ import org.apache.commons.dbutils.*;
 import org.apache.commons.dbutils.handlers.*;
 import utils.DBUtil;
 
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.*;
 
@@ -125,6 +126,12 @@ public class GoodsDao {
         QueryRunner r = new QueryRunner(DBUtil.getDataSource());
         String sql = "update goods set name=?,cover=?,image1=?,image2=?,price=?,intro=?,stock=?,type_id=? where id=?";
         r.update(sql,g.getName(),g.getCover(),g.getImage1(),g.getImage2(),g.getPrice(),g.getIntro(),g.getStock(),g.getType().getId(),g.getId());
+    }
+
+    public void update(Connection con, Goods g) throws SQLException {  //追加含有連線con的更新
+        QueryRunner r = new QueryRunner();
+        String sql = "update goods set name=?,cover=?,image1=?,image2=?,price=?,intro=?,stock=?,type_id=? where id=?";
+        r.update(con,sql,g.getName(),g.getCover(),g.getImage1(),g.getImage2(),g.getPrice(),g.getIntro(),g.getStock(),g.getType().getId(),g.getId());
     }
     public void delete(int id) throws SQLException {
         QueryRunner r = new QueryRunner(DBUtil.getDataSource());
