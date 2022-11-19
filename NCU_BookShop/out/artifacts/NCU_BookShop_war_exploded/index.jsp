@@ -67,7 +67,7 @@
                         <p>${g.typeName} > ${g.name}</p>
                         <div class="galry">
                             <div class="prices">
-                                <h5 class="item_price">¥ ${g.price}</h5>
+                                <h5 class="item_price">$ ${g.price}</h5>
                             </div>
                             <div class="clearfix"></div>
                         </div>
@@ -98,7 +98,7 @@
                         <p>${g.typeName} > ${g.name}</p>
                         <div class="galry">
                             <div class="prices">
-                                <h5 class="item_price">¥ ${g.price}</h5>
+                                <h5 class="item_price">$ ${g.price}</h5>
                             </div>
                             <div class="clearfix"></div>
                         </div>
