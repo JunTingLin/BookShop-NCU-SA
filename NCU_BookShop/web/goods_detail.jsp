@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>商品详情</title>
+	<title>商品詳情</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
@@ -71,7 +71,7 @@
 						<div class="clearfix"></div>
 					</div>
 					<div class="btn_form">
-						<a href="javascript:;" class="add-cart item_add" onclick="buy(${g.id})">加入购物车</a>
+						<a href="javascript:;" class="add-cart item_add" onclick="buy(${g.id})">加入購物車</a>
 					</div>
 				</div>
 				<div class="col-md-4 single-grid1">

@@ -27,7 +27,7 @@
 <!--products-->
 <div class="products">
 	<div class="container">
-		<h2> 搜索 ‘${param.keyword }’的结果 </h2>
+		<h2> 查詢 ‘${param.keyword }’的結果 </h2>
 
 		<div class="col-md-12 product-model-sec">
 
@@ -39,7 +39,7 @@
 							<img src="${pageContext.request.contextPath }${g.cover}" class="img-responsive" alt="${g.name }" width="240" height="240">
 							<div class="b-wrapper">
 								<h4 class="b-animate b-from-left  b-delay03">
-									<button>查看详情</button>
+									<button>查看詳情</button>
 								</h4>
 							</div>
 						</div>
@@ -48,7 +48,7 @@
 						<div class="product-info-cust prt_name">
 							<h4>${g.name }</h4>
 							<span class="item_price">¥ ${g.price }</span>
-							<input type="button" class="item_add items" value="加入购物车" onclick="buy(${g.id})">
+							<input type="button" class="item_add items" value="加入購物車" onclick="buy(${g.id})">
 							<div class="clearfix"> </div>
 						</div>
 					</div>

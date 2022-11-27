@@ -31,8 +31,8 @@
 <div class="banner">
     <div class="container">
         <h2 class="hdng"><a href="/goods_detail?id=${scroll.id}">${scroll.name}</a><span></span></h2>
-        <p>今日精选推荐</p>
-        <a class="banner_a" href="javascript:;" onclick="buy(${scroll.id})">立刻购买</a>
+        <p>今日精選推薦</p>
+        <a class="banner_a" href="javascript:;" onclick="buy(${scroll.id})">立刻購買</a>
         <div class="banner-text">
             <a href="/goods_detail?id=${scroll.id}">
                 <img src="${scroll.cover}" alt="${scroll.name}" width="350" height="350">
@@ -48,7 +48,7 @@
 <!--gallery-->
 <div class="gallery">
     <div class="container">
-        <div class="alert alert-danger">热销推荐</div>
+        <div class="alert alert-danger">熱門推薦</div>
         <div class="gallery-grids">
             <c:forEach items="${hotList}" var="g">
                 <div class="col-md-4 gallery-grid glry-two">
@@ -58,9 +58,9 @@
                     <div class="gallery-info galrr-info-two">
                         <p>
                             <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                            <a href="/goods_detail?id=${g.id}">查看详情</a>
+                            <a href="/goods_detail?id=${g.id}">查看詳情</a>
                         </p>
-                        <a class="shop" href="javascript:;" onclick="buy(${g.id})">立刻购买</a>
+                        <a class="shop" href="javascript:;" onclick="buy(${g.id})">立刻購買</a>
                         <div class="clearfix"> </div>
                     </div>
                     <div class="galy-info">
@@ -79,7 +79,7 @@
         </div>
 
         <div class="clearfix"></div>
-        <div class="alert alert-info">新品推荐</div>
+        <div class="alert alert-info">新品推購</div>
         <div class="gallery-grids">
             <c:forEach items="${newList}" var="g">
                 <div class="col-md-3 gallery-grid ">
@@ -89,9 +89,9 @@
                     <div class="gallery-info">
                         <p>
                             <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                            <a href="/goods_detail?id=${g.id}">查看详情</a>
+                            <a href="/goods_detail?id=${g.id}">查看詳情</a>
                         </p>
-                        <a class="shop" href="javascript:;" onclick="buy(${g.id})">立刻购买</a>
+                        <a class="shop" href="javascript:;" onclick="buy(${g.id})">立刻購買</a>
                         <div class="clearfix"> </div>
                     </div>
                     <div class="galy-info">

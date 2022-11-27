@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>个人中心</title>
+	<title>個人中心</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
@@ -32,21 +32,21 @@
 				</c:if>
 				
 					<div class="register-top-grid">
-						<h3>个人中心</h3>
+						<h3>個人中心</h3>
 						<form action="/user_changeaddress" method="post">
 						<!-- 收货信息 start -->
-						<h4>收货信息</h4>
+						<h4>收貨訊息</h4>
 						<div class="input">
-							<span>收货人<label></label></span>
-							<input type="text" name="name" value="${user.name }" placeholder="请输入收货"> 
+							<span>收貨人<label></label></span>
+							<input type="text" name="name" value="${user.name }" placeholder="情輸入收貨人">
 						</div>
 						<div class="input">
-							<span>收货电话</span>
-							<input type="text" name="phone" value="${user.phone }" placeholder="请输入收货电话"> 
+							<span>聯絡電話</span>
+							<input type="text" name="phone" value="${user.phone }" placeholder="請输入聯絡電話">
 						</div>
 						<div class="input">
-							<span>收货地址</span>
-							<input type="text" name="address" value="${user.address }" placeholder="请输入收货地址"> 
+							<span>收貨地址</span>
+							<input type="text" name="address" value="${user.address }" placeholder="請输入收貨地址">
 						</div>
 						<div class="register-but text-center">
 						   <input type="submit" value="提交">
@@ -55,14 +55,14 @@
 						</form>
 						<hr>
 						<form action="/user_changepwd" method="post">
-						<h4>安全信息</h4>
+						<h4>安全中心</h4>
 						<div class="input">
-							<span>原密码</span>
-							<input type="text" name="password" placeholder="请输入原密码"> 
+							<span>原密碼</span>
+							<input type="text" name="password" placeholder="請输入原密碼">
 						</div>
 						<div class="input">
-							<span>新密码</span>
-							<input type="text" name="newPassword" placeholder="请输入新密码"> 
+							<span>新密碼</span>
+							<input type="text" name="newPassword" placeholder="請输入新密碼">
 						</div>
 						<div class="clearfix"> </div>
 						<div class="register-but text-center">

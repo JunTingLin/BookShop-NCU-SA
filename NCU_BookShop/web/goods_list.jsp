@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>首页</title>
+    <title>首頁</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
@@ -52,7 +52,7 @@
                             <img src="${g.cover}" class="img-responsive" alt="${g.name}" width="240" height="240">
                             <div class="b-wrapper">
                                 <h4 class="b-animate b-from-left  b-delay03">
-                                    <button href="/goods_detail?id=${g.id}">查看详情</button>
+                                    <button href="/goods_detail?id=${g.id}">查看詳情</button>
                                 </h4>
                             </div>
                         </div>
