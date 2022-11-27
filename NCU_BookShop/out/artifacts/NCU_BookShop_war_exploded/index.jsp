@@ -1,72 +1,125 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: 19767
+  Date: 2018/11/19
+  Time: 15:03
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>首頁</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
-        <link type="text/css" rel="stylesheet" href="css/style1.css">
-        <link href="https://fonts.googleapis.com/css2?family=Rampart+One&family=Zen+Antique&display=swap" rel="stylesheet">        <script type="text/javascript" src="js/jquery.min.js"></script>
-        <script type="text/javascript" src="js/jquery.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="layer/layer.js"></script>
-        <script type="text/javascript" src="js/cart.js"></script>
-    </head>
-    <body>
-    <!--header-->
-        <div class="header">
-            <div class="container">
-                <nav class="navbar">
-                    <div class="logo">
-                        <a href="#"><img class="logo-pic" src="images/logo.jpg" alt="NCU_logo" /></a>
-                        <!-- image source: https://www.facebook.com/ncu.tw/photos/a.645090168908504/2865575473526618> -->
-                        <a class="logo-name" href="#">
-                            <h1 class="logo-name-top">NCU</h1>
-                            <h1 class="logo-name-bottom">教科書商城</h1>
-                        </a>
-                    </div>
-                    <div>
-                        <ul class="nav navbar-nav">
-                            <li><a class="nav-link active" href="#">首頁</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">科系類別<b class="caret"></b></a>
-                                <ul class="dropdown-menu multi-column columns-2">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <li><a class="all" href="/goods_list">不分科系</a></li>
-                                                <h5 class="major-type">管理學院</h5>
-                                                <h5 class="major-type">工學院</h5>
-                                                <h5 class="major-type">資電學院</h5>
-                                                <h5 class="major-type">文學院</h5>
-                                            </div>
-                                        </div>
-                                </ul>
-                            </li>
-                            <li><a class="nav-link" href="/goodsrecommend_list?type=2">熱銷書籍</a></li>
-                            <li><a class="nav-link" href="/goodsrecommend_list?type=3">最新上架</a></li>
-                            <li><a class="nav-link" href="/user_register.jsp">註冊</a></li>
-                            <li><a class="nav-link" href="/user_login.jsp">登入</a></li> 
-                        </ul>
-                    </div>                          
-                </nav>
-            </div>
-        </div>
-    <!--header-->
-    <!--banner-->
-    <div class="banner">
-        <div class="container">
-            <p class="ad-text">本周銷量冠軍</p>
-            <!-- 要寫死還用GoodsDao裡的sql語法select -->
-            <h2><a class="sales-champ" href="/goods_detail?id=${scroll.id}">~ ${scroll.name} ~</a></h2>
-            <a class="add-cart" href="javascript:;" onclick="buy(${scroll.id})">加入購物車</a>
-            <div class="ad-pic">
-                <a href="/goods_detail?id=9">
-                    <img src="${scroll.cover}" alt="${scroll.name}" width="350" height="auto">
-                </a>
-            </div>
+<head>
+    <title>商品列表</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="layer/layer.js"></script>
+    <script type="text/javascript" src="js/cart.js"></script>
+</head>
+<body>
+<!--header-->
+<jsp:include page="/header.jsp">
+    <jsp:param name="flag" value="1"></jsp:param>
+</jsp:include>
+<!--banner-->
+
+<div class="banner">
+    <div class="container">
+        <h2 class="hdng"><a href="/goods_detail?id=${scroll.id}">${scroll.name}</a><span></span></h2>
+        <p>今日精選推薦</p>
+        <a class="banner_a" href="javascript:;" onclick="buy(${scroll.id})">立刻購買</a>
+        <div class="banner-text">
+            <a href="/goods_detail?id=${scroll.id}">
+                <img src="${scroll.cover}" alt="${scroll.name}" width="350" height="350">
+            </a>
         </div>
     </div>
-    <!--//banner-->
-    </body>
+</div>
+
+<!--//banner-->
+
+<div class="subscribe2"></div>
+
+<!--gallery-->
+<div class="gallery">
+    <div class="container">
+        <div class="alert alert-danger">熱門推薦</div>
+        <div class="gallery-grids">
+            <c:forEach items="${hotList}" var="g">
+                <div class="col-md-4 gallery-grid glry-two">
+                    <a href="/goods_detail?id=${g.id}">
+                        <img src="${g.cover}" class="img-responsive" alt="${g.name}" width="350" height="350"/>
+                    </a>
+                    <div class="gallery-info galrr-info-two">
+                        <p>
+                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                            <a href="/goods_detail?id=${g.id}">查看詳情</a>
+                        </p>
+                        <a class="shop" href="javascript:;" onclick="buy(${g.id})">立刻購買</a>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="galy-info">
+                        <p>${g.typeName} > ${g.name}</p>
+                        <div class="galry">
+                            <div class="prices">
+                                <h5 class="item_price">$ ${g.price}</h5>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </c:forEach>
+
+
+        </div>
+
+        <div class="clearfix"></div>
+        <div class="alert alert-info">新品推購</div>
+        <div class="gallery-grids">
+            <c:forEach items="${newList}" var="g">
+                <div class="col-md-3 gallery-grid ">
+                    <a href="/goods_detail?id=${g.id}">
+                        <img src="${g.cover}" class="img-responsive" alt="${g.name}"/>
+                    </a>
+                    <div class="gallery-info">
+                        <p>
+                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                            <a href="/goods_detail?id=${g.id}">查看詳情</a>
+                        </p>
+                        <a class="shop" href="javascript:;" onclick="buy(${g.id})">立刻購買</a>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="galy-info">
+                        <p>${g.typeName} > ${g.name}</p>
+                        <div class="galry">
+                            <div class="prices">
+                                <h5 class="item_price">$ ${g.price}</h5>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </c:forEach>
+
+
+
+
+        </div>
+    </div>
+</div>
+<!--//gallery-->
+
+<!--subscribe-->
+<div class="subscribe"></div>
+<!--//subscribe-->
+
+
+<!--footer-->
+<jsp:include page="/footer.jsp"></jsp:include>
+</body>
 </html>
