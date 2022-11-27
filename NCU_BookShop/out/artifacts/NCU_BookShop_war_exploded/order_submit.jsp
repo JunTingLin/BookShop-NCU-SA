@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>支付</title>
+	<title>付款</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
@@ -51,7 +51,7 @@
 
 				<br><hr><br>
 
-				<h2>選擇支付方式</h2>
+				<h2>選擇付款方式</h2>
 				<h3>支付金額: ${order.total }</h3><br><br>
 
 
@@ -59,7 +59,7 @@
 					<label>
 						<div class="thumbnail">
 							<input type="radio" name="paytype" value="1" checked="checked" />
-							<img src="images/wechat.jpg" alt="信用卡支付">
+							<img src="images/wechat.jpg" alt="信用卡付款">
 						</div>
 					</label>
 				</div>

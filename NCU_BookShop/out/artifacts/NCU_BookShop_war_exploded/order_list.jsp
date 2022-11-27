@@ -36,17 +36,17 @@
 		
 		
 		
-			<h2>我的订单</h2>
+			<h2>我的訂單</h2>
 			
 				<table class="table table-bordered table-hover">
 
 				<tr>
-					<th width="10%">商品編號</th>
+					<th width="10%">ID</th>
 					<th width="10%">總價</th>
 					<th width="20%">商品詳情</th>
 					<th width="30%">收貨訊息</th>
 					<th width="10%">訂單狀態</th>
-					<th width="10%">支付方式</th>
+					<th width="10%">付款方式</th>
 					<th width="10%">下單時間</th>
 				</tr>
 
@@ -78,7 +78,7 @@
 							<td>
 								<p>
 
-									<c:if test="${order.paytype==1 }">信用卡支付</c:if>
+									<c:if test="${order.paytype==1 }">信用卡付款</c:if>
 									<c:if test="${order.paytype==2 }">銀行轉帳</c:if>
 									<c:if test="${order.paytype==3 }">貨到付款</c:if>
 

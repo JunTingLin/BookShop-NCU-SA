@@ -35,7 +35,7 @@
 		
 		
 		
-			<h2>我的购物车</h2>
+			<h2>我的購物車</h2>
 
 
 			<c:forEach items="${order.itemMap }" var="item">
@@ -48,11 +48,11 @@
 						</div>
 						<div class="cart-item-info">
 							<h3><a href="/goods_detail?id=${item.key}">${item.value.goods.name}</a></h3>
-							<h3><span>单价: ¥ ${item.value.price}</span></h3>
-							<h3><span>数量: ${item.value.amount}</span></h3>
+							<h3><span>單價: ¥ ${item.value.price}</span></h3>
+							<h3><span>數量: ${item.value.amount}</span></h3>
 							<a class="btn btn-info" href="javascript:buy(${item.key});">增加</a>
-							<a class="btn btn-warning" href="javascript:lessen(${item.key});">减少</a>
-							<a class="btn btn-danger" href="javascript:deletes(${item.key});">删除</a>
+							<a class="btn btn-warning" href="javascript:lessen(${item.key});">減少</a>
+							<a class="btn btn-danger" href="javascript:deletes(${item.key});">刪除</a>
 						</div>
 						<div class="clearfix"></div>
 					</div>
@@ -61,8 +61,8 @@
 			
 			<div class="cart-header col-md-12">
 				<hr>
-				<h3>订单总金额: ¥ ${order.total}</h3>
-				<a class="btn btn-success btn-lg" style="margin-left:74%" href="/order_submit">提交订单</a>
+				<h3>訂單總金額: ¥ ${order.total}</h3>
+				<a class="btn btn-success btn-lg" style="margin-left:74%" href="/order_submit">提交訂單</a>
 			</div>
 			
 			

@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>客户添加</title>
+	<title>新增用戶</title>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" href="css/bootstrap.css" />
 </head>
@@ -21,19 +21,19 @@
 	<br><br>
 	<form class="form-horizontal" action="/admin/user_add" method="post">
 		<div class="form-group">
-			<label for="input_name" class="col-sm-1 control-label">用户名</label>
+			<label for="input_name" class="col-sm-1 control-label">用戶名字</label>
 			<div class="col-sm-6">
 				<input type="text" class="form-control" id="input_name" name="username" required="required" value="${u.username }" />
 			</div>
 		</div>
 		<div class="form-group">
-			<label for="input_name" class="col-sm-1 control-label">邮箱</label>
+			<label for="input_name" class="col-sm-1 control-label">電子信箱</label>
 			<div class="col-sm-6">
 				<input type="text" class="form-control" id="input_name" name="email" required="required" value="${u.email }"/>
 			</div>
 		</div>
 		<div class="form-group">
-			<label for="input_name" class="col-sm-1 control-label">密码</label>
+			<label for="input_name" class="col-sm-1 control-label">密碼</label>
 			<div class="col-sm-6">
 				<input type="text" class="form-control" id="input_name" name="password" required="required" value="${u.password }"/>
 			</div>
@@ -45,7 +45,7 @@
 			</div>
 		</div>
 		<div class="form-group">
-			<label for="input_name" class="col-sm-1 control-label">电话</label>
+			<label for="input_name" class="col-sm-1 control-label">電話</label>
 			<div class="col-sm-6">
 				<input type="text" class="form-control" id="input_name" name="phone" value="${u.phone }" />
 			</div>
@@ -58,7 +58,7 @@
 		</div>
 		<div class="form-group">
 			<div class="col-sm-offset-1 col-sm-10">
-				<button type="submit" class="btn btn-success">提交保存</button>
+				<button type="submit" class="btn btn-success">儲存</button>
 			</div>
 		</div>
 	</form>

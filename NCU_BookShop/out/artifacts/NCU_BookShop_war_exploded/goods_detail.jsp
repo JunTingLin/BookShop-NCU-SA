@@ -61,7 +61,7 @@
 				<div class="col-md-4 single-grid simpleCart_shelfItem">		
 					<h3>${g.name}</h3>
 					<div class="tag">
-						<p>分类 : <a href="goods.action?typeid=5">${g.type.name}</a></p>
+						<p>分類 : <a href="goods.action?typeid=5">${g.type.name}</a></p>
 					</div>
 					<p>${g.intro}</p>
 					<div class="galry">
@@ -75,9 +75,9 @@
 					</div>
 				</div>
 				<div class="col-md-4 single-grid1">
-					<!-- <h2>商品分类</h2> -->
+					<!-- <h2>商品分類</h2> -->
 					<ul>
-                        <li><a  href="/goods_list">全部系列</a></li>
+                        <li><a  href="/goods_list">全部科系類別</a></li>
 
                         <c:forEach items="${typeList}" var="t">
                             <li><a href="/goods_list?typeid=${t.id}">${t.name}</a></li>
@@ -92,7 +92,7 @@
 	<!--related-products--><!-- 
 	<div class="related-products">
 		<div class="container">
-			<h3>猜你喜欢</h3>
+			<h3>猜你喜歡</h3>
 			<div class="product-model-sec single-product-grids">
 				<div class="product-grid single-product">
 					<a href="single.html">

@@ -34,11 +34,11 @@
 					<div class="register-top-grid">
 						<h3>個人中心</h3>
 						<form action="/user_changeaddress" method="post">
-						<!-- 收货信息 start -->
+						<!-- 收貨訊息 start -->
 						<h4>收貨訊息</h4>
 						<div class="input">
 							<span>收貨人<label></label></span>
-							<input type="text" name="name" value="${user.name }" placeholder="情輸入收貨人">
+							<input type="text" name="name" value="${user.name }" placeholder="請輸入收貨人">
 						</div>
 						<div class="input">
 							<span>聯絡電話</span>
@@ -51,7 +51,7 @@
 						<div class="register-but text-center">
 						   <input type="submit" value="提交">
 						</div>	
-						<!-- 收货信息 end -->
+						<!-- 收貨訊息 end -->
 						</form>
 						<hr>
 						<form action="/user_changepwd" method="post">

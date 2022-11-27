@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>类目编辑</title>
+	<title>科系類別編輯</title>
 	<meta charset="utf-8"/>
 	<link rel="stylesheet" href="css/bootstrap.css"/>
 </head>
@@ -20,7 +20,7 @@
 	<form class="form-horizontal" action="/admin/type_edit" method="post">
 		<input type="hidden" name="id" value="${param.id }">
 		<div class="form-group">
-			<label for="input_name" class="col-sm-1 control-label">类目名称</label>
+			<label for="input_name" class="col-sm-1 control-label">科系名稱</label>
 			<div class="col-sm-6">
 				<input type="text" class="form-control" id="input_name" name="name" value="${param.name }" required="required">
 			</div>

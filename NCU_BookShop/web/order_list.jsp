@@ -36,18 +36,18 @@
 		
 		
 		
-			<h2>我的订单</h2>
+			<h2>我的訂單</h2>
 			
 				<table class="table table-bordered table-hover">
 
 				<tr>
 					<th width="10%">ID</th>
-					<th width="10%">总价</th>
-					<th width="20%">商品详情</th>
-					<th width="30%">收货信息</th>
-					<th width="10%">订单状态</th>
-					<th width="10%">支付方式</th>
-					<th width="10%">下单时间</th>
+					<th width="10%">總價</th>
+					<th width="20%">商品詳情</th>
+					<th width="30%">收貨訊息</th>
+					<th width="10%">訂單狀態</th>
+					<th width="10%">付款方式</th>
+					<th width="10%">下單時間</th>
 				</tr>
 
 					<c:forEach items="${orderList }" var="order">
@@ -69,7 +69,7 @@
 							<td>
 								<p>
 									<c:if test="${order.status==2 }"><span style="color:red;">已付款</span></c:if>
-									<c:if test="${order.status==3 }"><span style="color:green;">已发货</span></c:if>
+									<c:if test="${order.status==3 }"><span style="color:green;">已發貨</span></c:if>
 									<c:if test="${order.status==4 }"><span style="color:black;">已完成</span></c:if>
 
 
@@ -78,9 +78,9 @@
 							<td>
 								<p>
 
-									<c:if test="${order.paytype==1 }">微信</c:if>
-									<c:if test="${order.paytype==2 }">支付宝</c:if>
-									<c:if test="${order.paytype==3 }">货到付款</c:if>
+									<c:if test="${order.paytype==1 }">信用卡付款</c:if>
+									<c:if test="${order.paytype==2 }">銀行轉帳</c:if>
+									<c:if test="${order.paytype==3 }">貨到付款</c:if>
 
 								</p>
 							</td>

@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>客户列表</title>
+<title>用戶列表</title>
 <meta charset="utf-8"/>
 <link rel="stylesheet" href="css/bootstrap.css"/> 
 </head>
@@ -18,7 +18,7 @@
 
 	<jsp:include page="header.jsp"></jsp:include>
 
-	<div class="text-right"><a class="btn btn-warning" href="user_add.jsp">添加客户</a></div>
+	<div class="text-right"><a class="btn btn-warning" href="user_add.jsp">新增用戶</a></div>
 	<c:if test="${!empty msg }">
 		<div class="alert alert-success">${msg }</div>
 	</c:if>
@@ -32,10 +32,10 @@
 
 	<tr>
 		<th width="5%">ID</th>
-		<th width="10%">用户名</th>
-		<th width="10%">邮箱</th>
+		<th width="10%">用戶名字</th>
+		<th width="10%">電子信箱</th>
 		<th width="10%">收件人</th>
-		<th width="10%">电话</th>
+		<th width="10%">電話</th>
 		<th width="10%">地址</th>
 		<th width="12%">操作</th>
 	</tr>
@@ -50,9 +50,9 @@
 				<td><p>${u.phone }</p></td>
 				<td><p>${u.address }</p></td>
 				<td>
-					<a class="btn btn-info" href="/admin/user_reset.jsp?id=${u.id }&username=${u.username }&email=${u.email }">重置密码</a>
+					<a class="btn btn-info" href="/admin/user_reset.jsp?id=${u.id }&username=${u.username }&email=${u.email }">重設密碼</a>
 					<a class="btn btn-primary" href="/admin/user_editshow?id=${u.id }">修改</a>
-					<a class="btn btn-danger" href="${pageContext.request.contextPath }/admin/user_delete?id=${u.id }">删除</a>
+					<a class="btn btn-danger" href="${pageContext.request.contextPath }/admin/user_delete?id=${u.id }">刪除</a>
 				</td>
 			</tr>
 		</c:forEach>

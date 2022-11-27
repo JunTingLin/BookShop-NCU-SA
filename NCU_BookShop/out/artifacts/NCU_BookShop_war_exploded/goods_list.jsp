@@ -40,7 +40,7 @@
 <!--products-->
 <div class="products">
     <div class="container">
-        <h2><c:choose><c:when test="${empty t}">全部系列</c:when><c:otherwise>${t.name}</c:otherwise> </c:choose></h2>
+        <h2><c:choose><c:when test="${empty t}">全部科系類別</c:when><c:otherwise>${t.name}</c:otherwise> </c:choose></h2>
 
         <div class="col-md-12 product-model-sec">
 
@@ -61,7 +61,7 @@
                         <div class="product-info-cust prt_name">
                             <h4>${g.name}</h4>
                             <span class="item_price">$ ${g.price}</span>
-                            <input type="button" class="item_add items" value="加入购物车" onclick="buy(${g.id})">
+                            <input type="button" class="item_add items" value="加入購物車" onclick="buy(${g.id})">
                             <div class="clearfix"> </div>
                         </div>
                     </div>
