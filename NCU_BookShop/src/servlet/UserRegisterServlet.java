@@ -27,10 +27,10 @@ public class UserRegisterServlet extends HttpServlet {
             e.printStackTrace();
         }
         if(uService.register(user)) {
-            request.setAttribute("msg", "注册成功，请登录！");
+            request.setAttribute("msg", "註冊成功，請登入！");
             request.getRequestDispatcher("user_login.jsp").forward(request, response);
         }else {
-            request.setAttribute("msg", "用户名或邮箱重复，请重新填写！");
+            request.setAttribute("msg", "用戶名或電子信箱重複，請重新填寫！");
             request.getRequestDispatcher("user_register.jsp").forward(request, response);
         }
     }

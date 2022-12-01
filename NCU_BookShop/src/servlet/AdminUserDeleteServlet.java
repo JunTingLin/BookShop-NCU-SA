@@ -19,9 +19,9 @@ public class AdminUserDeleteServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         boolean isSuccess = uService.delete(id);
         if(isSuccess) {
-            request.setAttribute("msg", "客户删除成功");
+            request.setAttribute("msg", "用戶刪除成功");
         }else {
-            request.setAttribute("failMsg", "客户有下的订单，请先删除该客户下的订单，再来删除客户！");
+            request.setAttribute("failMsg", "用戶有下訂單，請先刪除該用戶所下的訂單，再來刪除用戶！");
         }
         request.getRequestDispatcher("/admin/user_list").forward(request, response);
     }

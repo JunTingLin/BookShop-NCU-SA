@@ -17,7 +17,7 @@ public class AdminGoodsListServlet extends HttpServlet {
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int type = 0;//推荐类型
+        int type = 0;//推薦類型
         if(request.getParameter("type") != null) {
             type=Integer.parseInt(request.getParameter("type") ) ;
         }

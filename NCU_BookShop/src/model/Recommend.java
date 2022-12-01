@@ -2,7 +2,7 @@ package model;
 
 public class Recommend {
 	private int id;
-	private int type;//1条幅 2热销 3新品
+	private int type;//1橫幅 2熱銷 3新品
 	private Goods goods;
 
 	public int getId() {
