@@ -2,6 +2,8 @@ package servlet;
 
 import model.User;
 import org.apache.commons.beanutils.BeanUtils;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import service.UserService;
 
 import javax.servlet.ServletException;
@@ -19,6 +21,11 @@ public class UserRegisterServlet extends HttpServlet {
         User user = new User();
         try {
             BeanUtils.copyProperties(user, request.getParameterMap());
+            //重新把user物件內的密碼換成密文
+            PasswordEncoder pe = new BCryptPasswordEncoder();
+            String encodePassword = pe.encode(request.getParameter("password"));
+            user.setPassword(encodePassword);
+
         } catch (IllegalAccessException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

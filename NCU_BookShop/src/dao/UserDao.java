@@ -36,15 +36,15 @@ public class UserDao {
             return true;
         }
     }
-    public User selectByUsernamePassword(String username,String password) throws SQLException {
+    public User selectByUsername(String username) throws SQLException {
         QueryRunner r = new QueryRunner(DBUtil.getDataSource());
-        String sql = "select * from user where username=? and password=?";
-        return r.query(sql, new BeanHandler<User>(User.class),username,password);
+        String sql = "select * from user where username=? ";
+        return r.query(sql, new BeanHandler<User>(User.class),username);
     }
-    public User selectByEmailPassword(String email,String password) throws SQLException {
+    public User selectByEmail(String email) throws SQLException {
         QueryRunner r = new QueryRunner(DBUtil.getDataSource());
-        String sql = "select * from user where email=? and password=?";
-        return r.query(sql, new BeanHandler<User>(User.class),email,password);
+        String sql = "select * from user where email=? ";
+        return r.query(sql, new BeanHandler<User>(User.class),email);
     }
     public User selectById(int id) throws SQLException {
         QueryRunner r = new QueryRunner(DBUtil.getDataSource());
