@@ -3,6 +3,8 @@ package service;
 import dao.UserDao;
 import model.Page;
 import model.User;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -28,22 +30,24 @@ public class UserService {
 
     public User login(String ue,String password) {
         User user=null;
+        PasswordEncoder pe = new BCryptPasswordEncoder();  //BCryptPasswordEncoder
+
         try {
-            user = uDao.selectByUsernamePassword(ue, password);
+            user = uDao.selectByUsername(ue);
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        if(user!=null) {
+        if(user!=null && pe.matches(password, user.getPassword())) {
             return user;
         }
         try {
-            user=uDao.selectByEmailPassword(ue, password);
+            user=uDao.selectByEmail(ue);
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        if(user!=null) {
+        if(user!=null && pe.matches(password, user.getPassword())) {
             return user;
         }
         return null;
