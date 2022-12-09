@@ -7,46 +7,36 @@
   Time: 15:49
   To change this template use File | Settings | File Templates.
 --%>
-
+<!-- navbar資料參考: https://ithelp.ithome.com.tw/articles/10192870 -->
 <!--header-->
 <div class="header">
     <div class="container">
-        <nav class="navbar navbar-default" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <h1 class="navbar-brand"><a href="/index">NCU教科書商城</a></h1>
+        <nav class="navbar">
+            <!-- logo -->
+            <div class="logo">
+                <a href="/index"><img class="logo-pic" src="images/logo.jpg" alt="NCU_logo" /></a>
+                <!-- image source: https://www.facebook.com/ncu.tw/photos/a.645090168908504/2865575473526618> -->
+                <a class="logo-name" href="/index">
+                    <h1 class="logo-name-top">NCU</h1>
+                    <h1 class="logo-name-bottom">教科書商城</h1>
+                </a>
             </div>
-            <!--navbar-header-->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <!-- navbar -->
+            <div>
                 <ul class="nav navbar-nav">
-                    <li><a href="/index" <c:if test="${param.flag==1}">class="active"</c:if>>首頁</a></li>
+                    <li><a class="nav-link active" href="/index" <c:if test="${param.flag==1}">class="active"</c:if>>首頁</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle <c:if test="${param.flag==2}">active</c:if>" data-toggle="dropdown">商品分類<b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">科系類別<b class="caret"></b></a>
                         <ul class="dropdown-menu multi-column columns-2">
-                            <li>
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <h4>科系類別</h4>
-                                        <ul class="multi-column-dropdown">
+                            <ul class="multi-column-dropdown">
 
-                                            <li><a class="list" href="/goods_list">全部科系類別</a></li>
-
-                                            <c:forEach items="${typeList}" var="t">
-                                                <li><a class="list" href="/goods_list?typeid=${t.id}">${t.name}</a></li>
-                                            </c:forEach>
-
-
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
+                                <li><a class="all" href="/goods_list">不分科系</a></li>
+                                    <c:forEach items="${typeList}" var="t">
+                                        <li><a class="list" href="/goods_list?typeid=${t.id}">${t.name}</a></li>
+                                    </c:forEach>
+                            </ul>
                         </ul>
-                    </li>
+                    </li>                      
                     <li><a href="/goodsrecommend_list?type=2" <c:if test="${param.flag==3 && t==2}">class="active"</c:if>>熱門</a></li>
                     <li><a href="/goodsrecommend_list?type=3" <c:if test="${param.flag==3 && t==3}">class="active"</c:if>>新品</a></li>
 
@@ -64,29 +54,26 @@
                         <li><a href="/admin/index.jsp" target="_blank">後台管理</a></li>
                     </c:if>
                 </ul>
-                <!--/.navbar-collapse-->
             </div>
-            <!--//navbar-header-->
-        </nav>
-        <div class="header-info">
-            <div class="header-right search-box">
+            <!-- search -->
+            <div class="search">
                 <a href="javascript:;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
-                <div class="search">
+                <div class="input-area">
                     <form class="navbar-form" action="/goods_search">
                         <input type="text" class="form-control" name="keyword">
                         <button type="submit" class="btn btn-default <c:if test="${param.flag==7 }">active</c:if>" aria-label="Left Align">搜尋</button>
                     </form>
                 </div>
             </div>
-
-            <div class="header-right cart">
+            <!-- cart -->
+            <div class="cart">
                 <a href="goods_cart.jsp">
-                    <span class="glyphicon glyphicon-shopping-cart <c:if test="${param.flag==8 }">active</c:if>" aria-hidden="true"><span class="card_num"><c:choose><c:when test="${empty order}">0</c:when><c:otherwise>${order.amount}</c:otherwise></c:choose></span></span>
+                    <span class="glyphicon glyphicon-shopping-cart<c:if test="${param.flag==8 }">active</c:if>" aria-hidden="true">
+                        <span class="goods_num"><c:choose><c:when test="${empty order}">0</c:when><c:otherwise>${order.amount}</c:otherwise></c:choose></span>
+                    </span>
                 </a>
             </div>
-            <div class="clearfix"> </div>
-        </div>
-        <div class="clearfix"> </div>
+        </nav>
     </div>
 </div>
 <!--//header-->
