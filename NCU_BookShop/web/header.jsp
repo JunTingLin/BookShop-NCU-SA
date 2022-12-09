@@ -16,7 +16,7 @@
             <div class="logo">
                 <a href="/index"><img class="logo-pic" src="images/logo.jpg" alt="NCU_logo" /></a>
                 <!-- image source: https://www.facebook.com/ncu.tw/photos/a.645090168908504/2865575473526618> -->
-                <a class="logo-name" href="#">
+                <a class="logo-name" href="/index">
                     <h1 class="logo-name-top">NCU</h1>
                     <h1 class="logo-name-bottom">教科書商城</h1>
                 </a>
