@@ -14,7 +14,7 @@
         <nav class="navbar">
             <!-- logo -->
             <div class="logo">
-                <a href="#"><img class="logo-pic" src="images/logo.jpg" alt="NCU_logo" /></a>
+                <a href="/index"><img class="logo-pic" src="images/logo.jpg" alt="NCU_logo" /></a>
                 <!-- image source: https://www.facebook.com/ncu.tw/photos/a.645090168908504/2865575473526618> -->
                 <a class="logo-name" href="#">
                     <h1 class="logo-name-top">NCU</h1>
@@ -24,7 +24,7 @@
             <!-- navbar -->
             <div>
                 <ul class="nav navbar-nav">
-                    <li><a class="nav-link active" href="#" <c:if test="${param.flag==1}">class="active"</c:if>>首頁</a></li>
+                    <li><a class="nav-link active" href="/index" <c:if test="${param.flag==1}">class="active"</c:if>>首頁</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">科系類別<b class="caret"></b></a>
                         <ul class="dropdown-menu multi-column columns-2">
