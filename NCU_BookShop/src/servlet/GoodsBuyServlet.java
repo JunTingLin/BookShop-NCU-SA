@@ -25,7 +25,7 @@ public class GoodsBuyServlet extends HttpServlet {
         int goodsid = Integer.parseInt(request.getParameter("goodsid"));
         Goods goods = gService.getGoodsById(goodsid);
 
-        if(goods.getStock()>0 && o.getItemMap().size()==0) {  //庫存>0 且 order裡面的itemMap沒東西
+        if(goods.getStock()>0 && ! o.getItemMap().containsKey(goodsid)) {  //庫存>0 且 order裡面的itemMap沒有過該商品
             o.addGoods(goods);
             response.getWriter().print("ok");
         } else if (goods.getStock()>0 && o.getItemMap().get(goodsid).getAmount() < goods.getStock()) {  //庫存>0 且 該商品加到購物車的數量<庫存，才能在繼續加(買)
