@@ -181,7 +181,7 @@ span.goods_num {
 		min-width: 240px !important;
 		overflow-x: hidden;
 	}
-}	
+}
 @media (max-width: 480px) {
 	.content {
 		width: 90%;
@@ -213,8 +213,8 @@ span.goods_num {
   display:block;
 }
 /* Login Button */
-#loginButton { 
-    display:inline-block;  
+#loginButton {
+    display:inline-block;
     position:relative;
     z-index:30;
     cursor:pointer;
@@ -399,7 +399,7 @@ input:focus {
     min-height: 600px;
 }
 .banner img {
-    
+
 }
 .banner-text {
     position: absolute;
@@ -801,7 +801,7 @@ ul.rating li a:hover, .price_single a:hover, ul.size li a:hover {
 .product-grid {
 	width: 22%;
 	margin: 0 3% 4% 0;
-	float: left;	
+	float: left;
 	position: relative;
 	transition: 0.5s all;
 	-webkit-transition: 0.5s all;
@@ -832,11 +832,11 @@ ul.rating li a:hover, .price_single a:hover, ul.size li a:hover {
 }
 .product-img img {
 	width: 100%;
-	padding:1em 1em 0; 
+	padding:1em 1em 0;
 }
 .product-info-cust {
 	padding: 0.8em 1.2em;
-} 
+}
 .item_quantity {
   margin: 1em 0;
   font-size: 0.85em;
@@ -992,7 +992,7 @@ p.disc {
 ul.place{
 	margin: 5px 0;
 	background: #f9f9f9;
-	width: 100%;  
+	width: 100%;
 	padding:0px 5px;
 	cursor: pointer;
 }
@@ -1028,7 +1028,7 @@ ul.place li.by{
 .possible-about h4{
 	color:#7db122;
 	font-size:1.4em;
-	
+
 	font-weight:600;
 	   padding: 0 0 0.3em;
 }
@@ -1046,7 +1046,7 @@ label.amount {
 span.amount {
   color: #7c8389;
 }
-.product-model h2{   
+.product-model h2{
  text-align: center;
     font-size: 2.5em;
     color: #000;
@@ -1054,7 +1054,7 @@ span.amount {
 	    font-weight: 600;
 }
 ul.dropdown-menu1 li a:hover{
-	color:#000!important;	
+	color:#000!important;
 }
 .glyphicon-minus:before {
     content: "\2212";
@@ -1102,13 +1102,13 @@ color:red;
 /* checked state */
 /**/
 .sky-form .radio input + i:after {
-	background-color: #2da5da;	
+	background-color: #2da5da;
 }
 .sky-form .checkbox input + i:after {
 	color: #2da5da;
 }
 .sky-form .rating input:checked ~ label {
-	color: #2da5da;	
+	color: #2da5da;
 	 background: url(../images/star.png) 0 -20px;
 	display: -webkit-box;
 }
@@ -1289,7 +1289,7 @@ color:#8ce78a;
     text-decoration: none;
 }
 p.qty {
-   
+
     display: inline-block;
 }
 .single-grid #quantity {
@@ -1555,14 +1555,14 @@ p span.overline{
 }
 
 .cart-sec{
-	
+
 	margin-bottom:3em;
 }
 .cart-item{
 	width:35%;
 	float:left;
 	margin-right:5%;
-	
+
 }
 .cart-item img{
 	width:100%;
@@ -1570,7 +1570,7 @@ p span.overline{
 .cart-item-info{
 	width:60%;
 	float:left;
-	 
+
 }
 .check{
 	padding:5em 0;
@@ -1608,7 +1608,7 @@ p span.overline{
 .cart-item-info h4 span{
 	font-size:0.65em;
 	font-weight:400;
-} 
+}
 .close{
   background: url('../images/close_1.png') no-repeat 0px 0px;
   cursor: pointer;
@@ -1622,19 +1622,19 @@ p span.overline{
   -o-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
 }
-.cart-header {  
-  position: relative;  
+.cart-header {
+  position: relative;
 }
-.cart-header2 {  
-  position: relative;  
+.cart-header2 {
+  position: relative;
 }
-.cart-header3 {  
-  position: relative;  
+.cart-header3 {
+  position: relative;
 }
 a.order {
   background:#00405d;
   padding: 10px 20px;
-  
+
   font-size: 1em;
   color: #fff;
   text-decoration: none;
@@ -1666,7 +1666,7 @@ a.order:hover{
 a.cpns{
 	background:#ff6978;
 	color:#fff;
-	
+
 	padding: 10px;
   font-size: 0.8em;
 	font-weight:600;
@@ -1678,7 +1678,7 @@ a.cpns:hover{
 	font-size:0.9em;
 	font-weight:400;
 	margin-top:1em;
-	color:#727272;	
+	color:#727272;
 }
 .total-item p a:hover{
 	color:#333;
@@ -1687,12 +1687,12 @@ a.cpns:hover{
 a.continue{
 	background:#00405d;
 	padding:10px 20px;
-	
+
 	font-size:1em;
 	color:#fff;
 	text-decoration:none;
 	display: block;
-   font-weight: 600;  
+   font-weight: 600;
    text-align: center;
    margin-bottom:2em;
 }
@@ -1707,7 +1707,7 @@ ul.total_price{
 ul.total_price li.last_price{
 	width: 50%;
   float: left;
-  
+
 }
 ul.total_price li.last_price span{
 	font-size: 1.1em;

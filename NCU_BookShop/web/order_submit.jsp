@@ -60,7 +60,7 @@
 					<label>
 						<div class="thumbnail">
 							<input type="radio" name="paytype" value="1" checked="checked" />
-							<img src="images/wechat.jpg" alt="信用卡付款">
+							<img src="images/linepay.png" alt="Line Pay">
 						</div>
 					</label>
 				</div>
@@ -68,7 +68,7 @@
 					<label>
 						<div class="thumbnail">
 							<input type="radio" name="paytype" value="2"  />
-							<img src="images/alipay.jpg" alt="銀行轉帳">
+							<img src="images/applepay.jpg" alt="Apple Pay">
 						</div>
 					</label>
 				</div>
