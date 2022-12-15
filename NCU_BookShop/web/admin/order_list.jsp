@@ -40,7 +40,7 @@
 		<th width="10%">訂單狀態</th>
 		<th width="10%">付款方式</th>
 		<th width="10%">下單用戶</th>
-		<th width="10%">下大腦時間</th>
+		<th width="10%">下單時間</th>
 		<th width="10%">操作</th>
 	</tr>
 
