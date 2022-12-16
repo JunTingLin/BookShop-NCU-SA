@@ -257,6 +257,88 @@ span.login-text{
     background: #189df0f6;
     color: rgb(241, 238, 238);
 }
+/* user_center css */
+.center {
+    padding: 80px 0;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: -50px;
+}
+h3.center-title {
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    background-color: #9cd3eb;
+    font-family: 'Zen Antique', serif;
+    color:rgb(12, 74, 146);
+    font-size: 35px;
+}
+h4.center-title-1 {
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    font-family: 'Zen Antique', serif;
+    color:rgb(84, 12, 146);
+    font-size: 20px;
+}
+h4.center-title-2 {
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    font-family: 'Zen Antique', serif;
+    color:rgb(84, 12, 146);
+    font-size: 20px;
+}
+div.center-input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+div.center-input input {
+    position: absolute;
+    left: 28%;
+}
+div.center-btn {
+    margin-top: 10px;
+    margin-left: 500px;
+}
+div.pwd-btn {
+    margin-top: 10px;
+    margin-left: 590px;
+}
+span.center-text{
+    font-size: 16px;
+    margin-left: 20px;
+}
+.center-btn input[type="submit"] {
+    border: 2px solid #676767a2;
+    color: rgb(16, 16, 16);
+    font-size: 15px;
+    font-family: 'Zen Antique', serif;
+    width: 80px;
+    height: 40px;
+    display: inline-block;
+    background-color: #189df0a2;
+    align-items: center;
+}
+.center-btn input[type="submit"]:hover {
+    background: #189df0f6;
+    color: rgb(241, 238, 238);
+}
+.pwd-btn input[type="submit"] {
+    border: 2px solid #676767a2;
+    color: rgb(16, 16, 16);
+    font-size: 15px;
+    font-family: 'Zen Antique', serif;
+    width: 80px;
+    height: 40px;
+    display: inline-block;
+    background-color: #189df0a2;
+    align-items: center;
+}
+.pwd-btn input[type="submit"]:hover {
+    background: #189df0f6;
+    color: rgb(241, 238, 238);
+}
 /* 我們的css結尾 */
 
 .dropdown-menu {
