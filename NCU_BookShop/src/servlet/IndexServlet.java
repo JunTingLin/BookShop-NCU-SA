@@ -21,13 +21,9 @@ public class IndexServlet extends HttpServlet {
         Map<String,Object> ScrollGood=gService.getScrollGood();
         request.setAttribute("scroll",ScrollGood);
 
-        List<Map<String,Object>>newList=gService.getGoodsList(3);
+        List<Map<String,Object>>newList=gService.getGoodsList(2);
         request.setAttribute("newList",newList);
 
-        List<Map<String,Object>>hotList=gService.getGoodsList(2);
-        request.setAttribute("hotList",hotList);
-
-        //response.sendRedirect("index.jsp");
         request.getRequestDispatcher("index.jsp").forward(request,response);
 
 

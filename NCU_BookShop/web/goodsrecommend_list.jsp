@@ -34,7 +34,7 @@
 <!--products-->
 <div class="products">
     <div class="container">
-        <h2><c:choose><c:when test="${t==2}">熱銷商品</c:when><c:otherwise>新品商品</c:otherwise></c:choose></h2>
+        <h2><c:choose><c:when test="${t==2}">新品商品</c:when></c:choose></h2>
 
         <div class="col-md-12 product-model-sec">
 
