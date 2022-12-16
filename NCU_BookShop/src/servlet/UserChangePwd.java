@@ -1,6 +1,8 @@
 package servlet;
 
 import model.User;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import service.UserService;
 
 import javax.servlet.ServletException;
@@ -20,8 +22,10 @@ public class UserChangePwd extends HttpServlet {
         String newPwd = request.getParameter("newPassword");
 
         User u = (User) request.getSession().getAttribute("user");
-        if(password.equals(u.getPassword())) {
-            u.setPassword(newPwd);
+        PasswordEncoder pe = new BCryptPasswordEncoder();
+
+        if(pe.matches(password, u.getPassword())) { 
+            u.setPassword(pe.encode(newPwd));
             uService.updatePwd(u);
             request.setAttribute("msg", "修改成功！");
             request.getRequestDispatcher("/user_center.jsp").forward(request, response);
