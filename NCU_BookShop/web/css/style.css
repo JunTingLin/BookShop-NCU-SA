@@ -140,6 +140,73 @@ span.goods_num {
     left: 80%;
     font-size: 20px;
 }
+
+/* user_register css */
+div.alert{
+    align-items: center;
+}
+div.register {
+    margin-top: -50px;
+}
+div.register-ad-empty{
+    position: absolute;
+    top: 31%;
+    left: 50%;
+    margin-left: 50px;
+}
+h3.register-ad-empty-text {
+    font-family: 'Zen Antique', serif;
+    color:rgb(248, 60, 51)
+}
+div.register-ad{
+    position: absolute;
+    top: 41%;
+    left: 50%;
+    margin-left: 50px;
+}
+h3.register-ad-text {
+    font-family: 'Zen Antique', serif;
+    color:rgb(248, 60, 51)
+}
+h3.register-title {
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    background-color: #9cd3eb;
+    font-family: 'Zen Antique', serif;
+    color:rgb(12, 74, 146);
+    font-size: 35px;
+}
+div.register-input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+div.register-input input {
+    position: absolute;
+    left: 34%;
+}
+div.register-btn {
+    margin-top: 10px;
+    margin-left: 300px;
+}
+span.register-text{
+    font-size: 16px;
+}
+.register-btn input[type="submit"] {
+    border: 2px solid #676767a2;
+    color: rgb(16, 16, 16);
+    font-size: 15px;
+    font-family: 'Zen Antique', serif;
+    width: 80px;
+    height: 40px;
+    display: inline-block;
+    background-color: #189df0a2;
+    align-items: center;
+}
+.register-btn input[type="submit"]:hover {
+    background: #189df0f6;
+    color: rgb(241, 238, 238);
+}
 /* 我們的css結尾 */
 
 .dropdown-menu {
@@ -1521,26 +1588,6 @@ p span.overline{
 }
 .news-letter:hover {
 	color:#00BFF0;
-}
-.register-but{
-	margin-top:1em;
-}
-.register-but input[type="submit"] {
-    border: 2px solid #F07818;
-    color: #FFF;
-    font-size: 1.1em;
-    padding: 0.5em 2em;
-    transition: 0.5s all;
-    -webkit-transition: 0.5s all;
-    -moz-transition: 0.5s all;
-    -o-transition: 0.5s all;
-    display: inline-block;
-    outline: none;
-    background-color: #F07818;
-}
-.register-but input[type="submit"]:hover {
-    background: #FFF;
-    color: #F07818;
 }
 .register-bottom-grid {
 	margin-top:4em;
