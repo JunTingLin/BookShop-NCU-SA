@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 19767
-  Date: 2018/11/19
-  Time: 15:03
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
@@ -49,9 +42,9 @@
 <!--gallery-->
 <div class="gallery">
     <div class="container">
-        <div class="alert alert-danger">熱門推薦</div>
+        <div class="alert alert-danger">新品推購</div>
         <div class="gallery-grids">
-            <c:forEach items="${hotList}" var="g">
+            <c:forEach items="${newList}" var="g">
                 <div class="col-md-4 gallery-grid glry-two">
                     <a href="/goods_detail?id=${g.id}">
                         <img src="${g.cover}" class="img-responsive" alt="${g.name}" width="350" height="350"/>
@@ -75,39 +68,6 @@
                     </div>
                 </div>
             </c:forEach>
-
-
-        </div>
-
-        <div class="clearfix"></div>
-        <div class="alert alert-info">新品推購</div>
-        <div class="gallery-grids">
-            <c:forEach items="${newList}" var="g">
-                <div class="col-md-3 gallery-grid ">
-                    <a href="/goods_detail?id=${g.id}">
-                        <img src="${g.cover}" class="img-responsive" alt="${g.name}"/>
-                    </a>
-                    <div class="gallery-info">
-                        <p>
-                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                            <a href="/goods_detail?id=${g.id}">查看詳情</a>
-                        </p>
-                        <a class="shop" href="javascript:;" onclick="buy(${g.id})">立刻購買</a>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="galy-info">
-                        <p>${g.typeName} > ${g.name}</p>
-                        <div class="galry">
-                            <div class="prices">
-                                <h5 class="item_price">$ ${g.price}</h5>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
-            </c:forEach>
-
-
 
 
         </div>
