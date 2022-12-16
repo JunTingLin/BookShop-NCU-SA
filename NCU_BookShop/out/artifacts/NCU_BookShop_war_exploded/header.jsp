@@ -1,14 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: 19767
-  Date: 2018/11/23
-  Time: 15:49
-  To change this template use File | Settings | File Templates.
---%>
-<!-- navbar資料參考: https://ithelp.ithome.com.tw/articles/10192870 -->
-<!--header-->
+
 <div class="header">
     <div class="container">
         <nav class="navbar">
@@ -37,8 +29,7 @@
                             </ul>
                         </ul>
                     </li>                      
-                    <li><a href="/goodsrecommend_list?type=2" <c:if test="${param.flag==3 && t==2}">class="active"</c:if>>熱門</a></li>
-                    <li><a href="/goodsrecommend_list?type=3" <c:if test="${param.flag==3 && t==3}">class="active"</c:if>>新品</a></li>
+                    <li><a href="/goodsrecommend_list?type=2" <c:if test="${param.flag==3 && t==2}">class="active"</c:if>>新品</a></li>
 
                     <c:choose><c:when test="${empty user }">
                         <li><a href="/user_register.jsp" <c:if test="${param.flag==10 }">class="active"</c:if>>註冊</a></li>

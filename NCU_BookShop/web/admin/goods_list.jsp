@@ -20,8 +20,8 @@
 	<ul role="tablist" class="nav nav-tabs">
 		<li <c:if test="${type==0 }">class="active"</c:if> role="presentation"><a href="/admin/goods_list">全部商品</a></li>
 		<li <c:if test="${type==1 }">class="active"</c:if> role="presentation"><a href="/admin/goods_list?type=1">推薦橫幅</a></li>
-		<li <c:if test="${type==2 }">class="active"</c:if> role="presentation"><a href="/admin/goods_list?type=2">熱銷商品</a></li>
-		<li <c:if test="${type==3 }">class="active"</c:if> role="presentation"><a href="/admin/goods_list?type=3">新書上架</a></li>
+		<li <c:if test="${type==2 }">class="active"</c:if> role="presentation"><a href="/admin/goods_list?type=2">新書上架</a></li>
+		<li
 	</ul>
 
 
@@ -62,18 +62,10 @@
 						</c:choose>
 						<c:choose>
 							<c:when test="${g.isHot }">
-								<a class="btn btn-info" href="/admin/goods_recommend?id=${g.id }&method=remove&typeTarget=2&pageNumber=${p.pageNumber}&type=${type}">移出熱銷</a>
+								<a class="btn btn-info" href="/admin/goods_recommend?id=${g.id }&method=remove&typeTarget=2&pageNumber=${p.pageNumber}&type=${type}">移出新書</a>
 							</c:when>
 							<c:otherwise>
-								<a class="btn btn-primary" href="/admin/goods_recommend?id=${g.id }&method=add&typeTarget=2&pageNumber=${p.pageNumber}&type=${type}">加入熱銷</a>
-							</c:otherwise>
-						</c:choose>
-						<c:choose>
-							<c:when test="${g.isNew }">
-								<a class="btn btn-info" href="/admin/goods_recommend?id=${g.id }&method=remove&typeTarget=3&pageNumber=${p.pageNumber}&type=${type}">移出新書</a>
-							</c:when>
-							<c:otherwise>
-								<a class="btn btn-primary" href="/admin/goods_recommend?id=${g.id }&method=add&typeTarget=3&pageNumber=${p.pageNumber}&type=${type}">加入新書</a>
+								<a class="btn btn-primary" href="/admin/goods_recommend?id=${g.id }&method=add&typeTarget=2&pageNumber=${p.pageNumber}&type=${type}">加入新書</a>
 							</c:otherwise>
 						</c:choose>
 
