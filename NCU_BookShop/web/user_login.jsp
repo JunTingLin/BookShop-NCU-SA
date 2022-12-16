@@ -17,57 +17,39 @@
 <body>
 
 	
-
-
-
-
-
 	<!--header-->
 	<jsp:include page="header.jsp">
 		<jsp:param name="flag" value="9"></jsp:param>
 	</jsp:include>
-	<!--//header-->
 
-	
-	<!--account-->
-	<div class="account">
-		<div class="container">
-			<div class="register">
-				<c:if test="${!empty msg }">
-					<div class="alert alert-success">${msg }</div>
-				</c:if>
-				<c:if test="${!empty failMsg }">
-					<div class="alert alert-danger">${failMsg }</div>
-				</c:if>
-
-				<form action="/user_login" method="post">
-					<div class="register-top-grid">
-						<h3>用戶登入</h3>
-						<div class="input">
-							<span>用戶名/電子郵件地址 <label style="color:red;">*</label></span>
-							<input type="text" name="ue" placeholder="請输入用戶名/電子郵件地址" required="required">
+	<!--login-->
+	<div class="login">
+		<div>
+			<c:if test="${!empty msg}">
+				<div class="alert alert-success">${msg}</div>
+			</c:if>
+			<c:if test="${!empty failMsg }">
+				<div class="alert alert-info">${failMsg}</div>
+			</c:if>
+			
+            <form action="/user_login" method="post">
+				<div>
+					<h3 class="login-title">帳號登入</h3>
+						<div class="login-input">
+							<span class="login-text">&ensp;帳號/電子郵件</span>
+							<input type="text" name="ue" placeholder="請输入帳號/電子郵件地址" required="required">
 						</div>
-						<div class="input">
-							<span>密碼 <label style="color:red;">*</label></span>
+						<div class="login-input">
+							<span class="login-text">&ensp;密碼</span>
 							<input type="password" name="password" placeholder="請输入密碼" required="required">
 						</div>
-
-						<div class="clearfix"> </div>
 					</div>
-					<div class="register-but text-center">
-						<input type="submit" value="提交">
-						<div class="clearfix"> </div>
+					<div class="login-btn">
+						<input type="submit" value="登入">
 					</div>
 				</form>
-				<div class="clearfix"> </div>
 			</div>
-	    </div>
 	</div>
-	<!--//account-->
-
-	
-
-
 
 
 	<!--footer-->

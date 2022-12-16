@@ -140,6 +140,205 @@ span.goods_num {
     left: 80%;
     font-size: 20px;
 }
+
+/* user_register css */
+.register {
+    padding: 80px 0;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: -50px;
+}
+div.alert{
+    align-items: center;
+}
+div.register-ad-empty{
+    position: absolute;
+    top: 31%;
+    left: 50%;
+    margin-left: 50px;
+}
+h3.register-ad-empty-text {
+    font-family: 'Zen Antique', serif;
+    color:rgb(248, 60, 51)
+}
+div.register-ad{
+    position: absolute;
+    top: 41%;
+    left: 50%;
+    margin-left: 50px;
+}
+h3.register-ad-text {
+    font-family: 'Zen Antique', serif;
+    color:rgb(248, 60, 51)
+}
+h3.register-title {
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    background-color: #9cd3eb;
+    font-family: 'Zen Antique', serif;
+    color:rgb(12, 74, 146);
+    font-size: 35px;
+}
+div.register-input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+div.register-input input {
+    position: absolute;
+    left: 34%;
+}
+div.register-btn {
+    margin-top: 10px;
+    margin-left: 300px;
+}
+span.register-text{
+    font-size: 16px;
+}
+.register-btn input[type="submit"] {
+    border: 2px solid #676767a2;
+    color: rgb(16, 16, 16);
+    font-size: 15px;
+    font-family: 'Zen Antique', serif;
+    width: 80px;
+    height: 40px;
+    display: inline-block;
+    background-color: #189df0a2;
+    align-items: center;
+}
+.register-btn input[type="submit"]:hover {
+    background: #189df0f6;
+    color: rgb(241, 238, 238);
+}
+
+/* user_login css */
+.login {
+    padding: 80px 0;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: -50px;
+}
+h3.login-title {
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    background-color: #9cd3eb;
+    font-family: 'Zen Antique', serif;
+    color:rgb(12, 74, 146);
+    font-size: 35px;
+}
+div.login-input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+div.login-input input {
+    position: absolute;
+    left: 30%;
+}
+div.login-btn {
+    margin-top: 10px;
+    margin-left: 500px;
+}
+span.login-text{
+    font-size: 16px;
+}
+.login-btn input[type="submit"] {
+    border: 2px solid #676767a2;
+    color: rgb(16, 16, 16);
+    font-size: 15px;
+    font-family: 'Zen Antique', serif;
+    width: 80px;
+    height: 40px;
+    display: inline-block;
+    background-color: #189df0a2;
+    align-items: center;
+}
+.login-btn input[type="submit"]:hover {
+    background: #189df0f6;
+    color: rgb(241, 238, 238);
+}
+/* user_center css */
+.center {
+    padding: 80px 0;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: -50px;
+}
+h3.center-title {
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    background-color: #9cd3eb;
+    font-family: 'Zen Antique', serif;
+    color:rgb(12, 74, 146);
+    font-size: 35px;
+}
+h4.center-title-1 {
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    font-family: 'Zen Antique', serif;
+    color:rgb(84, 12, 146);
+    font-size: 20px;
+}
+h4.center-title-2 {
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    font-family: 'Zen Antique', serif;
+    color:rgb(84, 12, 146);
+    font-size: 20px;
+}
+div.center-input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+div.center-input input {
+    position: absolute;
+    left: 28%;
+}
+div.center-btn {
+    margin-top: 10px;
+    margin-left: 500px;
+}
+div.pwd-btn {
+    margin-top: 10px;
+    margin-left: 590px;
+}
+span.center-text{
+    font-size: 16px;
+    margin-left: 20px;
+}
+.center-btn input[type="submit"] {
+    border: 2px solid #676767a2;
+    color: rgb(16, 16, 16);
+    font-size: 15px;
+    font-family: 'Zen Antique', serif;
+    width: 80px;
+    height: 40px;
+    display: inline-block;
+    background-color: #189df0a2;
+    align-items: center;
+}
+.center-btn input[type="submit"]:hover {
+    background: #189df0f6;
+    color: rgb(241, 238, 238);
+}
+.pwd-btn input[type="submit"] {
+    border: 2px solid #676767a2;
+    color: rgb(16, 16, 16);
+    font-size: 15px;
+    font-family: 'Zen Antique', serif;
+    width: 80px;
+    height: 40px;
+    display: inline-block;
+    background-color: #189df0a2;
+    align-items: center;
+}
+.pwd-btn input[type="submit"]:hover {
+    background: #189df0f6;
+    color: rgb(241, 238, 238);
+}
 /* 我們的css結尾 */
 
 .dropdown-menu {
@@ -1422,38 +1621,7 @@ p span.overline{
     background-color: #fff!important;
 }
 /*--//single--*/
-/*--register--*/
-.register {
-    padding: 6em 0;
-    width: 60%;
-    margin: 0 auto;
-}
-.register-top-grid h3, .register-bottom-grid h3 {
-    color: #F07818;
-    font-size: 3em;
-    padding-bottom: 1em;
-    margin: 0;
-    text-align: center;
-    font-family: 'Marvel-Regular';
-}
-.register-top-grid .input, .register-bottom-grid .input {
-	margin: 10px 0;
-}
-.register-top-grid span, .register-bottom-grid span {
-	color:#999;
-	font-size: 0.85em;
-	padding-bottom: 0.2em;
-	display: block;
-	text-transform: uppercase;
-	margin-bottom: 4px;
-}
-.register-top-grid input[type="text"], .register-top-grid input[type="password"] {
-	border: 1px solid #555;
-	outline-color:#FD9F3E;
-	width: 96%;
-	font-size: 1em;
-	padding: 0.5em;
-}
+
 .checkbox {
 	margin-bottom: 4px;
 	padding-left: 27px;
@@ -1521,26 +1689,6 @@ p span.overline{
 }
 .news-letter:hover {
 	color:#00BFF0;
-}
-.register-but{
-	margin-top:1em;
-}
-.register-but input[type="submit"] {
-    border: 2px solid #F07818;
-    color: #FFF;
-    font-size: 1.1em;
-    padding: 0.5em 2em;
-    transition: 0.5s all;
-    -webkit-transition: 0.5s all;
-    -moz-transition: 0.5s all;
-    -o-transition: 0.5s all;
-    display: inline-block;
-    outline: none;
-    background-color: #F07818;
-}
-.register-but input[type="submit"]:hover {
-    background: #FFF;
-    color: #F07818;
 }
 .register-bottom-grid {
 	margin-top:4em;
