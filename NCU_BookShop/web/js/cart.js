@@ -6,9 +6,11 @@ function buy(goodid){
 	$.post("goods_buy", {goodsid:goodid}, function(data){
 		if(data=="ok")
 		{
-			layer.msg("添加到購物車!", {time:800}, function(){
-               location.reload();
-            });
+			// layer.msg("添加到購物車!", {time:800}, function(){
+            //    location.reload();
+            // });
+            // alert("添加到購物車!");
+            location.reload();
 		}
 		else if(data=="fail")
 		{
