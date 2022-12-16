@@ -6,13 +6,13 @@ function buy(goodid){
 	$.post("goods_buy", {goodsid:goodid}, function(data){
 		if(data=="ok")
 		{
-			layer.msg("添加到购物车!", {time:800}, function(){
+			layer.msg("添加到購物車!", {time:800}, function(){
                location.reload();
             });
 		}
 		else if(data=="fail")
 		{
-            layer.msg("库存不足,请购买其他商品!", {time:800}, function(){
+            layer.msg("庫存不足,請購買其他商品!", {time:800}, function(){
 
             });
 		}

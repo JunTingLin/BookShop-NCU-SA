@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>重置密码</title>
+	<title>重設密碼</title>
 	<meta charset="utf-8"/>
 	<link rel="stylesheet" href="css/bootstrap.css"/>
 </head>
@@ -18,15 +18,15 @@
 	<form class="form-horizontal" action="/admin/user_reset" method="post">
 		<input type="hidden" name="id" value="${param.id }">
 		<div class="form-group">
-			<label for="input_name" class="col-sm-1 control-label">用户名</label>
+			<label for="input_name" class="col-sm-1 control-label">用戶名字</label>
 			<div class="col-sm-5">${param.username }</div>
 		</div>
 		<div class="form-group">
-			<label for="input_name" class="col-sm-1 control-label">邮箱</label>
+			<label for="input_name" class="col-sm-1 control-label">電子信箱</label>
 			<div class="col-sm-5">${param.email }</div>
 		</div>
 		<div class="form-group">
-			<label for="input_name" class="col-sm-1 control-label">密码</label>
+			<label for="input_name" class="col-sm-1 control-label">密碼</label>
 			<div class="col-sm-6">
 				<input type="text" class="form-control" id="input_name" name="password" value="" required="required">
 			</div>

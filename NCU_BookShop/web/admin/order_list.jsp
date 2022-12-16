@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>订单列表</title>
+<title>訂單列表</title>
 <link rel="stylesheet" href="css/bootstrap.css"/> 
 </head>
 <body>
@@ -21,10 +21,10 @@
 	<br>
 
 	<ul role="tablist" class="nav nav-tabs">
-		<li <c:if test="${status==0 }">class="active"</c:if> role="presentation"><a href="/admin/order_list">全部订单</a></li>
+		<li <c:if test="${status==0 }">class="active"</c:if> role="presentation"><a href="/admin/order_list">全部訂單</a></li>
 		<li <c:if test="${status==1 }">class="active"</c:if> role="presentation"><a href="/admin/order_list?status=1">未付款</a></li>
 		<li <c:if test="${status==2 }">class="active"</c:if> role="presentation"><a href="/admin/order_list?status=2">已付款</a></li>
-		<li <c:if test="${status==3 }">class="active"</c:if> role="presentation"><a href="/admin/order_list?status=3">配送中</a></li>
+		<li <c:if test="${status==3 }">class="active"</c:if> role="presentation"><a href="/admin/order_list?status=3">運送中</a></li>
 		<li <c:if test="${status==4 }">class="active"</c:if> role="presentation"><a href="/admin/order_list?status=4">已完成</a></li>
 	</ul>
 
@@ -34,13 +34,13 @@
 
 	<tr>
 		<th width="5%">ID</th>
-		<th width="5%">总价</th>
-		<th width="15%">商品详情</th>
-		<th width="20%">收货信息</th>
-		<th width="10%">订单状态</th>
-		<th width="10%">支付方式</th>
-		<th width="10%">下单用户</th>
-		<th width="10%">下单时间</th>
+		<th width="5%">總金額</th>
+		<th width="15%">商品詳情</th>
+		<th width="20%">收貨訊息</th>
+		<th width="10%">訂單狀態</th>
+		<th width="10%">付款方式</th>
+		<th width="10%">下單用戶</th>
+		<th width="10%">下單時間</th>
 		<th width="10%">操作</th>
 	</tr>
 
@@ -60,8 +60,9 @@
 				</td>
 				<td>
 					<p>
+						<c:if test="${order.status==1 }"><span style="color:red;">未付款</span></c:if>
 						<c:if test="${order.status==2 }"><span style="color:red;">已付款</span></c:if>
-						<c:if test="${order.status==3 }"><span style="color:green;">已发货</span></c:if>
+						<c:if test="${order.status==3 }"><span style="color:green;">已發貨</span></c:if>
 						<c:if test="${order.status==4 }"><span style="color:black;">已完成</span></c:if>
 
 					</p>
@@ -69,9 +70,9 @@
 				<td>
 					<p>
 
-						<c:if test="${order.paytype==1 }">微信</c:if>
-						<c:if test="${order.paytype==2 }">支付宝</c:if>
-						<c:if test="${order.paytype==3 }">货到付款</c:if>
+						<c:if test="${order.paytype==1 }">信用卡支付</c:if>
+						<c:if test="${order.paytype==2 }">銀行轉帳</c:if>
+						<c:if test="${order.paytype==3 }">貨到付款</c:if>
 
 					</p>
 				</td>
@@ -79,12 +80,12 @@
 				<td><p>${order.datetime }</p></td>
 				<td>
 					<c:if test="${order.status==2 }">
-						<a class="btn btn-success" href="/admin/order_status?id=${order.id }&status=3">发货</a>
+						<a class="btn btn-success" href="/admin/order_status?id=${order.id }&status=3">發貨</a>
 					</c:if>
 					<c:if test="${order.status==3 }">
 						<a class="btn btn-warning" href="/admin/order_status?id=${order.id }&status=4">完成</a>
 					</c:if>
-					<a class="btn btn-danger" href="/admin/order_delete?id=${order.id }&pageNumber=${p.pageNumber}&status=${status}">删除</a>
+					<a class="btn btn-danger" href="/admin/order_delete?id=${order.id }&pageNumber=${p.pageNumber}&status=${status}">刪除</a>
 				</td>
 			</tr>
 		</c:forEach>

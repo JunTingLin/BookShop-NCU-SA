@@ -19,9 +19,9 @@ public class AdminTypeDeleteServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         boolean isSuccess = tService.delete(id);
         if(isSuccess) {
-            request.setAttribute("msg", "删除成功");
+            request.setAttribute("msg", "刪除成功");
         }else {
-            request.setAttribute("failMsg", "类目下包含商品，无法直接删除类目！");
+            request.setAttribute("failMsg", "類別下包含商品，無法直接刪除類別！");
         }
         request.getRequestDispatcher("/admin/type_list").forward(request, response);
     }

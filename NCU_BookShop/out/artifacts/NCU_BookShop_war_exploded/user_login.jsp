@@ -4,11 +4,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>用户登录</title>
+	<title>用戶登入</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
 	<link type="text/css" rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&family=Zen+Antique&display=swap" rel="stylesheet">
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/simpleCart.min.js"></script>
@@ -41,14 +42,14 @@
 
 				<form action="/user_login" method="post">
 					<div class="register-top-grid">
-						<h3>用户登录</h3>
+						<h3>用戶登入</h3>
 						<div class="input">
-							<span>用户名/邮箱 <label style="color:red;">*</label></span>
-							<input type="text" name="ue" placeholder="请输入用户名" required="required">
+							<span>用戶名/電子郵件地址 <label style="color:red;">*</label></span>
+							<input type="text" name="ue" placeholder="請输入用戶名/電子郵件地址" required="required">
 						</div>
 						<div class="input">
-							<span>密码 <label style="color:red;">*</label></span>
-							<input type="password" name="password" placeholder="请输入密码" required="required">
+							<span>密碼 <label style="color:red;">*</label></span>
+							<input type="password" name="password" placeholder="請输入密碼" required="required">
 						</div>
 
 						<div class="clearfix"> </div>

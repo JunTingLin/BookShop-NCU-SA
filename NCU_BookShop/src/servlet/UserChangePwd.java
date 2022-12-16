@@ -26,7 +26,7 @@ public class UserChangePwd extends HttpServlet {
             request.setAttribute("msg", "修改成功！");
             request.getRequestDispatcher("/user_center.jsp").forward(request, response);
         }else {
-            request.setAttribute("failMsg", "修改失败，原密码不正确，你再想想！");
+            request.setAttribute("failMsg", "修改失敗，原密碼不正確，請確認後再嘗試！");
             request.getRequestDispatcher("/user_center.jsp").forward(request, response);
         }
     }

@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>后台管理</title>
+<title>後台管理</title>
 <link rel="stylesheet" href="css/bootstrap.css"/> 
 </head>
 <body>
@@ -19,7 +19,7 @@
 
 	<br><br>
 	
-	<div class="alert alert-success" role="alert">恭喜你! 登录成功了</div>
+	<div class="alert alert-success" role="alert">恭喜你! 登入成功</div>
 	
 </div>	
 </body>

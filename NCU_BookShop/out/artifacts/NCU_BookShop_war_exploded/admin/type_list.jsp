@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>类目列表</title>
+	<title>科系列表</title>
 	<meta charset="utf-8"/>
 	<link rel="stylesheet" href="css/bootstrap.css"/>
 </head>
@@ -18,8 +18,8 @@
 
 	<div>
 		<form class="form-inline" method="post" action="/admin/type_add">
-			<input type="text" class="form-control" id="input_name" name="name" placeholder="输入类目名称" required="required" style="width: 500px">
-			<input type="submit" class="btn btn-warning" value="添加类目"/>
+			<input type="text" class="form-control" id="input_name" name="name" placeholder="輸入科系名稱" required="required" style="width: 500px">
+			<input type="submit" class="btn btn-warning" value="新增科系類別"/>
 		</form>
 	</div>
 	<br/>
@@ -35,7 +35,7 @@
 
 		<tr>
 			<th width="5%">ID</th>
-			<th width="10%">名称</th>
+			<th width="10%">名稱</th>
 			<th width="10%">操作</th>
 		</tr>
 
@@ -45,7 +45,7 @@
 				<td><p>${t.name }</p></td>
 				<td>
 					<a class="btn btn-primary" href="/admin/type_edit.jsp?id=${t.id }&name=${t.encodeName }">修改</a>
-					<a class="btn btn-danger" href="/admin/type_delete?id=${t.id }">删除</a>
+					<a class="btn btn-danger" href="/admin/type_delete?id=${t.id }">刪除</a>
 				</td>
 			</tr>
 		</c:forEach>

@@ -5,11 +5,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>商品详情</title>
+	<title>商品詳情</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
 	<link type="text/css" rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Rampart+One&family=Zen+Antique&display=swap" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="css/flexslider.css">
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.flexslider.js"></script>
@@ -61,7 +62,7 @@
 				<div class="col-md-4 single-grid simpleCart_shelfItem">		
 					<h3>${g.name}</h3>
 					<div class="tag">
-						<p>分类 : <a href="goods.action?typeid=5">${g.type.name}</a></p>
+						<p>分類 : <a href="goods.action?typeid=5">${g.type.name}</a></p>
 					</div>
 					<p>${g.intro}</p>
 					<div class="galry">
@@ -71,13 +72,13 @@
 						<div class="clearfix"></div>
 					</div>
 					<div class="btn_form">
-						<a href="javascript:;" class="add-cart item_add" onclick="buy(${g.id})">加入购物车</a>
+						<a href="javascript:;" class="add-cart item_add" onclick="buy(${g.id})">加入購物車</a>
 					</div>
 				</div>
 				<div class="col-md-4 single-grid1">
-					<!-- <h2>商品分类</h2> -->
+					<!-- <h2>商品分類</h2> -->
 					<ul>
-                        <li><a  href="/goods_list">全部系列</a></li>
+                        <li><a  href="/goods_list">全部科系類別</a></li>
 
                         <c:forEach items="${typeList}" var="t">
                             <li><a href="/goods_list?typeid=${t.id}">${t.name}</a></li>
@@ -92,7 +93,7 @@
 	<!--related-products--><!-- 
 	<div class="related-products">
 		<div class="container">
-			<h3>猜你喜欢</h3>
+			<h3>猜你喜歡</h3>
 			<div class="product-model-sec single-product-grids">
 				<div class="product-grid single-product">
 					<a href="single.html">

@@ -18,7 +18,7 @@ public class UserLoginServlet extends HttpServlet {
         String password = request.getParameter("password");
         User user = uService.login(ue, password);
         if(user==null) {
-            request.setAttribute("failMsg", "用户名、邮箱或者密码错误，请重新登录！");
+            request.setAttribute("failMsg", "用戶名、電子信箱或密碼錯誤，請重新登入！");
             request.getRequestDispatcher("/user_login.jsp").forward(request, response);
         }else {
             request.getSession().setAttribute("user", user);

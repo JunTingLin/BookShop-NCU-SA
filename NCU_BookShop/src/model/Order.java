@@ -6,10 +6,10 @@ import java.util.*;
 
 public class Order {
     private int id;
-    private float total;//总价
-    private int amount;// 商品总数
-    private int status;//1未付款/2已付款/3已发货/4已完成
-    private int paytype;//1微信/2支付宝/3货到付款
+    private float total;//總價
+    private int amount;// 商品總數
+    private int status;//1=未付款/2已付款/3已發貨/4已完成
+    private int paytype;//1信用卡支付/2銀行轉帳/3貨到付款
     private String name;
     private String phone;
     private String address;

@@ -28,10 +28,10 @@ public class UserChangeAddressServlet extends HttpServlet {
             e.printStackTrace();
         } catch (InvocationTargetException e) {
             // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        uService.updateUserAddress(loginUser);
-        request.setAttribute("msg", "收件信息更新成功！");
+        e.printStackTrace();
+    }
+    uService.updateUserAddress(loginUser);
+        request.setAttribute("msg", "收貨訊息更新成功！");
         request.getRequestDispatcher("/user_center.jsp").forward(request, response);
     }
 
