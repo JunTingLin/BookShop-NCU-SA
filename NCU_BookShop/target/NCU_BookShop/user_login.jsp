@@ -10,6 +10,7 @@
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
 	<link type="text/css" rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Rampart+One&family=Zen+Antique&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/simpleCart.min.js"></script>
@@ -34,14 +35,14 @@
 			
             <form action="/user_login" method="post">
 				<div>
-					<h3 class="login-title">帳號登入</h3>
+					<h3 class="login-title"><i class="bi bi-box-arrow-in-right"></i> 帳號登入</h3>
 						<div class="login-input">
 							<span class="login-text">&ensp;帳號/電子郵件</span>
-							<input type="text" name="ue" placeholder="請输入帳號/電子郵件地址" required="required">
+							<input type="text" name="ue" placeholder="請輸入帳號/電子郵件" required="required">
 						</div>
 						<div class="login-input">
 							<span class="login-text">&ensp;密碼</span>
-							<input type="password" name="password" placeholder="請输入密碼" required="required">
+							<input type="password" name="password" placeholder="請輸入密碼" required="required">
 						</div>
 					</div>
 					<div class="login-btn">

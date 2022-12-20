@@ -22,10 +22,10 @@ body a{
 }
 img.logo-pic {
     float: left;
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
     border-radius: 100%;
-    margin-top: -1.5%;
+    margin-top: 5%;
     margin-right: 2%;
 }
 a {
@@ -35,12 +35,14 @@ a {
 h1.logo-name-top {
     font-size: 2.5em;
     font-family: 'Rampart One', cursive;
+    margin-left: 8px;
 }
 h1.logo-name-bottom {
     float:left;
     font-size: 1.5em;
     font-family: 'Zen Antique', serif;
     margin-top: -10px;
+    margin-left: 8px;
 }
 h5.major-type {
     font-family: 'Zen Antique', serif;
@@ -53,15 +55,19 @@ hr.header-line {
     align-items: flex-start;
 }
 nav.navbar {
-    float:left;
+    float: none;
     background-color: #84D9F3;
     height: 80px;
     margin-top: 0px;
-    position:relative;
+    position: relative;
+    width: 100%;
 }
 .navbar-nav {
     padding-left: 300px;
-    margin-top: -60px;
+    margin-top: 0px;
+}
+.logo{
+    display: flex;
 }
 li > a.dropdown-toggle {
     font-size: 15px;
@@ -125,19 +131,19 @@ form.navbar-form {
 	padding: 0;
 	margin: 1em 0;
 }
-div.cart {
-    position: absolute;
-    top: 50%;
-    left: 130%;
-}
-span.glyphicon {
-    font-size: 30px;
-    color: #FFF;
+#cart {
+    position: relative;
+    margin-top: 9px;
+    margin-left: -30px;
+    margin-right: 15px;
+    margin-bottom: -20px;
+    font-size: 35px;
+    color: #fff;
 }
 span.goods_num {
-    position: absolute;
-    top: 50%;
-    left: 80%;
+    margin-left: 0px;
+    color: #fff;
+    font-style: italic;
     font-size: 20px;
 }
 
@@ -186,7 +192,7 @@ div.register-input {
 }
 div.register-input input {
     position: absolute;
-    left: 34%;
+    left: 35%;
 }
 div.register-btn {
     margin-top: 10px;
@@ -1284,7 +1290,7 @@ color:red;
 .sky-form .rating label {
 	display: block;
 	float: left;
-	height: -4px;
+	height: 0px;
 	cursor: pointer;
 }
 .sky-form [class^="icon-"] {
