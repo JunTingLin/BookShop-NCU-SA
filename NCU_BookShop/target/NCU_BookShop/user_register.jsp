@@ -11,7 +11,8 @@
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
 	<link type="text/css" rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Rampart+One&family=Zen+Antique&display=swap" rel="stylesheet">
-	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/simpleCart.min.js"></script>
 </head>
@@ -30,7 +31,8 @@
             </c:if>
             <form action="/user_rigister" method="post">
                 <div>
-                    <h3 class="register-title">註冊</h3>
+                    
+                    <h3 class="register-title"><i class="bi bi-person-plus-fill"></i> 註冊</h3>
                     <div class="register-input">
                         <span class="register-text">■&ensp;帳號(user name) <label style="color:red;">*</label></span>
                         <input type="text" name="username" placeholder="請輸入帳號名稱" required="required">

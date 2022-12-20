@@ -11,6 +11,7 @@
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
 	<link type="text/css" rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Rampart+One&family=Zen+Antique&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/simpleCart.min.js"></script>
@@ -28,7 +29,7 @@
 <!--products-->
 <div class="products">
 	<div class="container">
-		<h2> 查詢 ‘${param.keyword }’的結果 </h2>
+		<h2> "${param.keyword}"相關結果 </h2>
 
 		<div class="col-md-12 product-model-sec">
 
