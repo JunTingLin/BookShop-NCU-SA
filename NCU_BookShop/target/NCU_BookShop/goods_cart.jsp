@@ -10,6 +10,7 @@
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
 	<link type="text/css" rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Rampart+One&family=Zen+Antique&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="layer/layer.js"></script>
@@ -48,9 +49,9 @@
 							</a>
 						</div>
 						<div class="cart-item-info">
-							<h3><a href="/goods_detail?id=${item.key}">${item.value.goods.name}</a></h3>
-							<h3><span>單價: ¥ ${item.value.price}</span></h3>
-							<h3><span>數量: ${item.value.amount}</span></h3>
+							<h3><a href="/goods_detail?id=${item.key}">NT${item.value.goods.name}</a></h3>
+							<h3><span>單價: NT$ ${item.value.price}</span></h3>
+							<h3><span>數量: NT${item.value.amount}</span></h3>
 							<a class="btn btn-info" href="javascript:buy(${item.key});">增加</a>
 							<a class="btn btn-warning" href="javascript:lessen(${item.key});">減少</a>
 							<a class="btn btn-danger" href="javascript:deletes(${item.key});">刪除</a>
@@ -62,7 +63,7 @@
 			
 			<div class="cart-header col-md-12">
 				<hr>
-				<h3>訂單總金額: ¥ ${order.total}</h3>
+				<h3>訂單總金額: NT$ ${order.total}</h3>
 				<a class="btn btn-success btn-lg" style="margin-left:74%" href="/order_submit">提交訂單</a>
 			</div>
 			
