@@ -45,8 +45,8 @@
                         <li class="nav-item"><a href="/admin/index.jsp" class="nav-link" target="_blank">後台管理</a></li>
                     </c:if>
                 </ul>
-                <form class="d-flex" action="/goods_search.jsp">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="keyword">
+                <form class="d-flex" action="/goods_search">
+                    <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="keyword">
                     <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
                 </form>
                 <div>
