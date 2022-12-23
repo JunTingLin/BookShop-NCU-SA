@@ -32,7 +32,7 @@
 			<div class="col-4 single-grid simpleCart_shelfItem">
 				<h3>${g.name}</h3>
 				<div class="tag">
-					<p>分類 : <a href="goods.action?typeid=5">${g.type.name}</a></p>
+					<p>分類 : <a href="goods_list?typeid=${g.type.id}">${g.type.name}</a></p>
 				</div>
 				<p>${g.intro}</p>
 				<div class="view-info">
