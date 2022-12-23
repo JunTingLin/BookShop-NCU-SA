@@ -21,6 +21,9 @@ public class IndexServlet extends HttpServlet {
         Map<String,Object> ScrollGood=gService.getScrollGood();
         request.setAttribute("scroll",ScrollGood);
 
+        List<Map<String,Object>>scrollList=gService.getGoodsList(1);
+        request.setAttribute("scrollList",scrollList);
+
         List<Map<String,Object>>newList=gService.getGoodsList(2);
         request.setAttribute("newList",newList);
 
