@@ -43,7 +43,7 @@
 			<c:forEach items="${order.itemMap }" var="item">
 				<div class="cart-header col-md-6">
 					<div class="cart-sec simpleCart_shelfItem">
-						<div class="cart-item cyc">
+						<div class="cart-item">
 							<a href="/goods_detail?id=${item.key}">
 								<img src="${pageContext.request.contextPath }${item.value.goods.cover}" class="img-responsive">
 							</a>
@@ -51,7 +51,7 @@
 						<div class="cart-item-info">
 							<h3><a href="/goods_detail?id=${item.key}">NT${item.value.goods.name}</a></h3>
 							<h3><span>單價: NT$ ${item.value.price}</span></h3>
-							<h3><span>數量: NT${item.value.amount}</span></h3>
+							<h3><span>數量: ${item.value.amount}</span></h3>
 							<a class="btn btn-info" href="javascript:buy(${item.key});">增加</a>
 							<a class="btn btn-warning" href="javascript:lessen(${item.key});">減少</a>
 							<a class="btn btn-danger" href="javascript:deletes(${item.key});">刪除</a>

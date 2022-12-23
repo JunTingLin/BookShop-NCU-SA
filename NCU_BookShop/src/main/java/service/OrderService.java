@@ -88,27 +88,4 @@ public class OrderService {
             e.printStackTrace();
         }
     }
-    public void delete(int id) {
-        Connection con = null;
-        try {
-            con = DBUtil.getDataSource().getConnection();
-            con.setAutoCommit(false);
-
-            oDao.deleteOrderItem(con, id);
-            oDao.deleteOrder(con, id);
-            con.commit();
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-            if(con!=null)
-                try {
-                    con.rollback();
-                } catch (SQLException e1) {
-                    // TODO Auto-generated catch block
-                    e1.printStackTrace();
-                }
-        }
-
-
-    }
 }
