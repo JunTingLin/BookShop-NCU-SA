@@ -67,14 +67,4 @@ public class OrderDao {
         String sql ="update `order` set status=? where id = ?";
         r.update(sql,status,id);
     }
-    public void deleteOrder(Connection con ,int id) throws SQLException {
-        QueryRunner r = new QueryRunner();
-        String sql ="delete from `order` where id = ?";
-        r.update(con,sql,id);
-    }
-    public void deleteOrderItem(Connection con ,int id) throws SQLException {
-        QueryRunner r = new QueryRunner();
-        String sql ="delete from orderitem where order_id=?";
-        r.update(con,sql,id);
-    }
 }

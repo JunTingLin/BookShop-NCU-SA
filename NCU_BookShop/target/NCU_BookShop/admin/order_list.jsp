@@ -85,7 +85,6 @@
 					<c:if test="${order.status==3 }">
 						<a class="btn btn-warning" href="/admin/order_status?id=${order.id }&status=4">完成</a>
 					</c:if>
-					<a class="btn btn-danger" href="/admin/order_delete?id=${order.id }&pageNumber=${p.pageNumber}&status=${status}">刪除</a>
 				</td>
 			</tr>
 		</c:forEach>
