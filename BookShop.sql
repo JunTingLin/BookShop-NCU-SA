@@ -118,8 +118,8 @@ CREATE TABLE `recommend`  (
 -- Records of recommend
 -- ----------------------------
 INSERT INTO `recommend` VALUES (9, 1, 15);
-INSERT INTO `recommend` VALUES (10, 3, 25);
-INSERT INTO `recommend` VALUES (11, 3, 40);
+INSERT INTO `recommend` VALUES (10, 1, 25);
+INSERT INTO `recommend` VALUES (11, 1, 40);
 INSERT INTO `recommend` VALUES (12, 2, 55);
 INSERT INTO `recommend` VALUES (13, 3, 82);
 INSERT INTO `recommend` VALUES (14, 2, 114);
