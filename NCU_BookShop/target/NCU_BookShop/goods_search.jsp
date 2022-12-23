@@ -29,7 +29,7 @@
 <!--products-->
 <div class="products">
 	<div class="container">
-		<h2> "${param.keyword}"相關結果 </h2>
+		<h2> 查詢 ‘${param.keyword }’相關結果 </h2>
 
 		<div class="col-md-12 product-model-sec">
 
