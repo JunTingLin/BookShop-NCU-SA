@@ -6,7 +6,7 @@ public class Goods {
 	private String cover;
 	private String image1;
 	private String image2;
-	private float price;
+	private int price;
 	private String intro;
 	private int stock;
 	private Type type;
@@ -81,10 +81,10 @@ public class Goods {
 	public void setImage2(String image2) {
 		this.image2 = image2;
 	}
-	public float getPrice() {
+	public int getPrice() {
 		return price;
 	}
-	public void setPrice(float price) {
+	public void setPrice(int price) {
 		this.price = price;
 	}
 	public String getIntro() {
@@ -108,7 +108,7 @@ public class Goods {
 	public Goods() {
 		super();
 	}
-	public Goods(int id, String name, String cover, String image1, String image2, float price, String intro, int stock,
+	public Goods(int id, String name, String cover, String image1, String image2, int price, String intro, int stock,
 			Type type) {
 		super();
 		this.id = id;
