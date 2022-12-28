@@ -1,12 +1,10 @@
 package model;
 
-import utils.PriceUtil;
-
 import java.util.*;
 
 public class Order {
     private int id;
-    private float total;//總價
+    private int total;//總價
     private int amount;// 商品總數
     private int status;//1=未付款/2已付款/3已發貨/4已完成
     private int paytype;//1信用卡支付/2銀行轉帳/3貨到付款
@@ -31,7 +29,7 @@ public class Order {
             itemMap.put(g.getId(), item);
         }
         amount++;
-        total = PriceUtil.add(total, g.getPrice());
+        total = total +  g.getPrice();
     }
 
     public List<OrderItem> getItemList() {
@@ -47,7 +45,7 @@ public class Order {
             OrderItem item = itemMap.get(goodsid);
             item.setAmount(item.getAmount()-1);
             amount--;
-            total = PriceUtil.subtract(total, item.getPrice());
+            total = total - item.getPrice();
             if(item.getAmount()<=0) {
                 itemMap.remove(goodsid);
             }
@@ -57,7 +55,7 @@ public class Order {
     {
         if(itemMap.containsKey(goodsid)) {
             OrderItem item = itemMap.get(goodsid);
-            total = PriceUtil.subtract(total, item.getAmount()*item.getPrice());
+            total = total -  item.getAmount()*item.getPrice();
             amount-=item.getAmount();
             itemMap.remove(goodsid);
         }
@@ -77,10 +75,10 @@ public class Order {
     public void setId(int id) {
         this.id = id;
     }
-    public float getTotal() {
+    public int getTotal() {
         return total;
     }
-    public void setTotal(float total) {
+    public void setTotal(int total) {
         this.total = total;
     }
     public int getAmount() {

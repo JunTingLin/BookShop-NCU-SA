@@ -2,7 +2,7 @@ package model;
 
 public class OrderItem {
     private int id;
-    private float price;
+    private int price;
     private int amount;
     private String goodsName;
     private Goods goods;
@@ -26,10 +26,10 @@ public class OrderItem {
     public void setId(int id) {
         this.id = id;
     }
-    public float getPrice() {
+    public int getPrice() {
         return price;
     }
-    public void setPrice(float price) {
+    public void setPrice(int price) {
         this.price = price;
     }
     public int getAmount() {
@@ -53,7 +53,7 @@ public class OrderItem {
     public OrderItem() {
         super();
     }
-    public OrderItem(float price, int amount, Goods goods, Order order) {
+    public OrderItem(int price, int amount, Goods goods, Order order) {
         super();
         this.price = price;
         this.amount = amount;
