@@ -1,3 +1,5 @@
+<%@ page import="java.util.Map" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
@@ -22,8 +24,16 @@
 <jsp:include page="/header.jsp">
     <jsp:param name="flag" value="1"></jsp:param>
 </jsp:include>
-<!--banner-->
 
+<%
+    List<Map<String,Object>>  r = (List)request.getAttribute("scrollList");
+    System.out.println(r);
+    System.out.println("橫幅已成功取得...");
+//一開始執行時會執行三次是這正常的
+%>
+
+
+<!--banner-->
 <div class="banner">
     <div id="banner_carousel" class="carousel-dark slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
