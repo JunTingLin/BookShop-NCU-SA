@@ -1,26 +1,20 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
 <html>
-<head>
-<title>後台管理</title>
-<link rel="stylesheet" href="css/bootstrap.css"/> 
-</head>
-<body>
-<div class="container-fluid">
+	<head>
+		<title>後台管理</title>
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
+		<link type="text/css" rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Rampart+One&family=Zen+Antique&display=swap" rel="stylesheet">
+	</head>
+	<body>
 
-	
+			<jsp:include page="header.jsp"></jsp:include>
 
-
-
-
-<jsp:include page="header.jsp"></jsp:include>
-
-	<br><br>
-	
-	<div class="alert alert-success" role="alert">恭喜你! 登入成功</div>
-	
-</div>	
-</body>
+				<br><br>
+			<div style="margin-left: 300px; width: 600px;">
+				<div class="alert alert-success" role="alert">管理員 ${user.username}，歡迎回來!</div>
+			</div>
+	</body>
 </html>
