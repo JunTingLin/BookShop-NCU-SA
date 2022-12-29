@@ -60,6 +60,7 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden"></span>
         </button>
+    </div>
 
 </div>
 
