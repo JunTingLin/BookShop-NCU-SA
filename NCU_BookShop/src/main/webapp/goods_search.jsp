@@ -37,19 +37,20 @@
 				<div class="product-grid">
 					<a href="${pageContext.request.contextPath }/goods_detail?id=${g.id}">
 						<div class="more-product"><span> </span></div>
-						<div class="product-img b-link-stripe b-animate-go  thickbox">
+						<div class="product-img">
 							<img src="${pageContext.request.contextPath }${g.cover}" class="img-responsive" alt="${g.name }" width="240" height="240">
-							<div class="b-wrapper">
-								<h4 class="b-animate b-from-left  b-delay03">
-									<button>查看詳情</button>
-								</h4>
-							</div>
 						</div>
 					</a>
 					<div class="product-info simpleCart_shelfItem">
 						<div class="product-info-cust prt_name">
-							<h4>${g.name }</h4>
-							<span class="item_price">¥ ${g.price }</span>
+							<h4>${g.name}</h4>
+							<div class="view-info">
+								<span class="item_price">NT$ ${g.price}</span>
+								<div class="items-info">
+									<i class="bi-eye" aria-hidden="true"></i>
+									<a href="/goods_detail?id=${g.id}">查看詳情</a>
+								</div>
+							</div>
 							<input type="button" class="item_add items" value="加入購物車" onclick="buy(${g.id})">
 							<div class="clearfix"> </div>
 						</div>
