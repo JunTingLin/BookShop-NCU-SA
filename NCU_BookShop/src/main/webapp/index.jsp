@@ -16,7 +16,6 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/carousel.js"></script>
-    <script type="text/javascript" src="layer/layer.js"></script>
     <script type="text/javascript" src="js/cart.js"></script>
 </head>
 <body>
@@ -52,14 +51,6 @@
                 </div>
             </c:forEach>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#banner_carousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#banner_carousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden"></span>
-        </button>
     </div>
 
 </div>
