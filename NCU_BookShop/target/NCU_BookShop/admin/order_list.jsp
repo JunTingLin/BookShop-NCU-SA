@@ -70,7 +70,7 @@
 				<th width="10%">操作</th>
 			</tr>
 
-				<c:forEach items="${p.list }" var="order">
+				<c:forEach items="${ list }" var="order">
 					<tr>
 						<td><p>${order.id }</p></td>
 						<td><p>${order.total }</p></td>
@@ -117,12 +117,7 @@
 
 
 		</table>
-
-		<br>
-			<jsp:include page="/page.jsp">
-				<jsp:param value="/admin/order_list" name="url"/>
-				<jsp:param value="&status=${status}" name="param"/>
-			</jsp:include>
+			
 		<br>
 		</div>
 		</div>
