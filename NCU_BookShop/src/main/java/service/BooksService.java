@@ -47,7 +47,6 @@ public class BooksService {
             list = bDao.selectBooksbyRecommend(type);
             for(Books b : (List<Books>)list) {
                 b.setScroll(bDao.isScroll(b));
-                b.setHot(bDao.isHot(b));
                 b.setNew(bDao.isNew(b));
             }
         } catch (SQLException e) {

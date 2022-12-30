@@ -9,7 +9,6 @@ public class Books {
 	private int stock;
 	private Type type;
 	private boolean isScroll;
-	private boolean isHot;
 	private boolean isNew;
 	
 	
@@ -18,12 +17,6 @@ public class Books {
 	}
 	public void setScroll(boolean isScroll) {
 		this.isScroll = isScroll;
-	}
-	public boolean getIsHot() {
-		return isHot;
-	}
-	public void setHot(boolean isHot) {
-		this.isHot = isHot;
 	}
 	public boolean getIsNew() {
 		return isNew;
