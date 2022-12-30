@@ -20,16 +20,16 @@ public class Order {
         user = new User();
         user.setUsername(username);
     }
-    public void addBooks(Books g) {
-        if(itemMap.containsKey(g.getId())) {
-            OrderItem item = itemMap.get(g.getId());
+    public void addBooks(Books b) {
+        if(itemMap.containsKey(b.getId())) {
+            OrderItem item = itemMap.get(b.getId());
             item.setAmount(item.getAmount()+1);
         }else {
-            OrderItem item = new OrderItem(g.getPrice(),1,g,this);
-            itemMap.put(g.getId(), item);
+            OrderItem item = new OrderItem(b.getPrice(),1,b,this);
+            itemMap.put(b.getId(), item);
         }
         amount++;
-        total = total +  g.getPrice();
+        total = total +  b.getPrice();
     }
 
     public List<OrderItem> getItemList() {

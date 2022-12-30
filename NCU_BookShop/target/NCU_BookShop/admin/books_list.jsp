@@ -59,36 +59,36 @@
 					<th width="25%">操作</th>
 				</tr>
 
-				<c:forEach items="${p.list }" var="g">
+				<c:forEach items="${p.list }" var="b">
 					<tr>
-						<td><p>${g.id }</p></td>
-						<td><p><a href="/books_detail?id=${g.id}" target="_blank"><img src="${g.cover}" width="100px" height="100px"></a></p></td>
-						<td><p><a href="/books_detail?id=${g.id}" target="_blank">${g.name}</a></p></td>
-						<td><p>${g.intro}</p></td>
-						<td><p>${g.price}</p></td>
-						<td><p>${g.type.name}</p></td>
+						<td><p>${b.id }</p></td>
+						<td><p><a href="/books_detail?id=${b.id}" target="_blank"><img src="${b.cover}" width="100px" height="100px"></a></p></td>
+						<td><p><a href="/books_detail?id=${b.id}" target="_blank">${b.name}</a></p></td>
+						<td><p>${b.intro}</p></td>
+						<td><p>${b.price}</p></td>
+						<td><p>${b.type.name}</p></td>
 						<td>
 							<p>
 								<c:choose>
-									<c:when test="${g.isScroll }">
-										<a class="btn btn-info" href="/admin/books_recommend?id=${g.id }&method=remove&typeTarget=1&pageNumber=${p.pageNumber}&type=${type}">移出橫幅</a>
+									<c:when test="${b.isScroll }">
+										<a class="btn btn-info" href="/admin/books_recommend?id=${b.id }&method=remove&typeTarget=1&pageNumber=${p.pageNumber}&type=${type}">移出橫幅</a>
 									</c:when>
 									<c:otherwise>
-										<a class="btn btn-primary" href="/admin/books_recommend?id=${g.id }&method=add&typeTarget=1&pageNumber=${p.pageNumber}&type=${type}">加入橫幅</a>
+										<a class="btn btn-primary" href="/admin/books_recommend?id=${b.id }&method=add&typeTarget=1&pageNumber=${p.pageNumber}&type=${type}">加入橫幅</a>
 									</c:otherwise>
 								</c:choose>
 								<c:choose>
-									<c:when test="${g.isHot }">
-										<a class="btn btn-info" href="/admin/books_recommend?id=${g.id }&method=remove&typeTarget=2&pageNumber=${p.pageNumber}&type=${type}">移出新書</a>
+									<c:when test="${b.isHot }">
+										<a class="btn btn-info" href="/admin/books_recommend?id=${b.id }&method=remove&typeTarget=2&pageNumber=${p.pageNumber}&type=${type}">移出新書</a>
 									</c:when>
 									<c:otherwise>
-										<a class="btn btn-primary" href="/admin/books_recommend?id=${g.id }&method=add&typeTarget=2&pageNumber=${p.pageNumber}&type=${type}">加入新書</a>
+										<a class="btn btn-primary" href="/admin/books_recommend?id=${b.id }&method=add&typeTarget=2&pageNumber=${p.pageNumber}&type=${type}">加入新書</a>
 									</c:otherwise>
 								</c:choose>
 
 							</p>
-							<a class="btn btn-success" href="/admin/books_editshow?id=${g.id }& pageNumber=${p.pageNumber}&type=${type}">修改</a>
-							<a class="btn btn-danger" href="/admin/books_delete?id=${g.id }&pageNumber=${p.pageNumber}&type=${type}">刪除</a>
+							<a class="btn btn-success" href="/admin/books_editshow?id=${b.id }& pageNumber=${p.pageNumber}&type=${type}">修改</a>
+							<a class="btn btn-danger" href="/admin/books_delete?id=${b.id }&pageNumber=${p.pageNumber}&type=${type}">刪除</a>
 						</td>
 					</tr>
 				</c:forEach>

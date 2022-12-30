@@ -76,10 +76,10 @@ public class BooksService {
         List list=null;
         try {
             list = bDao.selectBooksbyRecommend(type, pageNumber, 8);
-            for(Books g : (List<Books>)list) {
-                g.setScroll(bDao.isScroll(g));
-                g.setHot(bDao.isHot(g));
-                g.setNew(bDao.isNew(g));
+            for(Books b : (List<Books>)list) {
+                b.setScroll(bDao.isScroll(b));
+                b.setHot(bDao.isHot(b));
+                b.setNew(bDao.isNew(b));
             }
         } catch (SQLException e) {
             // TODO Auto-generated catch block
@@ -89,14 +89,14 @@ public class BooksService {
         return p;
     }
     public Books getBooksById(int id) {
-        Books g=null;
+        Books b=null;
         try {
-            g = bDao.getBooksById(id);
+            b = bDao.getBooksById(id);
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        return g;
+        return b;
     }
     public Page getSearchBooksPage(String keyword, int pageNumber) {
         Page p = new Page();

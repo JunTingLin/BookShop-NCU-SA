@@ -13,8 +13,8 @@ function popupMsg(msg,duration)
     document.body.appendChild(el);
 }
 
-function buy(goodid){
-	$.post("books_buy", {booksid:goodid}, function(data){
+function buy(bookid){
+	$.post("books_buy", {booksid:bookid}, function(data){
 		if(data=="ok") {
             setTimeout('popupMsg("成功新增至購物車", 1000);', 0);
             setTimeout('location.reload();', 1100);
@@ -42,8 +42,8 @@ function lessen(booksid){
 /**
  * 將商品從購物車中刪除
  */
-function deletes(goodid){
-    $.post("books_delete", {booksid:goodid}, function(data){
+function deletes(bookid){
+    $.post("books_delete", {booksid:bookid}, function(data){
         if(data=="ok"){
             setTimeout('popupMsg("成功將商品從購物車中刪除", 1000);', 0);
             setTimeout('location.reload();', 1100);

@@ -18,8 +18,8 @@ public class AdminBooksEditshowServelt extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
-        Books g = bService.getBooksById(id);
-        request.setAttribute("g", g);
+        Books b = bService.getBooksById(id);
+        request.setAttribute("b", b);
         request.getRequestDispatcher("/admin/books_edit.jsp").forward(request, response);
     }
 
