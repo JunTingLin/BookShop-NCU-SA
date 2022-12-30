@@ -36,7 +36,7 @@
         <h2><c:choose><c:when test="${t==2}">新品商品</c:when></c:choose></h2>
 
         <div class="row">
-            <c:forEach items="${p.list}" var="b">
+            <c:forEach items="${list}" var="b">
                 <div class="col-6 col-sm-4 product-model-sec">
                     <div class="product-grid">
                         <a href="/books_detail?id=${b.id}">
@@ -65,10 +65,7 @@
             </c:forEach>
         </div>
 
-        <jsp:include page="page.jsp">
-            <jsp:param name="url" value="/booksrecommend_list"></jsp:param>
-            <jsp:param name="param" value="&type=${t}"></jsp:param>
-        </jsp:include>
+
     </div>
 </div>
 </div>

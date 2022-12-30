@@ -63,10 +63,6 @@
 
         </div>
 
-<%--        <jsp:include page="page.jsp">--%>
-<%--            <jsp:param name="url" value="/books_list"></jsp:param>--%>
-<%--            <jsp:param name="param" value="&typeid=${id}"></jsp:param>--%>
-<%--        </jsp:include>--%>
     </div>
 </div>
 </div>

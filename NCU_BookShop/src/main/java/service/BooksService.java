@@ -40,42 +40,12 @@ public class BooksService {
         }
         return list;
     }
-//    public Page selectPageByTypeID(int typeID,int pageNumber)
-//    {
-//        Page p=new Page();
-//        p.setPageNumber(pageNumber);
-//        int totalCount=0;
-//        try {
-//            totalCount=bDao.getCountOfBooksByTypeID(typeID);
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//        p.SetPageSizeAndTotalCount(8,totalCount);
-//
-//        List list=null;
-//        try {
-//            list=bDao.selectBooksByTypeID(typeID,pageNumber,8);
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//
-//        p.setList(list);
-//        return p;
-//    }
-    public Page getBooksRecommendPage(int type,int pageNumber) {
-        Page p = new Page();
-        p.setPageNumber(pageNumber);
-        int totalCount = 0;
-        try {
-            totalCount = bDao.getRecommendCountOfBooksByTypeID(type);
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        p.SetPageSizeAndTotalCount(8, totalCount);
+
+    public List<Books> getBooksRecommend(int type) {
+
         List list=null;
         try {
-            list = bDao.selectBooksbyRecommend(type, pageNumber, 8);
+            list = bDao.selectBooksbyRecommend(type);
             for(Books b : (List<Books>)list) {
                 b.setScroll(bDao.isScroll(b));
                 b.setHot(bDao.isHot(b));
@@ -85,8 +55,7 @@ public class BooksService {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        p.setList(list);
-        return p;
+        return list;
     }
     public Books getBooksById(int id) {
         Books b=null;
