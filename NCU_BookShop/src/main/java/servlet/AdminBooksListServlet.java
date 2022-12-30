@@ -1,5 +1,6 @@
 package servlet;
 
+import model.Books;
 import model.Page;
 import service.BooksService;
 
@@ -9,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet(name = "admin_books_list",urlPatterns = "/admin/books_list")
 public class AdminBooksListServlet extends HttpServlet {
@@ -21,32 +23,10 @@ public class AdminBooksListServlet extends HttpServlet {
         if(request.getParameter("type") != null) {
             type=Integer.parseInt(request.getParameter("type") ) ;
         }
-        int pageNumber = 1;
-        if(request.getParameter("pageNumber") != null) {
-            try {
-                pageNumber=Integer.parseInt(request.getParameter("pageNumber") ) ;
-            }
-            catch (Exception e)
-            {
 
-            }
+        List<Books> list = bService.getBooksRecommend(type);
 
-        }
-        if(pageNumber<=0)
-            pageNumber=1;
-        Page p = bService.getBooksRecommendPage(type, pageNumber);
-        if(p.getTotalPage()==0)
-        {
-            p.setTotalPage(1);
-            p.setPageNumber(1);
-        }
-        else {
-            if(pageNumber>=p.getTotalPage()+1)
-            {
-                p = bService.getBooksRecommendPage(type, pageNumber);
-            }
-        }
-        request.setAttribute("p", p);
+        request.setAttribute("list", list);
         request.setAttribute("type", type);
         request.getRequestDispatcher("/admin/books_list.jsp").forward(request, response);
     }

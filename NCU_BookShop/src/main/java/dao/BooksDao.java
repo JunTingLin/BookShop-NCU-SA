@@ -56,24 +56,19 @@ public class BooksDao {
             return r.query(sql,new ScalarHandler<Long>(),typeID).intValue();
         }
     }
-    public List<Books> selectBooksbyRecommend(int type, int pageNumber, int pageSize) throws SQLException {
+    public List<Books> selectBooksbyRecommend(int type) throws SQLException {
         QueryRunner r = new QueryRunner(DBUtil.getDataSource());
         if(type==0) {
             //當不添加推薦類型限制的時候
-            String sql = " select b.id,b.name,b.cover,b.intro,b.price,b.stock,t.name typename from books b,type t where b.type_id=t.id order by b.id limit ?,?";
-            return r.query(sql, new BeanListHandler<Books>(Books.class),(pageNumber-1)*pageSize,pageSize);
+            String sql = " select b.id,b.name,b.cover,b.intro,b.price,b.stock,t.name typename from books b,type t where b.type_id=t.id order by b.id";
+            return r.query(sql, new BeanListHandler<Books>(Books.class));
 
         }
 
-        String sql = " select b.id,b.name,b.cover,b.intro,b.price,b.stock,t.name typename from books b,recommend r,type t where b.id=r.books_id and b.type_id=t.id and r.type=? order by b.id limit ?,?";
-        return r.query(sql, new BeanListHandler<Books>(Books.class),type,(pageNumber-1)*pageSize,pageSize);
+        String sql = " select b.id,b.name,b.cover,b.intro,b.price,b.stock,t.name typename from books b,recommend r,type t where b.id=r.books_id and b.type_id=t.id and r.type=? order by b.id";
+        return r.query(sql, new BeanListHandler<Books>(Books.class),type);
     }
-    public int getRecommendCountOfBooksByTypeID(int type) throws SQLException {
-        if(type==0)return getCountOfBooksByTypeID(0);
-        QueryRunner r = new QueryRunner(DBUtil.getDataSource());
-        String sql = "select count(*) from recommend where type=?";
-        return r.query(sql, new ScalarHandler<Long>(),type).intValue();
-    }
+
     public Books getBooksById(int id) throws SQLException {
         QueryRunner r = new QueryRunner(DBUtil.getDataSource());
         String sql = "select b.id,b.name,b.cover,b.price,b.intro,b.stock,t.id typeid,t.name typename from books b,type t where b.id = ? and b.type_id=t.id";

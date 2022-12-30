@@ -59,7 +59,7 @@
 					<th width="25%">操作</th>
 				</tr>
 
-				<c:forEach items="${p.list }" var="b">
+				<c:forEach items="${ list }" var="b">
 					<tr>
 						<td><p>${b.id }</p></td>
 						<td><p><a href="/books_detail?id=${b.id}" target="_blank"><img src="${b.cover}" width="100px" height="100px"></a></p></td>
@@ -97,11 +97,7 @@
 			</table>
 
 			<br>
-			<jsp:include page="/page.jsp">
-				<jsp:param value="/admin/books_list" name="url"/>
-				<jsp:param value="&type=${type }" name="param"/>
-			</jsp:include>
-			<br>
+
 		</div>
 	</body>
 </html>
