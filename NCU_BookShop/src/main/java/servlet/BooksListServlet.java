@@ -1,5 +1,6 @@
 package servlet;
 
+import model.Books;
 import model.Page;
 import model.Type;
 import service.BooksService;
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet(name = "books_List",urlPatterns = "/books_list")
 public class BooksListServlet extends HttpServlet {
@@ -26,43 +28,18 @@ public class BooksListServlet extends HttpServlet {
         {
             id=Integer.parseInt(request.getParameter("typeid"));
         }
-        int pageNumber=1;
-        if(request.getParameter("pageNumber")!=null) {
-            try {
-                pageNumber=Integer.parseInt(request.getParameter("pageNumber"));
-            }
-            catch (Exception e)
-            {
 
-            }
-
-        }
         Type t=null;
         if(id!=0)
         {
             t=tService.selectTypeNameByID(id);
         }
         request.setAttribute("t",t);
-        //List<Books> list=bService.selectBooksByTypeID(id,1,8);
-        //request.setAttribute("booksList",list);
-        if(pageNumber<=0)
-            pageNumber=1;
-        Page p=bService.selectPageByTypeID(id,pageNumber);
 
-        if(p.getTotalPage()==0)
-        {
-            p.setTotalPage(1);
-            p.setPageNumber(1);
-        }
-        else {
-            if(pageNumber>=p.getTotalPage()+1)
-            {
-                p=bService.selectPageByTypeID(id,p.getTotalPage());
-            }
-        }
+        List<Books> list=bService.selectBooksByTypeID(id);
 
-        request.setAttribute("p",p);
-        request.setAttribute("id",String.valueOf(id));
+        request.setAttribute("list",list);
+//        request.setAttribute("id",String.valueOf(id));
         request.getRequestDispatcher("/books_list.jsp").forward(request,response);
     }
 }

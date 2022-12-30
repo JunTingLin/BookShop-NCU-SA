@@ -35,7 +35,7 @@
     <div class="container">
         <h2><c:choose><c:when test="${empty t}">全部科系類別</c:when><c:otherwise>${t.name}</c:otherwise> </c:choose></h2>
         <div class="row">
-            <c:forEach items="${p.list}" var="b">
+            <c:forEach items="${list}" var="b">
                 <div class="col-6 col-sm-4 product-model-sec">
                     <div class="product-grid">
                         <a href="/books_detail?id=${b.id}">
@@ -63,10 +63,10 @@
 
         </div>
 
-        <jsp:include page="page.jsp">
-            <jsp:param name="url" value="/books_list"></jsp:param>
-            <jsp:param name="param" value="&typeid=${id}"></jsp:param>
-        </jsp:include>
+<%--        <jsp:include page="page.jsp">--%>
+<%--            <jsp:param name="url" value="/books_list"></jsp:param>--%>
+<%--            <jsp:param name="param" value="&typeid=${id}"></jsp:param>--%>
+<%--        </jsp:include>--%>
     </div>
 </div>
 </div>
