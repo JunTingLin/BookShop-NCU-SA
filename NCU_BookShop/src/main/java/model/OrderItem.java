@@ -4,20 +4,20 @@ public class OrderItem {
     private int id;
     private int price;
     private int amount;
-    private String goodsName;
-    private Goods goods;
+    private String booksName;
+    private Books books;
     private Order order;// order_id
 
     public void setName(String name) {
-        this.goodsName=name;
+        this.booksName=name;
     }
 
-    public String getGoodsName() {
-        return goodsName;
+    public String getBooksName() {
+        return booksName;
     }
 
-    public void setGoodsName(String goodsName) {
-        this.goodsName = goodsName;
+    public void setBooksName(String booksName) {
+        this.booksName = booksName;
     }
 
     public int getId() {
@@ -38,11 +38,11 @@ public class OrderItem {
     public void setAmount(int amount) {
         this.amount = amount;
     }
-    public Goods getGoods() {
-        return goods;
+    public Books getBooks() {
+        return books;
     }
-    public void setGoods(Goods goods) {
-        this.goods = goods;
+    public void setBooks(Books books) {
+        this.books = books;
     }
     public Order getOrder() {
         return order;
@@ -53,11 +53,11 @@ public class OrderItem {
     public OrderItem() {
         super();
     }
-    public OrderItem(int price, int amount, Goods goods, Order order) {
+    public OrderItem(int price, int amount, Books books, Order order) {
         super();
         this.price = price;
         this.amount = amount;
-        this.goods = goods;
+        this.books = books;
         this.order = order;
     }
 }

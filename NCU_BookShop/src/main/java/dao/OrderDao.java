@@ -28,8 +28,8 @@ public class OrderDao {
     }
     public void insertOrderItem(Connection con, OrderItem item) throws SQLException {
         QueryRunner r = new QueryRunner();
-        String sql ="insert into orderitem(price,amount,goods_id,order_id) values(?,?,?,?)";
-        r.update(con,sql,item.getPrice(),item.getAmount(),item.getGoods().getId(),item.getOrder().getId());
+        String sql ="insert into orderitem(price,amount,books_id,order_id) values(?,?,?,?)";
+        r.update(con,sql,item.getPrice(),item.getAmount(),item.getBooks().getId(),item.getOrder().getId());
     }
     public List<Order> selectAll(int userid) throws SQLException {
         QueryRunner r = new QueryRunner(DBUtil.getDataSource());
@@ -38,7 +38,7 @@ public class OrderDao {
     }
     public List<OrderItem> selectAllItem(int orderid) throws SQLException{
         QueryRunner r = new QueryRunner(DBUtil.getDataSource());
-        String sql = "select i.id,i.price,i.amount,g.name from orderitem i,goods g where order_id=? and i.goods_id=g.id";
+        String sql = "select i.id,i.price,i.amount,b.name from orderitem i,books b where order_id=? and i.books_id=b.id";
         return r.query(sql, new BeanListHandler<OrderItem>(OrderItem.class),orderid);
     }
     public int getOrderCount(int status) throws SQLException {

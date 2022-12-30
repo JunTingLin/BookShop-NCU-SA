@@ -3,7 +3,7 @@ package model;
 public class Recommend {
 	private int id;
 	private int type;//1橫幅 2熱銷 3新品
-	private Goods goods;
+	private Books books;
 
 	public int getId() {
 		return id;
@@ -17,17 +17,17 @@ public class Recommend {
 	public void setType(int type) {
 		this.type = type;
 	}
-	public Goods getGoods() {
-		return goods;
+	public Books getBooks() {
+		return books;
 	}
-	public void setGoods(Goods goods) {
-		this.goods = goods;
+	public void setBooks(Books books) {
+		this.books = books;
 	}
-	public Recommend(int id, int type, Goods goods) {
+	public Recommend(int id, int type, Books books) {
 		super();
 		this.id = id;
 		this.type = type;
-		this.goods = goods;
+		this.books = books;
 	}
 	public Recommend() {
 		super();

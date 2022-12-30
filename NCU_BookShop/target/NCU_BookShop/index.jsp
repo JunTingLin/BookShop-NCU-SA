@@ -16,7 +16,6 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/carousel.js"></script>
-    <script type="text/javascript" src="layer/layer.js"></script>
     <script type="text/javascript" src="js/cart.js"></script>
 </head>
 <body>
@@ -36,20 +35,15 @@
 <!--banner-->
 <div class="banner">
     <div id="banner_carousel" class="carousel-dark slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#banner_carousels" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#banner_carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#banner_carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
         <div class="carousel-inner">
             <c:forEach items="${scrollList}" var="g" varStatus="status">
                 <div class="carousel-item <c:if test='${status.first}'>active</c:if>">
                     <div class="container">
-                        <h2 class="hdng"><a href="/goods_detail?id=${g.id}">${g.name}</a><span></span></h2>
+                        <h2 class="hdng"><a href="/books_detail?id=${g.id}">${g.name}</a><span></span></h2>
                         <p>今日精選推薦</p>
                         <a class="buying_now" href="javascript:;" onclick="buy(${g.id})">立刻購買</a>
                         <div class="banner-text">
-                            <a href="/goods_detail?id=${g.id}">
+                            <a href="/books_detail?id=${g.id}">
                                 <img src="${g.cover}" alt="${g.name}" width="350" height="350">
                             </a>
                         </div>
@@ -70,13 +64,13 @@
         <div class="row align-items-start items">
             <c:forEach items="${newList}" var="g">
                 <div class="col recommend-new">
-                    <a href="/goods_detail?id=${g.id}">
+                    <a href="/books_detail?id=${g.id}">
                         <img src="${g.cover}" class="img-responsive" alt="${g.name}" width="350" height="350"/>
                     </a>
                     <div class="items-info">
                         <p>
                             <span><i class="bi-eye" aria-hidden="true"></i></span>
-                            <a href="/goods_detail?id=${g.id}">查看詳情</a>
+                            <a href="/books_detail?id=${g.id}">查看詳情</a>
                         </p>
                         <a class="buying_now" href="javascript:;" onclick="buy(${g.id})">立刻購買</a>
                         <div class="clearfix"> </div>
