@@ -30,38 +30,38 @@ public class BooksService {
         }
         return scroolBook;
     }
-    public List<Books> selectBooksByTypeID(int typeID, int pageNumber, int pageSize)
+    public List<Books> selectBooksByTypeID(int typeID)
     {
         List<Books> list=null;
         try {
-            list=bDao.selectBooksByTypeID(typeID,pageNumber,pageSize);
+            list=bDao.selectBooksByTypeID(typeID);
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return list;
     }
-    public Page selectPageByTypeID(int typeID,int pageNumber)
-    {
-        Page p=new Page();
-        p.setPageNumber(pageNumber);
-        int totalCount=0;
-        try {
-            totalCount=bDao.getCountOfBooksByTypeID(typeID);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        p.SetPageSizeAndTotalCount(8,totalCount);
-
-        List list=null;
-        try {
-            list=bDao.selectBooksByTypeID(typeID,pageNumber,8);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        p.setList(list);
-        return p;
-    }
+//    public Page selectPageByTypeID(int typeID,int pageNumber)
+//    {
+//        Page p=new Page();
+//        p.setPageNumber(pageNumber);
+//        int totalCount=0;
+//        try {
+//            totalCount=bDao.getCountOfBooksByTypeID(typeID);
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        p.SetPageSizeAndTotalCount(8,totalCount);
+//
+//        List list=null;
+//        try {
+//            list=bDao.selectBooksByTypeID(typeID,pageNumber,8);
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//
+//        p.setList(list);
+//        return p;
+//    }
     public Page getBooksRecommendPage(int type,int pageNumber) {
         Page p = new Page();
         p.setPageNumber(pageNumber);
