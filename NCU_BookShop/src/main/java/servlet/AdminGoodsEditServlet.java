@@ -50,12 +50,6 @@ public class AdminGoodsEditServlet extends HttpServlet {
                         case "cover":
                             g.setCover(item.getString("utf-8"));
                             break;
-                        case "image1":
-                            g.setImage1(item.getString("utf-8"));
-                            break;
-                        case "image2":
-                            g.setImage2(item.getString("utf-8"));
-                            break;
                         case "stock":
                             g.setStock(Integer.parseInt(item.getString("utf-8")));
                             break;
@@ -88,12 +82,6 @@ public class AdminGoodsEditServlet extends HttpServlet {
                     switch(item.getFieldName()) {
                         case "cover":
                             g.setCover("/picture" +fileName);
-                            break;
-                        case "image1":
-                            g.setImage1("/picture" +fileName);
-                            break;
-                        case "image2":
-                            g.setImage2("/picture" +fileName);
                             break;
                     }
                 }

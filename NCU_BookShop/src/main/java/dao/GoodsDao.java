@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class GoodsDao {
     //select g.id,g.name,g.cover,g.price,t.name typename from recommend r,goods g,type t where type=2 and r.goods_id=g.id and g.type_id=t.id
-    // 橫幅列表(type==1)、熱銷列表(type==2)、新品列表(type==3)
+    // 橫幅列表(type==1)、新品列表(type==2)
     public List<Map<String,Object>> getGoodsList(int recommendType) throws SQLException {
         QueryRunner r = new QueryRunner(DBUtil.getDataSource());
         String sql="select g.id,g.name,g.cover,g.price,t.name typename from recommend r,goods g,type t where type=? and r.goods_id=g.id and g.type_id=t.id";
@@ -59,12 +59,12 @@ public class GoodsDao {
         QueryRunner r = new QueryRunner(DBUtil.getDataSource());
         if(type==0) {
             //當不添加推薦類型限制的時候
-            String sql = " select g.id,g.name,g.cover,g.image1,g.image2,g.intro,g.price,g.stock,t.name typename from goods g,type t where g.type_id=t.id order by g.id limit ?,?";
+            String sql = " select g.id,g.name,g.cover,g.intro,g.price,g.stock,t.name typename from goods g,type t where g.type_id=t.id order by g.id limit ?,?";
             return r.query(sql, new BeanListHandler<Goods>(Goods.class),(pageNumber-1)*pageSize,pageSize);
 
         }
 
-        String sql = " select g.id,g.name,g.cover,g.image1,g.image2,g.intro,g.price,g.stock,t.name typename from goods g,recommend r,type t where g.id=r.goods_id and g.type_id=t.id and r.type=? order by g.id limit ?,?";
+        String sql = " select g.id,g.name,g.cover,g.intro,g.price,g.stock,t.name typename from goods g,recommend r,type t where g.id=r.goods_id and g.type_id=t.id and r.type=? order by g.id limit ?,?";
         return r.query(sql, new BeanListHandler<Goods>(Goods.class),type,(pageNumber-1)*pageSize,pageSize);
     }
     public int getRecommendCountOfGoodsByTypeID(int type) throws SQLException {
@@ -75,7 +75,7 @@ public class GoodsDao {
     }
     public Goods getGoodsById(int id) throws SQLException {
         QueryRunner r = new QueryRunner(DBUtil.getDataSource());
-        String sql = "select g.id,g.name,g.cover,g.image1,g.image2,g.price,g.intro,g.stock,t.id typeid,t.name typename from goods g,type t where g.id = ? and g.type_id=t.id";
+        String sql = "select g.id,g.name,g.cover,g.price,g.intro,g.stock,t.id typeid,t.name typename from goods g,type t where g.id = ? and g.type_id=t.id";
         return r.query(sql, new BeanHandler<Goods>(Goods.class),id);
     }
     public int getSearchCount(String keyword) throws SQLException {
@@ -119,19 +119,19 @@ public class GoodsDao {
     }
     public void insert(Goods g) throws SQLException {
         QueryRunner r = new QueryRunner(DBUtil.getDataSource());
-        String sql = "insert into goods(name,cover,image1,image2,price,intro,stock,type_id) values(?,?,?,?,?,?,?,?)";
-        r.update(sql,g.getName(),g.getCover(),g.getImage1(),g.getImage2(),g.getPrice(),g.getIntro(),g.getStock(),g.getType().getId());
+        String sql = "insert into goods(name,cover,price,intro,stock,type_id) values(?,?,?,?,?,?)";
+        r.update(sql,g.getName(),g.getCover(),g.getPrice(),g.getIntro(),g.getStock(),g.getType().getId());
     }
     public void update(Goods g) throws SQLException {
         QueryRunner r = new QueryRunner(DBUtil.getDataSource());
-        String sql = "update goods set name=?,cover=?,image1=?,image2=?,price=?,intro=?,stock=?,type_id=? where id=?";
-        r.update(sql,g.getName(),g.getCover(),g.getImage1(),g.getImage2(),g.getPrice(),g.getIntro(),g.getStock(),g.getType().getId(),g.getId());
+        String sql = "update goods set name=?,cover=?,price=?,intro=?,stock=?,type_id=? where id=?";
+        r.update(sql,g.getName(),g.getCover(),g.getPrice(),g.getIntro(),g.getStock(),g.getType().getId(),g.getId());
     }
 
     public void update(Connection con, Goods g) throws SQLException {  //追加含有連線con的更新
         QueryRunner r = new QueryRunner();
-        String sql = "update goods set name=?,cover=?,image1=?,image2=?,price=?,intro=?,stock=?,type_id=? where id=?";
-        r.update(con,sql,g.getName(),g.getCover(),g.getImage1(),g.getImage2(),g.getPrice(),g.getIntro(),g.getStock(),g.getType().getId(),g.getId());
+        String sql = "update goods set name=?,cover=?,price=?,intro=?,stock=?,type_id=? where id=?";
+        r.update(con,sql,g.getName(),g.getCover(),g.getPrice(),g.getIntro(),g.getStock(),g.getType().getId(),g.getId());
     }
     public void delete(int id) throws SQLException {
         QueryRunner r = new QueryRunner(DBUtil.getDataSource());

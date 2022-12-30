@@ -50,7 +50,8 @@ public class AdminGoodsAddServlet extends HttpServlet {
                             break;
                     }
                 }else {
-                    if(item.getInputStream().available()<=0)continue;
+                    if(item.getInputStream().available()<=0)
+                        continue;
                     String fileName = item.getName();
                     fileName = fileName.substring(fileName.lastIndexOf("."));
                     fileName = "/"+new Date().getTime()+fileName;
@@ -68,12 +69,6 @@ public class AdminGoodsAddServlet extends HttpServlet {
                     switch(item.getFieldName()) {
                         case "cover":
                             g.setCover("/picture" +fileName);
-                            break;
-                        case "image1":
-                            g.setImage1("/picture" +fileName);
-                            break;
-                        case "image2":
-                            g.setImage2("/picture" +fileName);
                             break;
                     }
                 }
