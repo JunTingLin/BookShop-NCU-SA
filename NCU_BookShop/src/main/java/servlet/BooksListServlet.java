@@ -1,7 +1,6 @@
 package servlet;
 
 import model.Books;
-import model.Page;
 import model.Type;
 import service.BooksService;
 import service.TypeService;

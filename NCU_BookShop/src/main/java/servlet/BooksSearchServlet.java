@@ -1,7 +1,6 @@
 package servlet;
 
 import model.Books;
-import model.Page;
 import service.BooksService;
 
 import javax.servlet.ServletException;

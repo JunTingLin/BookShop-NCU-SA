@@ -74,11 +74,7 @@ public class BooksDao {
         String sql = "select b.id,b.name,b.cover,b.price,b.intro,b.stock,t.id typeid,t.name typename from books b,type t where b.id = ? and b.type_id=t.id";
         return r.query(sql, new BeanHandler<Books>(Books.class),id);
     }
-//    public int getSearchCount(String keyword) throws SQLException {
-//        QueryRunner r = new QueryRunner(DBUtil.getDataSource());
-//        String sql = "select count(*) from books where name like ?";
-//        return r.query(sql, new ScalarHandler<Long>(),"%"+keyword+"%").intValue();
-//    }
+
     public List<Books> selectSearchBooks(String keyword) throws SQLException{
         QueryRunner r = new QueryRunner(DBUtil.getDataSource());
         String sql = "select * from books where name like ? ";
