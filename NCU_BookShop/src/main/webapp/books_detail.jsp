@@ -26,20 +26,20 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-4 single-grid simpleCart_shelfItem" >
-				<img src="${g.cover}" data-imagezoom="true" class="img-responsive">
+				<img src="${b.cover}" data-imagezoom="true" class="img-responsive">
 			</div>
 			<div class="col-4 single-grid simpleCart_shelfItem">
-				<h3>${g.name}</h3>
+				<h3>${b.name}</h3>
 				<div class="tag">
-					<p>分類 : <a href="books_list?typeid=${g.type.id}">${g.type.name}</a></p>
+					<p>分類 : <a href="books_list?typeid=${b.type.id}">${b.type.name}</a></p>
 				</div>
-				<p>${g.intro}</p>
+				<p>${b.intro}</p>
 				<div class="view-info">
 					<div class="prices">
-						<h5 class="item_price">NT$ ${g.price}</h5>
+						<h5 class="item_price">NT$ ${b.price}</h5>
 					</div>
 					<div>
-						<a href="javascript:;" class="item_add" onclick="buy(${g.id})">加入購物車</a>
+						<a href="javascript:;" class="item_add" onclick="buy(${b.id})">加入購物車</a>
 					</div>
 				</div>
 			</div>

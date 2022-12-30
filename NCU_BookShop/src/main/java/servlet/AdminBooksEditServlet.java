@@ -29,32 +29,32 @@ public class AdminBooksEditServlet extends HttpServlet {
         ServletFileUpload upload = new ServletFileUpload(factory);
         try {
             List<FileItem> list = upload.parseRequest(request);
-            Books g = new Books();
+            Books b = new Books();
             int pageNumber =1;
             int type=0;
             for(FileItem item:list) {
                 if(item.isFormField()) {
                     switch(item.getFieldName()) {
                         case "id":
-                            g.setId(Integer.parseInt(item.getString("utf-8")));
+                            b.setId(Integer.parseInt(item.getString("utf-8")));
                             break;
                         case "name":
-                            g.setName(item.getString("utf-8"));
+                            b.setName(item.getString("utf-8"));
                             break;
                         case "price":
-                            g.setPrice(Integer.parseInt(item.getString("utf-8")));
+                            b.setPrice(Integer.parseInt(item.getString("utf-8")));
                             break;
                         case "intro":
-                            g.setIntro(item.getString("utf-8"));
+                            b.setIntro(item.getString("utf-8"));
                             break;
                         case "cover":
-                            g.setCover(item.getString("utf-8"));
+                            b.setCover(item.getString("utf-8"));
                             break;
                         case "stock":
-                            g.setStock(Integer.parseInt(item.getString("utf-8")));
+                            b.setStock(Integer.parseInt(item.getString("utf-8")));
                             break;
                         case "typeid":
-                            g.setTypeid(Integer.parseInt(item.getString("utf-8")));
+                            b.setTypeid(Integer.parseInt(item.getString("utf-8")));
                             break;
                         case "pageNumber":
                             pageNumber=Integer.parseInt(item.getString("utf-8"));
@@ -81,12 +81,12 @@ public class AdminBooksEditServlet extends HttpServlet {
                     item.delete();
                     switch(item.getFieldName()) {
                         case "cover":
-                            g.setCover("/picture" +fileName);
+                            b.setCover("/picture" +fileName);
                             break;
                     }
                 }
             }
-            bService.update(g);
+            bService.update(b);
             request.getRequestDispatcher("/admin/books_list?pageNumber=" +pageNumber+"&type="+type).forward(request, response);
         } catch (FileUploadException e) {
             // TODO Auto-generated catch block

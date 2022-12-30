@@ -18,37 +18,37 @@
 		<div class="container-fluid">
 			<br><br>
 			<form class="form-horizontal" action="/admin/books_edit" method="post" enctype="multipart/form-data">
-				<input type="hidden" name="id" value="${g.id }"/>
-				<input type="hidden" name="cover" value="${g.cover }"/>
+				<input type="hidden" name="id" value="${b.id }"/>
+				<input type="hidden" name="cover" value="${b.cover }"/>
 				<input type="hidden" name="pageNo" value="${param.pageNo }"/>
 				<input type="hidden" name="type" value="${param.type }"/>
 				<div class="form-group">
 					<label for="input_name" class="col-sm-1 control-label">書名</label>
 					<div class="col-sm-6">
-						<input type="text" class="form-control" id="input_name" name="name" value="${g.name }" required="required">
+						<input type="text" class="form-control" id="input_name" name="name" value="${b.name }" required="required">
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="input_name" class="col-sm-1 control-label">價格</label>
 					<div class="col-sm-6">
-						<input type="text" class="form-control" id="input_name" name="price" value="${g.price }">
+						<input type="text" class="form-control" id="input_name" name="price" value="${b.price }">
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="input_name" class="col-sm-1 control-label">介紹</label>
 					<div class="col-sm-6">
-						<input type="text" class="form-control" id="input_name" name="intro" value="${g.intro }">
+						<input type="text" class="form-control" id="input_name" name="intro" value="${b.intro }">
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="input_name" class="col-sm-1 control-label">庫存</label>
 					<div class="col-sm-6">
-						<input type="text" class="form-control" id="input_name" name="stock" value="${g.stock }">
+						<input type="text" class="form-control" id="input_name" name="stock" value="${b.stock }">
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="input_file" class="col-sm-1 control-label">封面照片</label>
-					<div class="col-sm-6"><img src="${pageContext.request.contextPath }${g.cover }" width="100" height="100"/>
+					<div class="col-sm-6"><img src="${pageContext.request.contextPath }${b.cover }" width="100" height="100"/>
 						<input type="file" name="cover"  id="input_file">推薦尺寸: 500 * 500
 					</div>
 				</div>
@@ -58,7 +58,7 @@
 						<select class="form-control" id="select_topic" name="typeid">
 
 							<c:forEach items="${typeList }" var="t">
-								<option <c:if test="${t.id==g.type.id }">selected="selected"</c:if> value="${t.id }">${t.name }</option>
+								<option <c:if test="${t.id==b.type.id }">selected="selected"</c:if> value="${t.id }">${t.name }</option>
 							</c:forEach>
 
 						</select>

@@ -36,15 +36,15 @@
 <div class="banner">
     <div id="banner_carousel" class="carousel-dark slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <c:forEach items="${scrollList}" var="g" varStatus="status">
+            <c:forEach items="${scrollList}" var="b" varStatus="status">
                 <div class="carousel-item <c:if test='${status.first}'>active</c:if>">
                     <div class="container">
-                        <h2 class="hdng"><a href="/books_detail?id=${g.id}">${g.name}</a><span></span></h2>
+                        <h2 class="hdng"><a href="/books_detail?id=${b.id}">${b.name}</a><span></span></h2>
                         <p>今日精選推薦</p>
-                        <a class="buying_now" href="javascript:;" onclick="buy(${g.id})">立刻購買</a>
+                        <a class="buying_now" href="javascript:;" onclick="buy(${b.id})">立刻購買</a>
                         <div class="banner-text">
-                            <a href="/books_detail?id=${g.id}">
-                                <img src="${g.cover}" alt="${g.name}" width="350" height="350">
+                            <a href="/books_detail?id=${b.id}">
+                                <img src="${b.cover}" alt="${b.name}" width="350" height="350">
                             </a>
                         </div>
                     </div>
@@ -62,23 +62,23 @@
     <div class="container">
         <div class="new_product">新品推薦</div>
         <div class="row align-items-start items">
-            <c:forEach items="${newList}" var="g">
+            <c:forEach items="${newList}" var="b">
                 <div class="col recommend-new">
-                    <a href="/books_detail?id=${g.id}">
-                        <img src="${g.cover}" class="img-responsive" alt="${g.name}" width="350" height="350"/>
+                    <a href="/books_detail?id=${b.id}">
+                        <img src="${b.cover}" class="img-responsive" alt="${b.name}" width="350" height="350"/>
                     </a>
                     <div class="items-info">
                         <p>
                             <span><i class="bi-eye" aria-hidden="true"></i></span>
-                            <a href="/books_detail?id=${g.id}">查看詳情</a>
+                            <a href="/books_detail?id=${b.id}">查看詳情</a>
                         </p>
-                        <a class="buying_now" href="javascript:;" onclick="buy(${g.id})">立刻購買</a>
+                        <a class="buying_now" href="javascript:;" onclick="buy(${b.id})">立刻購買</a>
                         <div class="clearfix"> </div>
                     </div>
                     <div class="view-info">
-                        <p>${g.typeName} > ${g.name}</p>
+                        <p>${b.typeName} > ${b.name}</p>
                         <div class="prices">
-                            <h6 class="item_price">$ ${g.price}</h6>
+                            <h6 class="item_price">$ ${b.price}</h6>
                         </div>
                     </div>
                 </div>

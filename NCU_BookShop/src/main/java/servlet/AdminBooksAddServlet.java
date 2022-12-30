@@ -29,24 +29,24 @@ public class AdminBooksAddServlet extends HttpServlet {
         ServletFileUpload upload = new ServletFileUpload(factory);
         try {
             List<FileItem> list = upload.parseRequest(request);
-            Books g = new Books();
+            Books b = new Books();
             for(FileItem item:list) {
                 if(item.isFormField()) {
                     switch(item.getFieldName()) {
                         case "name":
-                            g.setName(item.getString("utf-8"));
+                            b.setName(item.getString("utf-8"));
                             break;
                         case "price":
-                            g.setPrice(Integer.parseInt(item.getString("utf-8")));
+                            b.setPrice(Integer.parseInt(item.getString("utf-8")));
                             break;
                         case "intro":
-                            g.setIntro(item.getString("utf-8"));
+                            b.setIntro(item.getString("utf-8"));
                             break;
                         case "stock":
-                            g.setStock(Integer.parseInt(item.getString("utf-8")));
+                            b.setStock(Integer.parseInt(item.getString("utf-8")));
                             break;
                         case "typeid":
-                            g.setTypeid(Integer.parseInt(item.getString("utf-8")));
+                            b.setTypeid(Integer.parseInt(item.getString("utf-8")));
                             break;
                     }
                 }else {
@@ -68,12 +68,12 @@ public class AdminBooksAddServlet extends HttpServlet {
                     item.delete();
                     switch(item.getFieldName()) {
                         case "cover":
-                            g.setCover("/picture" +fileName);
+                            b.setCover("/picture" +fileName);
                             break;
                     }
                 }
             }
-            bService.insert(g);
+            bService.insert(b);
             request.getRequestDispatcher("/admin/books_list").forward(request, response);
         } catch (FileUploadException e) {
             // TODO Auto-generated catch block
