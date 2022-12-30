@@ -25,10 +25,10 @@
 <div class="single">
 	<div class="container">
 		<div class="row">
-			<div class="col-4 single-grid simpleCart_shelfItem" >
+			<div class="col-4 single-grid" >
 				<img src="${b.cover}" data-imagezoom="true" class="img-responsive">
 			</div>
-			<div class="col-4 single-grid simpleCart_shelfItem">
+			<div class="col-4 single-grid">
 				<h3>${b.name}</h3>
 				<div class="tag">
 					<p>分類 : <a href="books_list?typeid=${b.type.id}">${b.type.name}</a></p>
