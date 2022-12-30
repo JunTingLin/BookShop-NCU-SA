@@ -23,18 +23,7 @@ public class AdminOrderListServlet extends HttpServlet {
             status=Integer.parseInt(request.getParameter("status") ) ;
         }
         request.setAttribute("status", status);
-        int pageNumber = 1;
-        if(request.getParameter("pageNumber") != null) {
-            try {
-                pageNumber=Integer.parseInt(request.getParameter("pageNumber") ) ;
-            }
-            catch (Exception e)
-            {
 
-            }
-        }
-        if(pageNumber<=0)
-            pageNumber=1;
         List<Order> list = oService.getOrderList(status);
 
 
