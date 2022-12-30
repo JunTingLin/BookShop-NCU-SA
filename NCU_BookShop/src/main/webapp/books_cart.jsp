@@ -41,7 +41,7 @@
 
 			<c:forEach items="${order.itemMap }" var="item">
 				<div class="cart-header col-md-6">
-					<div class="cart-sec simpleCart_shelfItem">
+					<div class="cart-sec">
 						<div class="cart-item">
 							<a href="/books_detail?id=${item.key}">
 								<img src="${pageContext.request.contextPath }${item.value.books.cover}" class="img-responsive">
