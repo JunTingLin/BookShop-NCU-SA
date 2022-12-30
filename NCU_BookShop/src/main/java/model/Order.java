@@ -20,7 +20,7 @@ public class Order {
         user = new User();
         user.setUsername(username);
     }
-    public void addGoods(Goods g) {
+    public void addBooks(Books g) {
         if(itemMap.containsKey(g.getId())) {
             OrderItem item = itemMap.get(g.getId());
             item.setAmount(item.getAmount()+1);
@@ -40,24 +40,24 @@ public class Order {
         this.itemList = itemList;
     }
 
-    public void lessen(int goodsid) {
-        if(itemMap.containsKey(goodsid)) {
-            OrderItem item = itemMap.get(goodsid);
+    public void lessen(int booksid) {
+        if(itemMap.containsKey(booksid)) {
+            OrderItem item = itemMap.get(booksid);
             item.setAmount(item.getAmount()-1);
             amount--;
             total = total - item.getPrice();
             if(item.getAmount()<=0) {
-                itemMap.remove(goodsid);
+                itemMap.remove(booksid);
             }
         }
     }
-    public void delete(int goodsid)
+    public void delete(int booksid)
     {
-        if(itemMap.containsKey(goodsid)) {
-            OrderItem item = itemMap.get(goodsid);
+        if(itemMap.containsKey(booksid)) {
+            OrderItem item = itemMap.get(booksid);
             total = total -  item.getAmount()*item.getPrice();
             amount-=item.getAmount();
-            itemMap.remove(goodsid);
+            itemMap.remove(booksid);
         }
     }
 

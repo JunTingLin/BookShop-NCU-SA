@@ -17,11 +17,9 @@
 
 		<div class="container-fluid">
 			<br><br>
-			<form class="form-horizontal" action="/admin/goods_edit" method="post" enctype="multipart/form-data">
+			<form class="form-horizontal" action="/admin/books_edit" method="post" enctype="multipart/form-data">
 				<input type="hidden" name="id" value="${g.id }"/>
 				<input type="hidden" name="cover" value="${g.cover }"/>
-				<input type="hidden" name="image1" value="${g.image1 }"/>
-				<input type="hidden" name="image2" value="${g.image2 }"/>
 				<input type="hidden" name="pageNo" value="${param.pageNo }"/>
 				<input type="hidden" name="type" value="${param.type }"/>
 				<div class="form-group">
@@ -52,18 +50,6 @@
 					<label for="input_file" class="col-sm-1 control-label">封面照片</label>
 					<div class="col-sm-6"><img src="${pageContext.request.contextPath }${g.cover }" width="100" height="100"/>
 						<input type="file" name="cover"  id="input_file">推薦尺寸: 500 * 500
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="input_file" class="col-sm-1 control-label">詳情圖片1</label>
-					<div class="col-sm-6"><img src="${pageContext.request.contextPath }${g.image1 }" width="100" height="100"/>
-						<input type="file" name="image1"  id="input_file">推薦尺寸: 500 * 500
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="input_file" class="col-sm-1 control-label">詳情圖片2</label>
-					<div class="col-sm-6"><img src="${pageContext.request.contextPath }${g.image2 }" width="100" height="100"/>
-						<input type="file" name="image2"  id="input_file">推薦尺寸: 500 * 500
 					</div>
 				</div>
 				<div class="form-group">

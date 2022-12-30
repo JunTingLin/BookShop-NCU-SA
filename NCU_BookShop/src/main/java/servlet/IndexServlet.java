@@ -1,6 +1,6 @@
 package servlet;
 
-import service.GoodsService;
+import service.BooksService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,15 +16,15 @@ public class IndexServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
-    private GoodsService gService=new GoodsService();
+    private BooksService bService=new BooksService();
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Map<String,Object> ScrollGood=gService.getScrollGood();
-        request.setAttribute("scroll",ScrollGood);
+        Map<String,Object> ScrollBook=bService.getScrollBook();
+        request.setAttribute("scroll",ScrollBook);
 
-        List<Map<String,Object>>scrollList=gService.getGoodsList(1);
+        List<Map<String,Object>>scrollList=bService.getBooksList(1);
         request.setAttribute("scrollList",scrollList);
 
-        List<Map<String,Object>>newList=gService.getGoodsList(2);
+        List<Map<String,Object>>newList=bService.getBooksList(2);
         request.setAttribute("newList",newList);
 
         request.getRequestDispatcher("index.jsp").forward(request,response);

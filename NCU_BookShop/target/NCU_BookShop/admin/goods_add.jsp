@@ -15,7 +15,7 @@
 		<jsp:include page="/admin/header.jsp"></jsp:include>
 		<div class="container-fluid">
 			<br><br>
-			<form class="form-horizontal" action="/admin/goods_add" method="post" enctype="multipart/form-data">
+			<form class="form-horizontal" action="/admin/books_add" method="post" enctype="multipart/form-data">
 				<div class="form-group">
 					<label for="input_name" class="col-sm-1 control-label">書名</label>
 					<div class="col-sm-6">

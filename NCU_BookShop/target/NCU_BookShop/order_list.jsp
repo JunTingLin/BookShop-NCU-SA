@@ -59,7 +59,7 @@
 							<td><p>${order.total }</p></td>
 							<td>
 								<c:forEach items="${order.itemList }" var="item">
-									<p>${item.goodsName }(${item.price }) x ${item.amount }</p>
+									<p>${item.booksName }(${item.price }) x ${item.amount }</p>
 								</c:forEach>
 
 							</td>

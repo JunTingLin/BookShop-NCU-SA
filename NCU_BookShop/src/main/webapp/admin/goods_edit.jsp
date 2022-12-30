@@ -17,7 +17,7 @@
 
 		<div class="container-fluid">
 			<br><br>
-			<form class="form-horizontal" action="/admin/goods_edit" method="post" enctype="multipart/form-data">
+			<form class="form-horizontal" action="/admin/books_edit" method="post" enctype="multipart/form-data">
 				<input type="hidden" name="id" value="${g.id }"/>
 				<input type="hidden" name="cover" value="${g.cover }"/>
 				<input type="hidden" name="pageNo" value="${param.pageNo }"/>
