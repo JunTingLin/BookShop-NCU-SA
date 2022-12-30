@@ -2,7 +2,6 @@ package service;
 
 import dao.BooksDao;
 import model.Books;
-import model.Page;
 
 import java.sql.Connection;
 import java.sql.SQLException;

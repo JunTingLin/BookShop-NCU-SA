@@ -1,7 +1,6 @@
 package service;
 
 import dao.UserDao;
-import model.Page;
 import model.User;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -79,28 +78,7 @@ public class UserService {
         }
     }
 
-    public Page getUserPage(int pageNumber) {
-        Page p = new Page();
-        p.setPageNumber(pageNumber);
-        int pageSize = 7;
-        int totalCount = 0;
-        try {
-            totalCount = uDao.selectUserCount();
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        p.SetPageSizeAndTotalCount(pageSize, totalCount);
-        List list=null;
-        try {
-            list = uDao.selectUserList( pageNumber, pageSize);
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        p.setList(list);
-        return p;
-    }
+
     public boolean delete(int id ) {
         try {
             uDao.delete(id);
