@@ -11,7 +11,7 @@
  Target Server Version : 50739
  File Encoding         : 65001
 
- Date: 30/12/2022 17:45:27
+ Date: 30/12/2022 21:37:47
 */
 
 SET NAMES utf8mb4;
@@ -82,13 +82,13 @@ CREATE TABLE `orderitem`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `price` float NULL DEFAULT NULL,
   `amount` int(11) NULL DEFAULT NULL,
-  `goods_id` int(11) NULL DEFAULT NULL,
+  `books_id` int(11) NULL DEFAULT NULL,
   `order_id` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `fk_order_id_idx`(`order_id`) USING BTREE,
-  INDEX `fk_orderitem_goods_id_idx`(`goods_id`) USING BTREE,
+  INDEX `fk_orderitem_goods_id_idx`(`books_id`) USING BTREE,
   CONSTRAINT `fk_order_id` FOREIGN KEY (`order_id`) REFERENCES `order` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_orderitem_goods_id` FOREIGN KEY (`goods_id`) REFERENCES `books` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_orderitem_goods_id` FOREIGN KEY (`books_id`) REFERENCES `books` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE = InnoDB AUTO_INCREMENT = 84 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
@@ -131,7 +131,7 @@ CREATE TABLE `type`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of type
@@ -142,6 +142,7 @@ INSERT INTO `type` VALUES (3, '機械工程學系');
 INSERT INTO `type` VALUES (4, '資訊管理學系');
 INSERT INTO `type` VALUES (5, '資訊工程學系');
 INSERT INTO `type` VALUES (6, '大氣科學學系');
+INSERT INTO `type` VALUES (8, '俊霆系');
 
 -- ----------------------------
 -- Table structure for user
