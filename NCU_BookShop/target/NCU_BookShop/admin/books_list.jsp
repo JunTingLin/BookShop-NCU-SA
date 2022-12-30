@@ -71,24 +71,24 @@
 							<p>
 								<c:choose>
 									<c:when test="${b.isScroll }">
-										<a class="btn btn-info" href="/admin/books_recommend?id=${b.id }&method=remove&typeTarget=1&pageNumber=${p.pageNumber}&type=${type}">移出橫幅</a>
+										<a class="btn btn-info" href="/admin/books_recommend?id=${b.id }&method=remove&typeTarget=1&type=${type}">移出橫幅</a>
 									</c:when>
 									<c:otherwise>
-										<a class="btn btn-primary" href="/admin/books_recommend?id=${b.id }&method=add&typeTarget=1&pageNumber=${p.pageNumber}&type=${type}">加入橫幅</a>
+										<a class="btn btn-primary" href="/admin/books_recommend?id=${b.id }&method=add&typeTarget=1&type=${type}">加入橫幅</a>
 									</c:otherwise>
 								</c:choose>
 								<c:choose>
 									<c:when test="${b.isHot }">
-										<a class="btn btn-info" href="/admin/books_recommend?id=${b.id }&method=remove&typeTarget=2&pageNumber=${p.pageNumber}&type=${type}">移出新書</a>
+										<a class="btn btn-info" href="/admin/books_recommend?id=${b.id }&method=remove&typeTarget=2&type=${type}">移出新書</a>
 									</c:when>
 									<c:otherwise>
-										<a class="btn btn-primary" href="/admin/books_recommend?id=${b.id }&method=add&typeTarget=2&pageNumber=${p.pageNumber}&type=${type}">加入新書</a>
+										<a class="btn btn-primary" href="/admin/books_recommend?id=${b.id }&method=add&typeTarget=2&type=${type}">加入新書</a>
 									</c:otherwise>
 								</c:choose>
 
 							</p>
-							<a class="btn btn-success" href="/admin/books_editshow?id=${b.id }& pageNumber=${p.pageNumber}&type=${type}">修改</a>
-							<a class="btn btn-danger" href="/admin/books_delete?id=${b.id }&pageNumber=${p.pageNumber}&type=${type}">刪除</a>
+							<a class="btn btn-success" href="/admin/books_editshow?id=${b.id }&type=${type}">修改</a>
+							<a class="btn btn-danger" href="/admin/books_delete?id=${b.id }&type=${type}">刪除</a>
 						</td>
 					</tr>
 				</c:forEach>

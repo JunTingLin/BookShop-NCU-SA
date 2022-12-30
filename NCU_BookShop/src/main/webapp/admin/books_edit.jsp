@@ -20,8 +20,8 @@
 			<form class="form-horizontal" action="/admin/books_edit" method="post" enctype="multipart/form-data">
 				<input type="hidden" name="id" value="${b.id }"/>
 				<input type="hidden" name="cover" value="${b.cover }"/>
-				<input type="hidden" name="pageNo" value="${param.pageNo }"/>
 				<input type="hidden" name="type" value="${param.type }"/>
+<%--				<C:out> 測試 param 內容 ${param}</C:out>--%>
 				<div class="form-group">
 					<label for="input_name" class="col-sm-1 control-label">書名</label>
 					<div class="col-sm-6">
