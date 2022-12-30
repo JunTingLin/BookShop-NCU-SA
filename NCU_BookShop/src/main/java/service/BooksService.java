@@ -67,28 +67,15 @@ public class BooksService {
         }
         return b;
     }
-    public Page getSearchBooksPage(String keyword, int pageNumber) {
-        Page p = new Page();
-        p.setPageNumber(pageNumber);
-        int totalCount = 0;
-        try {
-//			totalCount = bDao.getBooksCount(typeId);
-            totalCount = bDao.getSearchCount(keyword);
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        p.SetPageSizeAndTotalCount(8, totalCount);
+    public List<Books> getSearchBooks(String keyword) {
         List list=null;
         try {
-//			list = bDao.selectBooks(keyword, pageNo, 8);
-            list = bDao.selectSearchBooks(keyword,pageNumber,8);
+            list = bDao.selectSearchBooks(keyword);
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        p.setList(list);
-        return p;
+        return list;
     }
     public void addRecommend(int id,int type) {
         try {
