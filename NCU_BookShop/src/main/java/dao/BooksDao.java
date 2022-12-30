@@ -83,11 +83,8 @@ public class BooksDao {
     public boolean isScroll(Books b) throws SQLException {
         return isRecommend(b, 1);
     }
-    public boolean isHot(Books b) throws SQLException {
-        return isRecommend(b, 2);
-    }
     public boolean isNew(Books b) throws SQLException {
-        return isRecommend(b, 3);
+        return isRecommend(b, 2);
     }
     private boolean isRecommend(Books b, int type) throws SQLException {
         QueryRunner r = new QueryRunner(DBUtil.getDataSource());

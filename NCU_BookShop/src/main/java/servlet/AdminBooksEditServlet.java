@@ -56,7 +56,7 @@ public class AdminBooksEditServlet extends HttpServlet {
                             b.setTypeid(Integer.parseInt(item.getString("utf-8")));
                             break;
                         case "type":
-                            System.out.println("測試param type "+item.getString("utf-8")+" 。");
+//                            System.out.println("測試param type "+item.getString("utf-8")+" 。");
                             type = Integer.parseInt(item.getString("utf-8"));
                             break;
                     }

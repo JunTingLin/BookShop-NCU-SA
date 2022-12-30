@@ -78,7 +78,7 @@
 									</c:otherwise>
 								</c:choose>
 								<c:choose>
-									<c:when test="${b.isHot }">
+									<c:when test="${b.isNew }">
 										<a class="btn btn-info" href="/admin/books_recommend?id=${b.id }&method=remove&typeTarget=2&type=${type}">移出新書</a>
 									</c:when>
 									<c:otherwise>
