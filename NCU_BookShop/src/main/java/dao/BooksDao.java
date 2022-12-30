@@ -27,18 +27,19 @@ public class BooksDao {
         return r.query(sql, new MapHandler());
     }
 
-    public List<Books> selectBooksByTypeID(int typeID, int pageNumber, int pageSize) throws SQLException {
+    public List<Books> selectBooksByTypeID(int typeID) throws SQLException {
+        // typeID=0代表所有科系
         if(typeID==0)
         {
-            String sql="select * from books limit ? , ?";
+            String sql="select * from books";
             QueryRunner r=new QueryRunner(DBUtil.getDataSource());
-            return  r.query(sql,new BeanListHandler<Books>(Books.class),(pageNumber-1)*pageSize,pageSize);
+            return  r.query(sql,new BeanListHandler<Books>(Books.class));
         }
         else
         {
-            String sql="select * from books where type_id=? limit ? , ?";
+            String sql="select * from books where type_id=?";
             QueryRunner r=new QueryRunner(DBUtil.getDataSource());
-            return  r.query(sql,new BeanListHandler<Books>(Books.class),typeID,(pageNumber-1)*pageSize,pageSize);
+            return  r.query(sql,new BeanListHandler<Books>(Books.class),typeID);
         }
     }
     public int getCountOfBooksByTypeID(int typeID) throws SQLException {
