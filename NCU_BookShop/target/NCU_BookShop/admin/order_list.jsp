@@ -105,6 +105,9 @@
 						<td><p>${order.user.username }</p></td>
 						<td><p>${order.datetime }</p></td>
 						<td>
+							<c:if test="${order.status==1 }">
+								<a class="btn btn-primary" href="/admin/order_status?id=${order.id }&status=2">收款</a>
+							</c:if>
 							<c:if test="${order.status==2 }">
 								<a class="btn btn-success" href="/admin/order_status?id=${order.id }&status=3">發貨</a>
 							</c:if>
