@@ -462,7 +462,7 @@ itens .items-info p{
 }
 
 /*新品推薦區結尾*/
-/**商品列表**/
+/**書本列表**/
 .products{
     padding: 5em 0;
 }
@@ -580,7 +580,7 @@ span.item_price{
     margin: 10px 0 5px;
     display:block;
 }
-/*商品詳情*/
+/*書本詳情*/
 .single{
     margin-top:30px;
 }
@@ -630,7 +630,7 @@ span.item_price{
 }
 
 /*購物車*/
-/**確認商品數目**/
+/**確認書本數目**/
 .cart-items{
     margin-top:30px;
     margin-bottom:30px;

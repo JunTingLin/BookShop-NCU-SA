@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>商品列表</title>
+		<title>書本列表</title>
 		<meta charset="utf-8"/>
 		<link rel="stylesheet" href="css/bootstrap.css"/>
 		<link type="text/css" rel="stylesheet" href="css/style.css">
@@ -21,7 +21,7 @@
 			<ul class="nav nav-tabs" role="tablist">
 				<li class="nav-item" role="presentation">
 					<button class="nav-link <c:if test="${type==0}"> active</c:if>" id="all_t" data-bs-toggle="tab" data-bs-target="#all_t" type="button" role="tab" aria-controls="all_t" aria-selected="true">
-						<a href="/admin/books_list">全部商品</a>
+						<a href="/admin/books_list">全部書本</a>
 					</button>
 				</li>
 				<li class="nav-item" role="presentation">
@@ -41,7 +41,7 @@
 				<div class="tab-pane fade <c:if test="${status==1}"> show active</c:if>"  role="tabpanel" aria-labelledby="t1">...</div>
 				<div class="tab-pane fade <c:if test="${status==2}"> show active</c:if>"  role="tabpanel" aria-labelledby="t2">...</div>
 			</div>
-			<div class="text-right"><a class="btn btn-warning" href="/admin/books_add.jsp">新增商品</a></div>
+			<div class="text-right"><a class="btn btn-warning" href="/admin/books_add.jsp">新增書本</a></div>
 
 			<br>
 			<br>

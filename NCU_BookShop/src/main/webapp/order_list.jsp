@@ -45,7 +45,7 @@
 				<tr>
 					<th width="10%">ID</th>
 					<th width="10%">總價</th>
-					<th width="20%">商品詳情</th>
+					<th width="20%">書本詳情</th>
 					<th width="30%">收貨訊息</th>
 					<th width="10%">訂單狀態</th>
 					<th width="10%">付款方式</th>

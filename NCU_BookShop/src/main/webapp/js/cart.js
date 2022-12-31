@@ -26,12 +26,12 @@ function buy(bookid){
 	});
 }
 /**
- * 將商品購買數減1
+ * 將書本購買數減1
  */
 function lessen(booksid){
     $.post("books_lessen", {booksid:booksid}, function(data){
         if(data=="ok"){
-            setTimeout('popupMsg("成功將商品數減1", 1000);', 0);
+            setTimeout('popupMsg("成功將書本數減1", 1000);', 0);
             setTimeout('location.reload();', 1100);
         }
 		else{
@@ -40,12 +40,12 @@ function lessen(booksid){
     });
 }
 /**
- * 將商品從購物車中刪除
+ * 將書本從購物車中刪除
  */
 function deletes(bookid){
     $.post("books_delete", {booksid:bookid}, function(data){
         if(data=="ok"){
-            setTimeout('popupMsg("成功將商品從購物車中刪除", 1000);', 0);
+            setTimeout('popupMsg("成功將書本從購物車中刪除", 1000);', 0);
             setTimeout('location.reload();', 1100);
         }
         else{
