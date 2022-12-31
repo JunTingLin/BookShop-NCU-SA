@@ -25,25 +25,25 @@
 				<div class="form-group">
 					<label for="input_price" class="col-sm-1 control-label">價格</label>
 					<div class="col-sm-6">
-						<input type="text" class="form-control" id="input_price" name="price" >
+						<input type="text" class="form-control" id="input_price" name="price" required="required" pattern="[1-9]+[0-9]*">
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="input_author" class="col-sm-1 control-label">作者</label>
 					<div class="col-sm-6">
-						<input type="text" class="form-control" id="input_author" name="author" >
+						<input type="text" class="form-control" id="input_author" name="author" required="required">
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="input_intro" class="col-sm-1 control-label">介紹</label>
 					<div class="col-sm-6">
-						<input type="text" class="form-control" id="input_intro" name="intro" >
+						<input type="text" class="form-control" id="input_intro" name="intro" required="required" >
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="input_stock" class="col-sm-1 control-label">庫存</label>
 					<div class="col-sm-6">
-						<input type="text" class="form-control" id="input_stock" name="stock" >
+						<input type="text" class="form-control" id="input_stock" name="stock" required="required" pattern="[1-9]+[0-9]*" >
 					</div>
 				</div>
 				<div class="form-group">

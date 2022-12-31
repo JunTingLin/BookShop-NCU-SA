@@ -37,15 +37,15 @@
 						<h4 class="center-title-1">收貨訊息</h4>
 						<div class="center-input">
 							<span class="center-text">收貨人<label></label></span>
-							<input type="text" name="name" value="${user.name }" placeholder="請輸入收貨人">
+							<input type="text" name="name" value="${user.name }" placeholder="請輸入收貨人" pattern="[^0-9!@#$%^&*()_]*">
 						</div>
 						<div class="center-input">
 							<span class="center-text">聯絡電話</span>
-							<input type="text" name="phone" value="${user.phone }" placeholder="請輸入連絡電話">
+							<input type="text" name="phone" value="${user.phone }" placeholder="請輸入連絡電話" pattern="09[0-9]{8}">
 						</div>
 						<div class="center-input">
 							<span class="center-text">收貨地址</span>
-							<input type="text" name="address" value="${user.address }" placeholder="請輸入地址">
+							<input type="text" name="address" value="${user.address }" placeholder="請輸入地址" pattern="[^0-9!@#$%^&*()_]*">
 						</div>
 						<div class="center-btn text-center">
 						   <input type="submit" value="更新資料">
@@ -61,7 +61,7 @@
 						</div>
 						<div class="center-input">
 							<span class="center-text">新密碼</span>
-							<input type="text" name="newPassword" placeholder="請輸入新密碼">
+							<input type="text" name="newPassword" placeholder="請輸入新密碼" pattern="[a-zA-Z0-9!@#$%^&*()_]{8,}" >
 						</div>
 						<div class="pwd-btn">
 						   <input type="submit" value="修改">
