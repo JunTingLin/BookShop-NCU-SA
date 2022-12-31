@@ -47,11 +47,11 @@
 			</ul>
 
 			<div class="tab-content" id="myTabContent">
-				<div class="tab-pane fade <c:if test="${status==0}"> show active</c:if>" id="all_o" role="tabpanel" aria-labelledby="all_o">...</div>
-				<div class="tab-pane fade <c:if test="${status==1}"> show active</c:if>" id="sta_1" role="tabpanel" aria-labelledby="sta_1">...</div>
-				<div class="tab-pane fade <c:if test="${status==2}"> show active</c:if>" id="sta_2" role="tabpanel" aria-labelledby="sta_2">...</div>
-				<div class="tab-pane fade <c:if test="${status==3}"> show active</c:if>" id="sta_3" role="tabpanel" aria-labelledby="sta_3">...</div>
-				<div class="tab-pane fade <c:if test="${status==4}"> show active</c:if>" id="sta_4" role="tabpanel" aria-labelledby="sta_4">...</div>
+				<div class="tab-pane fade <c:if test="${status==0}"> show active</c:if>"  role="tabpanel" aria-labelledby="all_o">...</div>
+				<div class="tab-pane fade <c:if test="${status==1}"> show active</c:if>"  role="tabpanel" aria-labelledby="sta_1">...</div>
+				<div class="tab-pane fade <c:if test="${status==2}"> show active</c:if>"  role="tabpanel" aria-labelledby="sta_2">...</div>
+				<div class="tab-pane fade <c:if test="${status==3}"> show active</c:if>"  role="tabpanel" aria-labelledby="sta_3">...</div>
+				<div class="tab-pane fade <c:if test="${status==4}"> show active</c:if>"  role="tabpanel" aria-labelledby="sta_4">...</div>
 			</div>
 
 			<br>

@@ -37,9 +37,9 @@
 			</ul>
 
 			<div class="tab-content" id="myTabContent">
-				<div class="tab-pane fade <c:if test="${status==0}"> show active</c:if>" id="all_t" role="tabpanel" aria-labelledby="all_t">...</div>
-				<div class="tab-pane fade <c:if test="${status==1}"> show active</c:if>" id="t1" role="tabpanel" aria-labelledby="t1">...</div>
-				<div class="tab-pane fade <c:if test="${status==2}"> show active</c:if>" id="t2" role="tabpanel" aria-labelledby="t2">...</div>
+				<div class="tab-pane fade <c:if test="${status==0}"> show active</c:if>"  role="tabpanel" aria-labelledby="all_t">...</div>
+				<div class="tab-pane fade <c:if test="${status==1}"> show active</c:if>"  role="tabpanel" aria-labelledby="t1">...</div>
+				<div class="tab-pane fade <c:if test="${status==2}"> show active</c:if>"  role="tabpanel" aria-labelledby="t2">...</div>
 			</div>
 			<div class="text-right"><a class="btn btn-warning" href="/admin/books_add.jsp">新增商品</a></div>
 
