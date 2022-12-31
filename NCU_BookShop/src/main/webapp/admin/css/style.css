@@ -146,3 +146,41 @@ span.books_num {
     font-style: italic;
     font-size: 20px;
 }
+/* books_add */
+.frame {
+    margin-left: 100px;
+    width: 1000px;
+    margin-bottom: 30px;
+}
+.add-book {
+    margin-left: 100px;
+    font-family: 'Zen Antique', serif;
+    width: 1000px;
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    background-color: #9cd3eb;
+    color:rgb(12, 74, 146);
+    font-size: 35px;
+}
+#input_file {
+    height: 65px;
+    padding-top: 35px;
+    padding-left: 25px;
+}
+/*books_edit*/
+.edit-book {
+    margin-left: 100px;
+    font-family: 'Zen Antique', serif;
+    width: 1000px;
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    background-color: #9cd3eb;
+    color:rgb(12, 74, 146);
+    font-size: 35px;
+}
+.edit_img {
+    display: inline-block;
+    margin-bottom: 10px;
+}
