@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Rampart+One&family=Zen+Antique&display=swap" rel="stylesheet">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-<%--    <script type="text/javascript" src="js/carousel.js"></script>--%>
     <script type="text/javascript" src="js/cart.js"></script>
 </head>
 <body>
@@ -96,7 +95,7 @@
                         <div class="clearfix"></div>
                     </div>
                     <div class="view-info">
-                        <p>${b.typeName} > ${b.name}</p>
+                        <p>${b.departmentName} > ${b.name}</p>
                         <div class="prices">
                             <h6 class="item_price">$ ${b.price}</h6>
                         </div>

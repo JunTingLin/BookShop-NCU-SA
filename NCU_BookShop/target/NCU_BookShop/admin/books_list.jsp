@@ -66,7 +66,7 @@
 						<td><p><a href="/books_detail?id=${b.id}" target="_blank">${b.name}</a></p></td>
 						<td><p>${b.intro}</p></td>
 						<td><p>${b.price}</p></td>
-						<td><p>${b.type.name}</p></td>
+						<td><p>${b.department.name}</p></td>
 						<td>
 							<p>
 								<c:choose>

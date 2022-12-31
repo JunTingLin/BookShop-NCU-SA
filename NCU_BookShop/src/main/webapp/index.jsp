@@ -95,7 +95,7 @@
                         <div class="clearfix"></div>
                     </div>
                     <div class="view-info">
-                        <p>${b.typeName} > ${b.name}</p>
+                        <p>${b.departmentName} > ${b.name}</p>
                         <div class="prices">
                             <h6 class="item_price">$ ${b.price}</h6>
                         </div>
