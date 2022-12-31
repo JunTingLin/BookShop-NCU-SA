@@ -29,7 +29,7 @@
 				<div class="alert alert-success">${msg}</div>
 			</c:if>
 			<c:if test="${!empty failMsg }">
-				<div class="alert alert-info">${failMsg}</div>
+				<div class="alert alert-danger">${failMsg}</div>
 			</c:if>
 			
             <form action="/user_login" method="post">
