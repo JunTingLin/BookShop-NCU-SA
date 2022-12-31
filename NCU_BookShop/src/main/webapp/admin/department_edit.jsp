@@ -7,12 +7,15 @@
 	<head>
 		<title>科系類別編輯</title>
 		<meta charset="utf-8"/>
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="css/bootstrap.css"/>
 		<link type="text/css" rel="stylesheet" href="css/style.css">
 		<link href="https://fonts.googleapis.com/css2?family=Rampart+One&family=Zen+Antique&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<jsp:include page="/admin/header.jsp"></jsp:include>
+		<jsp:include page="/admin/header.jsp">
+			<jsp:param name="flag" value="3"></jsp:param>
+		</jsp:include>
 			<div class="container-fluid">
 			<br><br>
 

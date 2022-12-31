@@ -5,6 +5,7 @@ public class Books {
 	private String name;
 	private String cover;
 	private int price;
+	private String author;
 	private String intro;
 	private int stock;
 	private Department department;
@@ -38,7 +39,7 @@ public class Books {
 	}
 	@Override
 	public String toString() {
-		return "Books [id=" + id + ", name=" + name + ", cover=" + cover + ", price=" + price + ", intro=" + intro + ", stock=" + stock + ", department=" + department + "]";
+		return "Books [id=" + id + ", name=" + name + ", cover=" + cover + ", price=" + price + ", author=" + author + ", intro=" + intro + ", stock=" + stock + ", department=" + department + "]";
 	}
 	public int getId() {
 		return id;
@@ -64,6 +65,12 @@ public class Books {
 	public void setPrice(int price) {
 		this.price = price;
 	}
+	public String getAuthor() {
+		return author;
+	}
+	public void setAuthor(String author) {
+		this.author = author;
+	}
 	public String getIntro() {
 		return intro;
 	}
@@ -85,13 +92,14 @@ public class Books {
 	public Books() {
 		super();
 	}
-	public Books(int id, String name, String cover, int price, String intro, int stock,
+	public Books(int id, String name, String cover, int price, String author, String intro, int stock,
 				 Department department) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.cover = cover;
 		this.price = price;
+		this.author = author;
 		this.intro = intro;
 		this.stock = stock;
 		this.department = department;

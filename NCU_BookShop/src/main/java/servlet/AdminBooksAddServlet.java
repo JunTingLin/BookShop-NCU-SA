@@ -39,6 +39,9 @@ public class AdminBooksAddServlet extends HttpServlet {
                         case "price":
                             b.setPrice(Integer.parseInt(item.getString("utf-8")));
                             break;
+                        case "author":
+                            b.setAuthor(item.getString("utf-8"));
+                            break;
                         case "intro":
                             b.setIntro(item.getString("utf-8"));
                             break;
