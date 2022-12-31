@@ -34,27 +34,27 @@
                     <h3 class="register-title"><i class="bi bi-person-plus-fill"></i> 註冊</h3>
                     <div class="register-input">
                         <span class="register-text">■&ensp;帳號(user name) <label style="color:red;">*</label></span>
-                        <input type="text" name="username" placeholder="請輸入帳號名稱" required="required">
+                        <input type="text" name="username" placeholder="請輸入帳號名稱" pattern="[a-zA-Z0-9]+" required="required">
                     </div>
                     <div class="register-input">
                         <span class="register-text">■&ensp;電子郵件(email) <label style="color:red;">*</label></span>
-                        <input type="text" name="email" placeholder="請輸入電子郵件" required="required">
+                        <input type="email" name="email" placeholder="請輸入電子郵件" required="required">
                     </div>
                     <div class="register-input">
                         <span class="register-text">■&ensp;密碼(password) <label style="color:red;">*</label></span>
-                        <input type="password" name="password" placeholder="請輸入密碼" required="required">
+                        <input type="password" name="password" placeholder="請輸入密碼" pattern="[a-zA-Z0-9!@#$%^&*()_]{8,}" required="required">
                     </div>
                     <div class="register-input">
                         <span class="register-text">■&ensp;收貨人姓名(full name)</span>
-                        <input type="text" name="name" placeholder="請輸入收貨人姓名">
+                        <input type="text" name="name" placeholder="請輸入收貨人姓名" pattern="[^0-9!@#$%^&*()_]*">
                     </div>
                     <div class="register-input">
                         <span class="register-text">■&ensp;收貨人電話(phone)</span>
-                        <input type="text" name="phone" placeholder="請輸入收貨人電話">
+                        <input type="text" name="phone" placeholder="請輸入收貨人電話" pattern="09[0-9]{8}">
                     </div>
                     <div class="register-input">
                         <span class="register-text">■&ensp;收貨地址(address)</span>
-                        <input type="text" name="address" placeholder="請輸入收貨地址">
+                        <input type="text" name="address" placeholder="請輸入收貨地址" pattern="[^0-9!@#$%^&*()_]*">
                     </div>
                 </div>
                 <div class="register-btn">
