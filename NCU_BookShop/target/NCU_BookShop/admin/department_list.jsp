@@ -6,6 +6,7 @@
 <html>
 	<head>
 		<title>科系列表</title>
+		<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 		<meta charset="utf-8"/>
 		<link rel="stylesheet" href="css/bootstrap.css"/>
 		<link type="text/css" rel="stylesheet" href="css/style.css">
