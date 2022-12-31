@@ -31,7 +31,7 @@
 
 		<div class="col-md-12 product-model-sec">
 
-			<c:forEach items="${p.list }" var="b">
+			<c:forEach items="${ list }" var="b">
 				<div class="product-grid">
 					<a href="${pageContext.request.contextPath }/books_detail?id=${b.id}">
 						<div class="more-product"><span> </span></div>
@@ -58,12 +58,7 @@
 
 			<div class="clearfix"> </div>
 		</div>
-		<div>
-			<jsp:include page="page.jsp">
-				<jsp:param name="url" value="/books_search"></jsp:param>
-				<jsp:param name="param" value="&keyword=${keyword}"></jsp:param>
-			</jsp:include>
-		</div>
+
 	</div>
 </div>
 <!--//products-->

@@ -43,7 +43,7 @@
                                 <img src="${b.cover}" class="img-responsive" alt="${b.name}" width="240" height="240">
                             </div>
                         </a>
-                        <div class="product-info simpleCart_shelfItem">
+                        <div class="product-info">
                             <div class="product-info-cust prt_name">
                                 <h4>${b.name}</h4>
                                 <div class="view-info">
@@ -63,10 +63,6 @@
 
         </div>
 
-<%--        <jsp:include page="page.jsp">--%>
-<%--            <jsp:param name="url" value="/books_list"></jsp:param>--%>
-<%--            <jsp:param name="param" value="&typeid=${id}"></jsp:param>--%>
-<%--        </jsp:include>--%>
     </div>
 </div>
 </div>

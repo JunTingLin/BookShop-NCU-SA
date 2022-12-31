@@ -47,11 +47,11 @@
 			</ul>
 
 			<div class="tab-content" id="myTabContent">
-				<div class="tab-pane fade <c:if test="${status==0}"> show active</c:if>" id="all_o" role="tabpanel" aria-labelledby="all_o">...</div>
-				<div class="tab-pane fade <c:if test="${status==1}"> show active</c:if>" id="sta_1" role="tabpanel" aria-labelledby="sta_1">...</div>
-				<div class="tab-pane fade <c:if test="${status==2}"> show active</c:if>" id="sta_2" role="tabpanel" aria-labelledby="sta_2">...</div>
-				<div class="tab-pane fade <c:if test="${status==3}"> show active</c:if>" id="sta_3" role="tabpanel" aria-labelledby="sta_3">...</div>
-				<div class="tab-pane fade <c:if test="${status==4}"> show active</c:if>" id="sta_4" role="tabpanel" aria-labelledby="sta_4">...</div>
+				<div class="tab-pane fade <c:if test="${status==0}"> show active</c:if>"  role="tabpanel" aria-labelledby="all_o">...</div>
+				<div class="tab-pane fade <c:if test="${status==1}"> show active</c:if>"  role="tabpanel" aria-labelledby="sta_1">...</div>
+				<div class="tab-pane fade <c:if test="${status==2}"> show active</c:if>"  role="tabpanel" aria-labelledby="sta_2">...</div>
+				<div class="tab-pane fade <c:if test="${status==3}"> show active</c:if>"  role="tabpanel" aria-labelledby="sta_3">...</div>
+				<div class="tab-pane fade <c:if test="${status==4}"> show active</c:if>"  role="tabpanel" aria-labelledby="sta_4">...</div>
 			</div>
 
 			<br>
@@ -61,7 +61,7 @@
 			<tr>
 				<th width="5%">ID</th>
 				<th width="5%">總金額</th>
-				<th width="15%">商品詳情</th>
+				<th width="15%">書本詳情</th>
 				<th width="20%">收貨訊息</th>
 				<th width="10%">訂單狀態</th>
 				<th width="10%">付款方式</th>
@@ -70,7 +70,7 @@
 				<th width="10%">操作</th>
 			</tr>
 
-				<c:forEach items="${p.list }" var="order">
+				<c:forEach items="${ list }" var="order">
 					<tr>
 						<td><p>${order.id }</p></td>
 						<td><p>${order.total }</p></td>
@@ -118,11 +118,6 @@
 
 		</table>
 
-		<br>
-			<jsp:include page="/page.jsp">
-				<jsp:param value="/admin/order_list" name="url"/>
-				<jsp:param value="&status=${status}" name="param"/>
-			</jsp:include>
 		<br>
 		</div>
 		</div>

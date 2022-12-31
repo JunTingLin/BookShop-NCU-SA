@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>商品列表</title>
+		<title>書本列表</title>
 		<meta charset="utf-8"/>
 		<link rel="stylesheet" href="css/bootstrap.css"/>
 		<link type="text/css" rel="stylesheet" href="css/style.css">
@@ -21,7 +21,7 @@
 			<ul class="nav nav-tabs" role="tablist">
 				<li class="nav-item" role="presentation">
 					<button class="nav-link <c:if test="${type==0}"> active</c:if>" id="all_t" data-bs-toggle="tab" data-bs-target="#all_t" type="button" role="tab" aria-controls="all_t" aria-selected="true">
-						<a href="/admin/books_list">全部商品</a>
+						<a href="/admin/books_list">全部書本</a>
 					</button>
 				</li>
 				<li class="nav-item" role="presentation">
@@ -37,11 +37,11 @@
 			</ul>
 
 			<div class="tab-content" id="myTabContent">
-				<div class="tab-pane fade <c:if test="${status==0}"> show active</c:if>" id="all_t" role="tabpanel" aria-labelledby="all_t">...</div>
-				<div class="tab-pane fade <c:if test="${status==1}"> show active</c:if>" id="t1" role="tabpanel" aria-labelledby="t1">...</div>
-				<div class="tab-pane fade <c:if test="${status==2}"> show active</c:if>" id="t2" role="tabpanel" aria-labelledby="t2">...</div>
+				<div class="tab-pane fade <c:if test="${status==0}"> show active</c:if>"  role="tabpanel" aria-labelledby="all_t">...</div>
+				<div class="tab-pane fade <c:if test="${status==1}"> show active</c:if>"  role="tabpanel" aria-labelledby="t1">...</div>
+				<div class="tab-pane fade <c:if test="${status==2}"> show active</c:if>"  role="tabpanel" aria-labelledby="t2">...</div>
 			</div>
-			<div class="text-right"><a class="btn btn-warning" href="/admin/books_add.jsp">新增商品</a></div>
+			<div class="text-right"><a class="btn btn-warning" href="/admin/books_add.jsp">新增書本</a></div>
 
 			<br>
 			<br>
@@ -59,36 +59,36 @@
 					<th width="25%">操作</th>
 				</tr>
 
-				<c:forEach items="${p.list }" var="b">
+				<c:forEach items="${ list }" var="b">
 					<tr>
 						<td><p>${b.id }</p></td>
 						<td><p><a href="/books_detail?id=${b.id}" target="_blank"><img src="${b.cover}" width="100px" height="100px"></a></p></td>
 						<td><p><a href="/books_detail?id=${b.id}" target="_blank">${b.name}</a></p></td>
 						<td><p>${b.intro}</p></td>
 						<td><p>${b.price}</p></td>
-						<td><p>${b.type.name}</p></td>
+						<td><p>${b.department.name}</p></td>
 						<td>
 							<p>
 								<c:choose>
 									<c:when test="${b.isScroll }">
-										<a class="btn btn-info" href="/admin/books_recommend?id=${b.id }&method=remove&typeTarget=1&pageNumber=${p.pageNumber}&type=${type}">移出橫幅</a>
+										<a class="btn btn-info" href="/admin/books_recommend?id=${b.id }&method=remove&typeTarget=1&type=${type}">移出橫幅</a>
 									</c:when>
 									<c:otherwise>
-										<a class="btn btn-primary" href="/admin/books_recommend?id=${b.id }&method=add&typeTarget=1&pageNumber=${p.pageNumber}&type=${type}">加入橫幅</a>
+										<a class="btn btn-primary" href="/admin/books_recommend?id=${b.id }&method=add&typeTarget=1&type=${type}">加入橫幅</a>
 									</c:otherwise>
 								</c:choose>
 								<c:choose>
-									<c:when test="${b.isHot }">
-										<a class="btn btn-info" href="/admin/books_recommend?id=${b.id }&method=remove&typeTarget=2&pageNumber=${p.pageNumber}&type=${type}">移出新書</a>
+									<c:when test="${b.isNew }">
+										<a class="btn btn-info" href="/admin/books_recommend?id=${b.id }&method=remove&typeTarget=2&type=${type}">移出新書</a>
 									</c:when>
 									<c:otherwise>
-										<a class="btn btn-primary" href="/admin/books_recommend?id=${b.id }&method=add&typeTarget=2&pageNumber=${p.pageNumber}&type=${type}">加入新書</a>
+										<a class="btn btn-primary" href="/admin/books_recommend?id=${b.id }&method=add&typeTarget=2&type=${type}">加入新書</a>
 									</c:otherwise>
 								</c:choose>
 
 							</p>
-							<a class="btn btn-success" href="/admin/books_editshow?id=${b.id }& pageNumber=${p.pageNumber}&type=${type}">修改</a>
-							<a class="btn btn-danger" href="/admin/books_delete?id=${b.id }&pageNumber=${p.pageNumber}&type=${type}">刪除</a>
+							<a class="btn btn-success" href="/admin/books_editshow?id=${b.id }&type=${type}">修改</a>
+							<a class="btn btn-danger" href="/admin/books_delete?id=${b.id }&type=${type}">刪除</a>
 						</td>
 					</tr>
 				</c:forEach>
@@ -97,11 +97,7 @@
 			</table>
 
 			<br>
-			<jsp:include page="/page.jsp">
-				<jsp:param value="/admin/books_list" name="url"/>
-				<jsp:param value="&type=${type }" name="param"/>
-			</jsp:include>
-			<br>
+
 		</div>
 	</body>
 </html>

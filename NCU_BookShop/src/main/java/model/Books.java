@@ -7,9 +7,8 @@ public class Books {
 	private int price;
 	private String intro;
 	private int stock;
-	private Type type;
+	private Department department;
 	private boolean isScroll;
-	private boolean isHot;
 	private boolean isNew;
 	
 	
@@ -19,33 +18,27 @@ public class Books {
 	public void setScroll(boolean isScroll) {
 		this.isScroll = isScroll;
 	}
-	public boolean getIsHot() {
-		return isHot;
-	}
-	public void setHot(boolean isHot) {
-		this.isHot = isHot;
-	}
 	public boolean getIsNew() {
 		return isNew;
 	}
 	public void setNew(boolean isNew) {
 		this.isNew = isNew;
 	}
-	public void setTypeid(int typeid) {
-		if(type==null) {
-			type = new Type();
+	public void setDepartmentid(int departmentid) {
+		if(department ==null) {
+			department = new Department();
 		}
-		type.setId(typeid);
+		department.setId(departmentid);
 	}
-	public void setTypename(String typename) {
-		if(type==null) {
-			type = new Type();
+	public void setDepartmentname(String departmentname) {
+		if(department ==null) {
+			department = new Department();
 		}
-		type.setName(typename);
+		department.setName(departmentname);
 	}
 	@Override
 	public String toString() {
-		return "Books [id=" + id + ", name=" + name + ", cover=" + cover + ", price=" + price + ", intro=" + intro + ", stock=" + stock + ", type=" + type + "]";
+		return "Books [id=" + id + ", name=" + name + ", cover=" + cover + ", price=" + price + ", intro=" + intro + ", stock=" + stock + ", department=" + department + "]";
 	}
 	public int getId() {
 		return id;
@@ -83,17 +76,17 @@ public class Books {
 	public void setStock(int stock) {
 		this.stock = stock;
 	}
-	public Type getType() {
-		return type;
+	public Department getDepartment() {
+		return department;
 	}
-	public void setType(Type type) {
-		this.type = type;
+	public void setDepartment(Department department) {
+		this.department = department;
 	}
 	public Books() {
 		super();
 	}
 	public Books(int id, String name, String cover, int price, String intro, int stock,
-				 Type type) {
+				 Department department) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -101,7 +94,7 @@ public class Books {
 		this.price = price;
 		this.intro = intro;
 		this.stock = stock;
-		this.type = type;
+		this.department = department;
 	}
 	
 	

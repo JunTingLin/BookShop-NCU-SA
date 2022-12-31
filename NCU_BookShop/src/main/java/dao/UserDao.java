@@ -67,11 +67,7 @@ public class UserDao {
         String sql = "select count(*) from user";
         return r.query(sql, new ScalarHandler<Long>()).intValue();
     }
-    public List selectUserList(int pageNo, int pageSize) throws SQLException {
-        QueryRunner r = new QueryRunner(DBUtil.getDataSource());
-        String sql = "select * from user limit ?,?";
-        return r.query(sql, new BeanListHandler<User>(User.class), (pageNo-1)*pageSize,pageSize );
-    }
+
     public void delete(int id) throws SQLException {
         QueryRunner r = new QueryRunner(DBUtil.getDataSource());
         String sql = "delete from user where id = ?";

@@ -2,7 +2,6 @@ package service;
 
 import dao.BooksDao;
 import model.Books;
-import model.Page;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -30,63 +29,31 @@ public class BooksService {
         }
         return scroolBook;
     }
-    public List<Books> selectBooksByTypeID(int typeID)
+    public List<Books> selectBooksByDepartmentID(int departmentID)
     {
         List<Books> list=null;
         try {
-            list=bDao.selectBooksByTypeID(typeID);
+            list=bDao.selectBooksByDepartmentID(departmentID);
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return list;
     }
-//    public Page selectPageByTypeID(int typeID,int pageNumber)
-//    {
-//        Page p=new Page();
-//        p.setPageNumber(pageNumber);
-//        int totalCount=0;
-//        try {
-//            totalCount=bDao.getCountOfBooksByTypeID(typeID);
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//        p.SetPageSizeAndTotalCount(8,totalCount);
-//
-//        List list=null;
-//        try {
-//            list=bDao.selectBooksByTypeID(typeID,pageNumber,8);
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//
-//        p.setList(list);
-//        return p;
-//    }
-    public Page getBooksRecommendPage(int type,int pageNumber) {
-        Page p = new Page();
-        p.setPageNumber(pageNumber);
-        int totalCount = 0;
-        try {
-            totalCount = bDao.getRecommendCountOfBooksByTypeID(type);
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        p.SetPageSizeAndTotalCount(8, totalCount);
+
+    public List<Books> getBooksRecommend(int type) {
+
         List list=null;
         try {
-            list = bDao.selectBooksbyRecommend(type, pageNumber, 8);
+            list = bDao.selectBooksbyRecommend(type);
             for(Books b : (List<Books>)list) {
                 b.setScroll(bDao.isScroll(b));
-                b.setHot(bDao.isHot(b));
                 b.setNew(bDao.isNew(b));
             }
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        p.setList(list);
-        return p;
+        return list;
     }
     public Books getBooksById(int id) {
         Books b=null;
@@ -98,28 +65,15 @@ public class BooksService {
         }
         return b;
     }
-    public Page getSearchBooksPage(String keyword, int pageNumber) {
-        Page p = new Page();
-        p.setPageNumber(pageNumber);
-        int totalCount = 0;
-        try {
-//			totalCount = bDao.getBooksCount(typeId);
-            totalCount = bDao.getSearchCount(keyword);
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        p.SetPageSizeAndTotalCount(8, totalCount);
+    public List<Books> getSearchBooks(String keyword) {
         List list=null;
         try {
-//			list = bDao.selectBooks(keyword, pageNo, 8);
-            list = bDao.selectSearchBooks(keyword,pageNumber,8);
+            list = bDao.selectSearchBooks(keyword);
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        p.setList(list);
-        return p;
+        return list;
     }
     public void addRecommend(int id,int type) {
         try {

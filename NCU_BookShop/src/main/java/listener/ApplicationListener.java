@@ -1,6 +1,6 @@
 package listener;
 
-import service.TypeService;
+import service.DepartmentService;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -11,8 +11,9 @@ import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 
 @WebListener()
-public class ApplicationListener implements ServletContextListener{
-    TypeService tsService=new TypeService();
+public class ApplicationListener implements ServletContextListener,
+        HttpSessionListener, HttpSessionAttributeListener {
+    DepartmentService depService=new DepartmentService();
     // Public constructor is required by servlet spec
     public ApplicationListener() {
     }
@@ -25,7 +26,7 @@ public class ApplicationListener implements ServletContextListener{
          initialized(when the Web application is deployed).
          You can initialize servlet context related data here.
       */
-        sce.getServletContext().setAttribute("typeList",tsService.GetAllType());
+        sce.getServletContext().setAttribute("departmentList",depService.GetAllDepartment());
     }
 
     public void contextDestroyed(ServletContextEvent sce) {
@@ -35,5 +36,36 @@ public class ApplicationListener implements ServletContextListener{
       */
     }
 
+    // -------------------------------------------------------
+    // HttpSessionListener implementation
+    // -------------------------------------------------------
+    public void sessionCreated(HttpSessionEvent se) {
+        /* Session is created. */
+    }
 
+    public void sessionDestroyed(HttpSessionEvent se) {
+        /* Session is destroyed. */
+    }
+
+    // -------------------------------------------------------
+    // HttpSessionAttributeListener implementation
+    // -------------------------------------------------------
+
+    public void attributeAdded(HttpSessionBindingEvent sbe) {
+      /* This method is called when an attribute
+         is added to a session.
+      */
+    }
+
+    public void attributeRemoved(HttpSessionBindingEvent sbe) {
+      /* This method is called when an attribute
+         is removed from a session.
+      */
+    }
+
+    public void attributeReplaced(HttpSessionBindingEvent sbe) {
+      /* This method is invoked when an attibute
+         is replaced in a session.
+      */
+    }
 }
