@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>新增商品</title>
+		<title>新增書本</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="css/bootstrap.css" />
 		<link type="text/css" rel="stylesheet" href="css/style.css">

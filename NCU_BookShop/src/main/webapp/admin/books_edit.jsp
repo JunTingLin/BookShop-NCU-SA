@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>編輯商品</title>
+		<title>編輯書本</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="css/bootstrap.css" />
 		<link type="text/css" rel="stylesheet" href="css/style.css">

@@ -33,7 +33,7 @@
 <!--products-->
 <div class="products">
     <div class="container">
-        <h2><c:choose><c:when test="${t==2}">新品商品</c:when></c:choose></h2>
+        <h2><c:choose><c:when test="${t==2}">新品書本</c:when></c:choose></h2>
 
         <div class="row">
             <c:forEach items="${list}" var="b">

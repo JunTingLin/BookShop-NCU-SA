@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>商品詳情</title>
+	<title>書本詳情</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
