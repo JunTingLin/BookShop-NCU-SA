@@ -31,7 +31,7 @@
 			<div class="col-4 single-grid">
 				<h3>${b.name}</h3>
 				<div class="tag">
-					<p>分類 : <a href="books_list?typeid=${b.type.id}">${b.type.name}</a></p>
+					<p>分類 : <a href="books_list?departmentid=${b.department.id}">${b.department.name}</a></p>
 				</div>
 				<p>${b.intro}</p>
 				<div class="view-info">
@@ -47,8 +47,8 @@
 				<ul>
 					<li><a  href="/books_list">全部科系類別</a></li>
 
-					<c:forEach items="${typeList}" var="t">
-						<li><a href="/books_list?typeid=${t.id}">${t.name}</a></li>
+					<c:forEach items="${departmentList}" var="dep">
+						<li><a href="/books_list?departmentid=${dep.id}">${dep.name}</a></li>
 					</c:forEach>
 				</ul>
 			</div>

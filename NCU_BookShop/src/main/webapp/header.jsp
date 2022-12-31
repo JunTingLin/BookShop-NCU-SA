@@ -23,8 +23,8 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="/books_list">不分科系</a></li>
-                            <c:forEach items="${typeList}" var="t">
-                                <li><a class="dropdown-item" href="/books_list?typeid=${t.id}">${t.name}</a></li>
+                            <c:forEach items="${departmentList}" var="dep">
+                                <li><a class="dropdown-item" href="/books_list?departmentid=${dep.id}">${dep.name}</a></li>
                             </c:forEach>
                         </ul>
                     </li>

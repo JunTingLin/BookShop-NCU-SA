@@ -55,10 +55,10 @@
 				<div class="form-group">
 					<label for="select_topic" class="col-sm-1 control-label">科系類別</label>
 					<div class="col-sm-6">
-						<select class="form-control" id="select_topic" name="typeid">
+						<select class="form-control" id="select_topic" name="departmentid">
 
-							<c:forEach items="${typeList }" var="t">
-								<option <c:if test="${t.id==b.type.id }">selected="selected"</c:if> value="${t.id }">${t.name }</option>
+							<c:forEach items="${departmentList }" var="dep">
+								<option <c:if test="${dep.id==b.department.id }">selected="selected"</c:if> value="${dep.id }">${dep.name }</option>
 							</c:forEach>
 
 						</select>

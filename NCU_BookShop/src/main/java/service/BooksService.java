@@ -29,11 +29,11 @@ public class BooksService {
         }
         return scroolBook;
     }
-    public List<Books> selectBooksByTypeID(int typeID)
+    public List<Books> selectBooksByDepartmentID(int departmentID)
     {
         List<Books> list=null;
         try {
-            list=bDao.selectBooksByTypeID(typeID);
+            list=bDao.selectBooksByDepartmentID(departmentID);
         } catch (SQLException e) {
             e.printStackTrace();
         }

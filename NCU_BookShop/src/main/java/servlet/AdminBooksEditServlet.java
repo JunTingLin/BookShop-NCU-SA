@@ -52,8 +52,8 @@ public class AdminBooksEditServlet extends HttpServlet {
                         case "stock":
                             b.setStock(Integer.parseInt(item.getString("utf-8")));
                             break;
-                        case "typeid":
-                            b.setTypeid(Integer.parseInt(item.getString("utf-8")));
+                        case "departmentid":
+                            b.setDepartmentid(Integer.parseInt(item.getString("utf-8")));
                             break;
                         case "type":
 //                            System.out.println("測試param type "+item.getString("utf-8")+" 。");

@@ -1,9 +1,9 @@
 package servlet;
 
 import model.Books;
-import model.Type;
+import model.Department;
 import service.BooksService;
-import service.TypeService;
+import service.DepartmentService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,26 +16,26 @@ import java.util.List;
 @WebServlet(name = "books_List",urlPatterns = "/books_list")
 public class BooksListServlet extends HttpServlet {
     private BooksService bService=new BooksService();
-    private TypeService tService=new TypeService();
+    private DepartmentService depService=new DepartmentService();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id=0;
-        if(request.getParameter("typeid")!=null)
+        if(request.getParameter("departmentid")!=null)
         {
-            id=Integer.parseInt(request.getParameter("typeid"));
+            id=Integer.parseInt(request.getParameter("departmentid"));
         }
 
-        Type t=null;
+        Department department =null;
         if(id!=0)
         {
-            t=tService.selectTypeNameByID(id);
+            department=depService.selectDepartmentNameByID(id);
         }
-        request.setAttribute("t",t);
+        request.setAttribute("dep",department);
 
-        List<Books> list=bService.selectBooksByTypeID(id);
+        List<Books> list=bService.selectBooksByDepartmentID(id);
 
         request.setAttribute("list",list);
 //        request.setAttribute("id",String.valueOf(id));

@@ -20,7 +20,7 @@
                         <a class="nav-link <c:if test="${param.flag==2}">active</c:if>" href="/admin/books_list" >商品管理</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <c:if test="${param.flag==3}">active</c:if>" href="/admin/type_list" >科系管理</a>
+                        <a class="nav-link <c:if test="${param.flag==3}">active</c:if>" href="/admin/department_list" >科系管理</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/user_logout">登出</a>
