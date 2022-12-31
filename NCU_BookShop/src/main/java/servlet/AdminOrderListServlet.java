@@ -1,6 +1,6 @@
 package servlet;
 
-import model.Page;
+import model.Order;
 import service.OrderService;
 
 import javax.servlet.ServletException;
@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet(name = "admin_order_list",urlPatterns = "/admin/order_list")
 public class AdminOrderListServlet extends HttpServlet {
@@ -22,32 +23,11 @@ public class AdminOrderListServlet extends HttpServlet {
             status=Integer.parseInt(request.getParameter("status") ) ;
         }
         request.setAttribute("status", status);
-        int pageNumber = 1;
-        if(request.getParameter("pageNumber") != null) {
-            try {
-                pageNumber=Integer.parseInt(request.getParameter("pageNumber") ) ;
-            }
-            catch (Exception e)
-            {
 
-            }
-        }
-        if(pageNumber<=0)
-            pageNumber=1;
-        Page p = oService.getOrderPage(status,pageNumber);
-        if(p.getTotalPage()==0)
-        {
-            p.setTotalPage(1);
-            p.setPageNumber(1);
-        }
-        else {
-            if(pageNumber>=p.getTotalPage()+1)
-            {
-                p = oService.getOrderPage(status,pageNumber);
-            }
-        }
+        List<Order> list = oService.getOrderList(status);
 
-        request.setAttribute("p", p);
+
+        request.setAttribute("list", list);
         request.getRequestDispatcher("/admin/order_list.jsp").forward(request, response);
     }
 }

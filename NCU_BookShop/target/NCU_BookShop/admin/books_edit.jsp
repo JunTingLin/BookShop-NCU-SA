@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>編輯商品</title>
+		<title>編輯書本</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="css/bootstrap.css" />
 		<link type="text/css" rel="stylesheet" href="css/style.css">
@@ -20,8 +20,8 @@
 			<form class="form-horizontal" action="/admin/books_edit" method="post" enctype="multipart/form-data">
 				<input type="hidden" name="id" value="${b.id }"/>
 				<input type="hidden" name="cover" value="${b.cover }"/>
-				<input type="hidden" name="pageNo" value="${param.pageNo }"/>
 				<input type="hidden" name="type" value="${param.type }"/>
+<%--				<C:out> 測試 param 內容 ${param}</C:out>--%>
 				<div class="form-group">
 					<label for="input_name" class="col-sm-1 control-label">書名</label>
 					<div class="col-sm-6">
@@ -29,21 +29,21 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="input_name" class="col-sm-1 control-label">價格</label>
+					<label for="input_price" class="col-sm-1 control-label">價格</label>
 					<div class="col-sm-6">
-						<input type="text" class="form-control" id="input_name" name="price" value="${b.price }">
+						<input type="text" class="form-control" id="input_price" name="price" value="${b.price }">
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="input_name" class="col-sm-1 control-label">介紹</label>
+					<label for="input_intro" class="col-sm-1 control-label">介紹</label>
 					<div class="col-sm-6">
-						<input type="text" class="form-control" id="input_name" name="intro" value="${b.intro }">
+						<input type="text" class="form-control" id="input_intro" name="intro" value="${b.intro }">
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="input_name" class="col-sm-1 control-label">庫存</label>
+					<label for="input_stock" class="col-sm-1 control-label">庫存</label>
 					<div class="col-sm-6">
-						<input type="text" class="form-control" id="input_name" name="stock" value="${b.stock }">
+						<input type="text" class="form-control" id="input_stock" name="stock" value="${b.stock }">
 					</div>
 				</div>
 				<div class="form-group">
@@ -55,10 +55,10 @@
 				<div class="form-group">
 					<label for="select_topic" class="col-sm-1 control-label">科系類別</label>
 					<div class="col-sm-6">
-						<select class="form-control" id="select_topic" name="typeid">
+						<select class="form-control" id="select_topic" name="departmentid">
 
-							<c:forEach items="${typeList }" var="t">
-								<option <c:if test="${t.id==b.type.id }">selected="selected"</c:if> value="${t.id }">${t.name }</option>
+							<c:forEach items="${departmentList }" var="dep">
+								<option <c:if test="${dep.id==b.department.id }">selected="selected"</c:if> value="${dep.id }">${dep.name }</option>
 							</c:forEach>
 
 						</select>

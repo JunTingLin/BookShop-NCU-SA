@@ -41,25 +41,26 @@ public class OrderDao {
         String sql = "select i.id,i.price,i.amount,b.name from orderitem i,books b where order_id=? and i.books_id=b.id";
         return r.query(sql, new BeanListHandler<OrderItem>(OrderItem.class),orderid);
     }
-    public int getOrderCount(int status) throws SQLException {
+//    public int getOrderCount(int status) throws SQLException {
+//        QueryRunner r = new QueryRunner(DBUtil.getDataSource());
+//        String sql = "";
+//        if(status==0) {
+//            sql = "select count(*) from `order`";
+//            return r.query(sql, new ScalarHandler<Long>()).intValue();
+//        }else {
+//            sql = "select count(*) from `order` where status=?";
+//            return r.query(sql, new ScalarHandler<Long>(),status).intValue();
+//        }
+//    }
+    public List<Order> selectOrderList(int status) throws SQLException {
         QueryRunner r = new QueryRunner(DBUtil.getDataSource());
-        String sql = "";
+        // status 0 代表所有訂單
         if(status==0) {
-            sql = "select count(*) from `order`";
-            return r.query(sql, new ScalarHandler<Long>()).intValue();
+            String sql = "select o.id,o.total,o.amount,o.status,o.paytype,o.name,o.phone,o.address,o.datetime,u.username from `order` o,user u where o.user_id=u.id order by o.datetime desc";
+            return r.query(sql, new BeanListHandler<Order>(Order.class));
         }else {
-            sql = "select count(*) from `order` where status=?";
-            return r.query(sql, new ScalarHandler<Long>(),status).intValue();
-        }
-    }
-    public List<Order> selectOrderList(int status, int pageNumber, int pageSize) throws SQLException {
-        QueryRunner r = new QueryRunner(DBUtil.getDataSource());
-        if(status==0) {
-            String sql = "select o.id,o.total,o.amount,o.status,o.paytype,o.name,o.phone,o.address,o.datetime,u.username from `order` o,user u where o.user_id=u.id order by o.datetime desc limit ?,?";
-            return r.query(sql, new BeanListHandler<Order>(Order.class), (pageNumber-1)*pageSize,pageSize );
-        }else {
-            String sql = "select o.id,o.total,o.amount,o.status,o.paytype,o.name,o.phone,o.address,o.datetime,u.username from `order` o,user u where o.user_id=u.id and o.status=? order by o.datetime desc limit ?,?";
-            return r.query(sql, new BeanListHandler<Order>(Order.class),status, (pageNumber-1)*pageSize,pageSize );
+            String sql = "select o.id,o.total,o.amount,o.status,o.paytype,o.name,o.phone,o.address,o.datetime,u.username from `order` o,user u where o.user_id=u.id and o.status=? order by o.datetime desc";
+            return r.query(sql, new BeanListHandler<Order>(Order.class),status);
         }
     }
     public void updateStatus(int id,int status) throws SQLException {

@@ -3,7 +3,6 @@ package service;
 import dao.OrderDao;
 import model.Order;
 import model.OrderItem;
-import model.Page;
 import utils.DBUtil;
 
 import java.sql.Connection;
@@ -54,21 +53,10 @@ public class OrderService {
         }
         return list;
     }
-    public Page getOrderPage(int status,int pageNumber) {
-        Page p = new Page();
-        p.setPageNumber(pageNumber);
-        int pageSize = 10;
-        int totalCount = 0;
-        try {
-            totalCount = oDao.getOrderCount(status);
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        p.SetPageSizeAndTotalCount(pageSize, totalCount);
+    public List<Order> getOrderList(int status) {
         List list=null;
         try {
-            list = oDao.selectOrderList(status, pageNumber, pageSize);
+            list = oDao.selectOrderList(status);
             for(Order o :(List<Order>)list) {
                 List<OrderItem> l = oDao.selectAllItem(o.getId());
                 o.setItemList(l);
@@ -77,8 +65,7 @@ public class OrderService {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        p.setList(list);
-        return p;
+        return list;
     }
     public void updateStatus(int id,int status) {
         try {

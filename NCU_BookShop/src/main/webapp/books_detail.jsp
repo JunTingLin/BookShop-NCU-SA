@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>商品詳情</title>
+	<title>書本詳情</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
@@ -25,13 +25,13 @@
 <div class="single">
 	<div class="container">
 		<div class="row">
-			<div class="col-4 single-grid simpleCart_shelfItem" >
+			<div class="col-4 single-grid" >
 				<img src="${b.cover}" data-imagezoom="true" class="img-responsive">
 			</div>
-			<div class="col-4 single-grid simpleCart_shelfItem">
+			<div class="col-4 single-grid">
 				<h3>${b.name}</h3>
 				<div class="tag">
-					<p>分類 : <a href="books_list?typeid=${b.type.id}">${b.type.name}</a></p>
+					<p>分類 : <a href="books_list?departmentid=${b.department.id}">${b.department.name}</a></p>
 				</div>
 				<p>${b.intro}</p>
 				<div class="view-info">
@@ -47,8 +47,8 @@
 				<ul>
 					<li><a  href="/books_list">全部科系類別</a></li>
 
-					<c:forEach items="${typeList}" var="t">
-						<li><a href="/books_list?typeid=${t.id}">${t.name}</a></li>
+					<c:forEach items="${departmentList}" var="dep">
+						<li><a href="/books_list?departmentid=${dep.id}">${dep.name}</a></li>
 					</c:forEach>
 				</ul>
 			</div>

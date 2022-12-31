@@ -30,7 +30,6 @@ public class AdminBooksEditServlet extends HttpServlet {
         try {
             List<FileItem> list = upload.parseRequest(request);
             Books b = new Books();
-            int pageNumber =1;
             int type=0;
             for(FileItem item:list) {
                 if(item.isFormField()) {
@@ -53,13 +52,11 @@ public class AdminBooksEditServlet extends HttpServlet {
                         case "stock":
                             b.setStock(Integer.parseInt(item.getString("utf-8")));
                             break;
-                        case "typeid":
-                            b.setTypeid(Integer.parseInt(item.getString("utf-8")));
-                            break;
-                        case "pageNumber":
-                            pageNumber=Integer.parseInt(item.getString("utf-8"));
+                        case "departmentid":
+                            b.setDepartmentid(Integer.parseInt(item.getString("utf-8")));
                             break;
                         case "type":
+//                            System.out.println("測試param type "+item.getString("utf-8")+" 。");
                             type = Integer.parseInt(item.getString("utf-8"));
                             break;
                     }
@@ -87,7 +84,7 @@ public class AdminBooksEditServlet extends HttpServlet {
                 }
             }
             bService.update(b);
-            request.getRequestDispatcher("/admin/books_list?pageNumber=" +pageNumber+"&type="+type).forward(request, response);
+            request.getRequestDispatcher("/admin/books_list?" +"type="+type).forward(request, response);
         } catch (FileUploadException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
