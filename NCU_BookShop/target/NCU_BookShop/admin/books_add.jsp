@@ -29,7 +29,6 @@
 			<div class="frame">
 				<form class="form-control" action="/admin/books_add" method="post" enctype="multipart/form-data">
 					<div class="form-floating mb-3">
-<<<<<<< HEAD
 						<input type="text" class="form-control" id="input_name" name="name" required="required">
 						<label for="input_name">書名</label>
 					</div>
@@ -47,25 +46,6 @@
 					</div>
 					<div class="form-floating mb-3">
 						<input type="text" class="form-control" id="input_stock" name="stock" required="required" pattern="[1-9]+[0-9]*">
-=======
-						<input type="text" class="form-control" id="input_name" name="name" required="required" maxlength="45">
-						<label for="input_name">書名</label>
-					</div>
-					<div class="form-floating mb-3">
-						<input type="text" class="form-control" id="input_price" name="price" required="required" pattern="0|[1-9]+[0-9]*">
-						<label for="input_price">價格</label>
-					</div>
-					<div class="form-floating mb-3">
-						<input type="text" class="form-control" id="input_author" name="author" required="required" maxlength="100">
-						<label for="input_author">作者</label>
-					</div>
-					<div class="form-floating mb-3">
-						<textarea class="form-control" style="height: 300px;" id="input_intro" name="intro" required="required" maxlength="300"></textarea>
-						<label for="input_intro">介紹</label>
-					</div>
-					<div class="form-floating mb-3">
-						<input type="text" class="form-control" id="input_stock" name="stock" required="required" pattern="0|[1-9]+[0-9]*">
->>>>>>> 78c626e5f67dccdccf59cadcb3c8262c7cd76022
 						<label for="input_stock">庫存</label>
 					</div>
 					<div class="form-floating mb-3">
@@ -80,11 +60,7 @@
 						</select>
 						<label for="select_department">科系類別</label>
 					</div>
-<<<<<<< HEAD
 					<div class="mb-3">
-=======
-					<div class="mb-3" style="margin-left: 830px;">
->>>>>>> 78c626e5f67dccdccf59cadcb3c8262c7cd76022
 						<button type="submit" class="btn btn-success">儲存</button>
 					</div>
 				</form>

@@ -1,8 +1,4 @@
-<<<<<<<< HEAD:NCU_BookShop/src/main/java/com/NCU/BookShop/model/Order.java
 package com.NCU.BookShop.model;
-========
-package model;
->>>>>>>> 78c626e5f67dccdccf59cadcb3c8262c7cd76022:NCU_BookShop/src/main/java/model/Order.java
 
 import java.util.*;
 

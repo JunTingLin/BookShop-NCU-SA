@@ -1,12 +1,7 @@
 package com.NCU.BookShop.service;
 
-<<<<<<<< HEAD:NCU_BookShop/src/main/java/com/NCU/BookShop/service/DepartmentService.java
 import com.NCU.BookShop.dao.DepartmentDao;
 import com.NCU.BookShop.model.Department;
-========
-import dao.DepartmentDao;
-import model.Department;
->>>>>>>> 78c626e5f67dccdccf59cadcb3c8262c7cd76022:NCU_BookShop/src/main/java/service/DepartmentService.java
 
 import java.sql.SQLException;
 import java.util.List;

@@ -29,11 +29,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-<<<<<<< HEAD
                         <a class="nav-link <c:if test="${param.flag==3 && t==2}">active</c:if>" href="/booksrecommend_list?type=2" >新品</a>
-=======
-                        <a class="nav-link <c:if test="${param.flag==3 && t==2}">active</c:if>" href="/booksrecommend_list?type=2" >新書上架</a>
->>>>>>> 78c626e5f67dccdccf59cadcb3c8262c7cd76022
                     </li>
                     <c:choose><c:when test="${empty user }">
                         <li class="nav-item"><a href="/user_register.jsp" class="nav-link <c:if test="${param.flag==10 }">active</c:if>">註冊</a></li>

@@ -1,19 +1,11 @@
 package com.NCU.BookShop.servlet;
 
-<<<<<<<< HEAD:NCU_BookShop/src/main/java/com/NCU/BookShop/servlet/AdminBooksAddServlet.java
 import com.NCU.BookShop.model.Books;
 import com.NCU.BookShop.service.BooksService;
-========
-import model.Books;
->>>>>>>> 78c626e5f67dccdccf59cadcb3c8262c7cd76022:NCU_BookShop/src/main/java/servlet/AdminBooksAddServlet.java
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
-<<<<<<<< HEAD:NCU_BookShop/src/main/java/com/NCU/BookShop/servlet/AdminBooksAddServlet.java
-========
-import service.BooksService;
->>>>>>>> 78c626e5f67dccdccf59cadcb3c8262c7cd76022:NCU_BookShop/src/main/java/servlet/AdminBooksAddServlet.java
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

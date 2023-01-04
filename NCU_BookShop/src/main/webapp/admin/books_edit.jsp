@@ -28,7 +28,6 @@
 				</h3>
 			</div>
 			<div class="frame">
-<<<<<<< HEAD
 				<form class="form-control" action="/admin/books_add" method="post" enctype="multipart/form-data">
 					<div class="form-floating mb-3">
 						<input type="text" class="form-control" id="input_name" name="name" required="required" value="${b.name}">
@@ -53,34 +52,6 @@
 					<div class="form-floating mb-3" style="display: inline-block">
 						<input type="file" class="form-control" id="input_file" name="cover" required="required" accept=".png, .jpg, .jpeg">
 						<label for="input_file">封面照片(推薦尺寸:225*300)右圖為原封面圖</label>
-=======
-				<form class="form-control" action="/admin/books_edit" method="post" enctype="multipart/form-data">
-					<div class="form-floating mb-3">
-						<input type="text" class="form-control" id="input_name" name="name" required="required" value="${b.name}" maxlength="45">
-						<label for="input_name">書名</label>
-					</div>
-					<div class="form-floating mb-3">
-						<input type="text" class="form-control" id="input_price" name="price" required="required" pattern="0|[1-9]+[0-9]*" value="${b.price}">
-						<label for="input_price">價格</label>
-					</div>
-					<div class="form-floating mb-3">
-						<input type="text" class="form-control" id="input_author" name="author" required="required" value="${b.author}" maxlength="100">
-						<label for="input_author">作者</label>
-					</div>
-					<div class="form-floating mb-3">
-						<textarea class="form-control" style="height: 300px;" id="input_intro" name="intro" required="required" maxlength="300">
-							${b.intro}
-						</textarea>
-						<label for="input_intro">介紹</label>
-					</div>
-					<div class="form-floating mb-3">
-						<input type="text" class="form-control" id="input_stock" name="stock" required="required" pattern="0|[1-9]+[0-9]*" value="${b.stock}">
-						<label for="input_stock">庫存</label>
-					</div>
-					<div class="form-floating mb-3" style="display: inline-block">
-						<input type="file" class="form-control" id="input_file" name="cover" accept=".png, .jpg, .jpeg" value="${b.cover }">
-						<label for="input_file">右圖為原封面圖(推薦尺寸:225*300)無更動則無需選擇</label>
->>>>>>> 78c626e5f67dccdccf59cadcb3c8262c7cd76022
 					</div>
 					<img class="edit_img" src="${pageContext.request.contextPath }${b.cover }" width="135" height="180"/>
 					<div class="form-floating mb-3">

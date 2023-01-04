@@ -1,12 +1,7 @@
 package com.NCU.BookShop.servlet;
 
-<<<<<<<< HEAD:NCU_BookShop/src/main/java/com/NCU/BookShop/servlet/AdminBooksListServlet.java
 import com.NCU.BookShop.model.Books;
 import com.NCU.BookShop.service.BooksService;
-========
-import model.Books;
-import service.BooksService;
->>>>>>>> 78c626e5f67dccdccf59cadcb3c8262c7cd76022:NCU_BookShop/src/main/java/servlet/AdminBooksListServlet.java
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

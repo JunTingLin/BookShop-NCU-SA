@@ -1,10 +1,6 @@
 package com.NCU.BookShop.listener;
 
-<<<<<<<< HEAD:NCU_BookShop/src/main/java/com/NCU/BookShop/listener/ApplicationListener.java
 import com.NCU.BookShop.service.DepartmentService;
-========
-import service.DepartmentService;
->>>>>>>> 78c626e5f67dccdccf59cadcb3c8262c7cd76022:NCU_BookShop/src/main/java/listener/ApplicationListener.java
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -30,11 +26,8 @@ public class ApplicationListener implements ServletContextListener,
          initialized(when the Web application is deployed).
          You can initialize servlet context related data here.
       */
-<<<<<<<< HEAD:NCU_BookShop/src/main/java/com/NCU/BookShop/listener/ApplicationListener.java
 //        sce.getServletContext().setAttribute("departmentList",depService.GetAllDepartment());
-========
-        sce.getServletContext().setAttribute("departmentList",depService.GetAllDepartment());
->>>>>>>> 78c626e5f67dccdccf59cadcb3c8262c7cd76022:NCU_BookShop/src/main/java/listener/ApplicationListener.java
+
     }
 
     public void contextDestroyed(ServletContextEvent sce) {

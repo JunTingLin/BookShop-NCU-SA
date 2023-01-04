@@ -1,16 +1,9 @@
 package com.NCU.BookShop.service;
 
-<<<<<<<< HEAD:NCU_BookShop/src/main/java/com/NCU/BookShop/service/OrderService.java
 import com.NCU.BookShop.model.Order;
 import com.NCU.BookShop.model.OrderItem;
 import com.NCU.BookShop.dao.OrderDao;
 import com.NCU.BookShop.utils.DBUtil;
-========
-import dao.OrderDao;
-import model.Order;
-import model.OrderItem;
-import utils.DBUtil;
->>>>>>>> 78c626e5f67dccdccf59cadcb3c8262c7cd76022:NCU_BookShop/src/main/java/service/OrderService.java
 
 import java.sql.Connection;
 import java.sql.SQLException;
