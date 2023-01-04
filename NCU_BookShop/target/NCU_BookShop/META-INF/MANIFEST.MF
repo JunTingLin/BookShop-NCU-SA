@@ -1,5 +1,10 @@
 Manifest-Version: 1.0
 Created-By: IntelliJ IDEA
+<<<<<<< HEAD
 Built-By: junting
 Build-Jdk: 1.8.0_202
+=======
+Built-By: USER
+Build-Jdk: Oracle OpenJDK version 19
+>>>>>>> 78c626e5f67dccdccf59cadcb3c8262c7cd76022
 

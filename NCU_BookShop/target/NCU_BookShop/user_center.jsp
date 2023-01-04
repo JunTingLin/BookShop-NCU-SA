@@ -58,11 +58,19 @@
 						<h4 class="center-title-2">更換密碼</h4>
 						<div class="center-input">
 							<span class="center-text">原密碼</span>
+<<<<<<< HEAD
 							<input type="text" name="password" placeholder="請輸入原密碼">
 						</div>
 						<div class="center-input">
 							<span class="center-text">新密碼</span>
 							<input type="text" name="newPassword" placeholder="請輸入新密碼" pattern="[a-zA-Z0-9!@#$%^&*()_]{8,}" >
+=======
+							<input type="password" name="password" placeholder="請輸入原密碼">
+						</div>
+						<div class="center-input">
+							<span class="center-text">新密碼</span>
+							<input type="password" name="newPassword" placeholder="請輸入新密碼" pattern="[a-zA-Z0-9!@#$%^&*()_]{8,}" >
+>>>>>>> 78c626e5f67dccdccf59cadcb3c8262c7cd76022
 						</div>
 						<div class="pwd-btn">
 						   <input type="submit" value="修改">

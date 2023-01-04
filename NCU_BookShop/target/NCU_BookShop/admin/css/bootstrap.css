@@ -3303,7 +3303,12 @@ textarea.form-control-lg {
     cursor: default
 }
 .nav-tabs {
+<<<<<<< HEAD
     border-bottom: 1px solid #dee2e6
+=======
+    border-bottom: 1px solid #dee2e6;
+    margin-left: 100px;
+>>>>>>> 78c626e5f67dccdccf59cadcb3c8262c7cd76022
 }
 .nav-tabs .nav-link {
     margin-bottom: -1px;
