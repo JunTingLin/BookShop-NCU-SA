@@ -22,14 +22,14 @@
                             科系類別
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/goods_list">不分科系</a></li>
-                            <c:forEach items="${typeList}" var="t">
-                                <li><a class="dropdown-item" href="/goods_list?typeid=${t.id}">${t.name}</a></li>
+                            <li><a class="dropdown-item" href="/books_list">不分科系</a></li>
+                            <c:forEach items="${departmentList}" var="dep">
+                                <li><a class="dropdown-item" href="/books_list?departmentid=${dep.id}">${dep.name}</a></li>
                             </c:forEach>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <c:if test="${param.flag==3 && t==2}">active</c:if>" href="/goodsrecommend_list?type=2" >新品</a>
+                        <a class="nav-link <c:if test="${param.flag==3 && t==2}">active</c:if>" href="/booksrecommend_list?type=2" >新書上架</a>
                     </li>
                     <c:choose><c:when test="${empty user }">
                         <li class="nav-item"><a href="/user_register.jsp" class="nav-link <c:if test="${param.flag==10 }">active</c:if>">註冊</a></li>
@@ -45,16 +45,16 @@
                         <li class="nav-item"><a href="/admin/index.jsp" class="nav-link" target="_blank">後台管理</a></li>
                     </c:if>
                 </ul>
-                <form class="d-flex" action="/goods_search">
+                <form class="d-flex" action="/books_search">
                     <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="keyword">
                     <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
                 </form>
                 <div>
-                    <a href="goods_cart.jsp">
+                    <a href="books_cart.jsp">
                         <i class="d-flex bi bi-cart2" id="cart"></i>
                     </a>
-                    <a href="goods_cart.jsp">
-                        <span class="goods_num">
+                    <a href="books_cart.jsp">
+                        <span class="books_num">
                             <c:choose>
                                 <c:when test="${empty order}">0</c:when>
                                 <c:otherwise>${order.amount}</c:otherwise>

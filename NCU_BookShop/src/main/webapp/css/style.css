@@ -139,7 +139,7 @@ form.navbar-form {
     font-size: 35px;
     color: #fff;
 }
-span.goods_num {
+span.books_num {
     margin-left: 0px;
     color: #fff;
     font-style: italic;
@@ -297,6 +297,7 @@ h4.center-title-2 {
 div.center-input {
     margin-top: 20px;
     margin-bottom: 20px;
+    font-family: 'Zen Antique', serif;
 }
 div.center-input input {
     position: absolute;
@@ -462,7 +463,7 @@ itens .items-info p{
 }
 
 /*新品推薦區結尾*/
-/**商品列表**/
+/**書本列表**/
 .products{
     padding: 5em 0;
 }
@@ -580,7 +581,7 @@ span.item_price{
     margin: 10px 0 5px;
     display:block;
 }
-/*商品詳情*/
+/*書本詳情*/
 .single{
     margin-top:30px;
 }
@@ -630,7 +631,7 @@ span.item_price{
 }
 
 /*購物車*/
-/**確認商品數目**/
+/**確認書本數目**/
 .cart-items{
     margin-top:30px;
     margin-bottom:30px;
@@ -697,6 +698,36 @@ span.item_price{
 
 /*footer*/
 .footer {
-    padding: 5em 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
     background-color: #f2f6f7;
+}
+/*order_list*/
+.order-list {
+    margin-left: 100px;
+    font-family: 'Zen Antique', serif;
+    width: 1000px;
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    background-color: #9cd3eb;
+    color:rgb(12, 74, 146);
+    font-size: 35px;
+}
+.frame-order {
+    margin-left: 100px;
+    width: 1000px;
+    margin-bottom: 30px;
+    font-family: 'Zen Antique', serif;
+}
+.list-title {
+    margin-left: 30px;
+    font-family: 'Zen Antique', serif;
+    width: 1060px;
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    background-color: #9cd3eb;
+    color:rgb(12, 74, 146);
+    font-size: 35px;
 }

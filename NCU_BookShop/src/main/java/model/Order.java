@@ -20,16 +20,16 @@ public class Order {
         user = new User();
         user.setUsername(username);
     }
-    public void addGoods(Goods g) {
-        if(itemMap.containsKey(g.getId())) {
-            OrderItem item = itemMap.get(g.getId());
+    public void addBooks(Books b) {
+        if(itemMap.containsKey(b.getId())) {
+            OrderItem item = itemMap.get(b.getId());
             item.setAmount(item.getAmount()+1);
         }else {
-            OrderItem item = new OrderItem(g.getPrice(),1,g,this);
-            itemMap.put(g.getId(), item);
+            OrderItem item = new OrderItem(b.getPrice(),1,b,this);
+            itemMap.put(b.getId(), item);
         }
         amount++;
-        total = total +  g.getPrice();
+        total = total +  b.getPrice();
     }
 
     public List<OrderItem> getItemList() {
@@ -40,24 +40,24 @@ public class Order {
         this.itemList = itemList;
     }
 
-    public void lessen(int goodsid) {
-        if(itemMap.containsKey(goodsid)) {
-            OrderItem item = itemMap.get(goodsid);
+    public void lessen(int booksid) {
+        if(itemMap.containsKey(booksid)) {
+            OrderItem item = itemMap.get(booksid);
             item.setAmount(item.getAmount()-1);
             amount--;
             total = total - item.getPrice();
             if(item.getAmount()<=0) {
-                itemMap.remove(goodsid);
+                itemMap.remove(booksid);
             }
         }
     }
-    public void delete(int goodsid)
+    public void delete(int booksid)
     {
-        if(itemMap.containsKey(goodsid)) {
-            OrderItem item = itemMap.get(goodsid);
+        if(itemMap.containsKey(booksid)) {
+            OrderItem item = itemMap.get(booksid);
             total = total -  item.getAmount()*item.getPrice();
             amount-=item.getAmount();
-            itemMap.remove(goodsid);
+            itemMap.remove(booksid);
         }
     }
 

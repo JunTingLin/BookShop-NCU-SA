@@ -1,6 +1,6 @@
 package listener;
 
-import service.TypeService;
+import service.DepartmentService;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSessionListener;
 @WebListener()
 public class ApplicationListener implements ServletContextListener,
         HttpSessionListener, HttpSessionAttributeListener {
-    TypeService tsService=new TypeService();
+    DepartmentService depService=new DepartmentService();
     // Public constructor is required by servlet spec
     public ApplicationListener() {
     }
@@ -23,15 +23,15 @@ public class ApplicationListener implements ServletContextListener,
     // -------------------------------------------------------
     public void contextInitialized(ServletContextEvent sce) {
       /* This method is called when the servlet context is
-         initialized(when the Web application is deployed). 
+         initialized(when the Web application is deployed).
          You can initialize servlet context related data here.
       */
-        sce.getServletContext().setAttribute("typeList",tsService.GetAllType());
+        sce.getServletContext().setAttribute("departmentList",depService.GetAllDepartment());
     }
 
     public void contextDestroyed(ServletContextEvent sce) {
-      /* This method is invoked when the Servlet Context 
-         (the Web application) is undeployed or 
+      /* This method is invoked when the Servlet Context
+         (the Web application) is undeployed or
          Application Server shuts down.
       */
     }
@@ -52,7 +52,7 @@ public class ApplicationListener implements ServletContextListener,
     // -------------------------------------------------------
 
     public void attributeAdded(HttpSessionBindingEvent sbe) {
-      /* This method is called when an attribute 
+      /* This method is called when an attribute
          is added to a session.
       */
     }

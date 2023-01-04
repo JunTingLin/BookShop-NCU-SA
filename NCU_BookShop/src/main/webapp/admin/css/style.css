@@ -140,9 +140,113 @@ form.navbar-form {
     font-size: 35px;
     color: #fff;
 }
-span.goods_num {
+span.books_num {
     margin-left: 0px;
     color: #fff;
     font-style: italic;
     font-size: 20px;
+}
+/* books_add */
+.frame {
+    margin-left: 100px;
+    width: 1000px;
+    margin-bottom: 30px;
+}
+.add-book {
+    margin-left: 100px;
+    font-family: 'Zen Antique', serif;
+    width: 1000px;
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    background-color: #9cd3eb;
+    color:rgb(12, 74, 146);
+    font-size: 35px;
+}
+#input_file {
+    height: 65px;
+    padding-top: 35px;
+    padding-left: 25px;
+}
+/*books_edit*/
+.edit-book {
+    margin-left: 100px;
+    font-family: 'Zen Antique', serif;
+    width: 1000px;
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    background-color: #9cd3eb;
+    color:rgb(12, 74, 146);
+    font-size: 35px;
+}
+.edit_img {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+/*books_list*/
+.book-list {
+    margin-left: 100px;
+    font-family: 'Zen Antique', serif;
+    width: 1100px;
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    background-color: #9cd3eb;
+    color:rgb(12, 74, 146);
+    font-size: 35px;
+}
+.frame-list {
+    margin-left: 100px;
+    width: 1100px;
+    margin-bottom: 30px;
+    font-family: 'Zen Antique', serif;
+}
+/*dep_list*/
+.dep-list {
+    margin-left: 100px;
+    font-family: 'Zen Antique', serif;
+    width: 700px;
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    background-color: #9cd3eb;
+    color:rgb(12, 74, 146);
+    font-size: 35px;
+}
+.frame-dep {
+    margin-left: 100px;
+    width: 700px;
+    margin-bottom: 30px;
+    font-family: 'Zen Antique', serif;
+}
+/*dep_edit*/
+.edit-dep {
+    margin-left: 100px;
+    font-family: 'Zen Antique', serif;
+    width: 700px;
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    background-color: #9cd3eb;
+    color:rgb(12, 74, 146);
+    font-size: 35px;
+}
+/*order_list*/
+.order-list {
+    margin-left: 100px;
+    font-family: 'Zen Antique', serif;
+    width: 1000px;
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    background-color: #9cd3eb;
+    color:rgb(12, 74, 146);
+    font-size: 35px;
+}
+.frame-order {
+    margin-left: 100px;
+    width: 1000px;
+    margin-bottom: 30px;
+    font-family: 'Zen Antique', serif;
 }

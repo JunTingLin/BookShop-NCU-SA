@@ -4,52 +4,74 @@
  */
 function popupMsg(msg,duration)
 {
-    var el = document.createElement("div");
-    el.setAttribute("style","position: fixed;left: 50%;top: 50%;transform: translate(-50%, -50%);align-items:center;justify-content:center;text-align:center;padding-top:55px;font-size: 16px;width:150px;height:150px;background-color:rgb(244, 170, 166);border-radius:75px;border-style: double;border-color:#0d4e88;border-width:5px;");
-    el.innerHTML = msg;
+    var el = document.createElement("img");
+    switch (msg) {
+        case 'add':
+            el.setAttribute("src", "./images/2.png");
+            break;
+        case 'out of stock':
+            el.setAttribute("src", "./images/1.png");
+            break;
+        case 'lessen':
+            el.setAttribute("src", "./images/4.png");
+            break;
+        case 'lessen failed':
+            el.setAttribute("src", "./images/6.png");
+            break;
+        case 'delete':
+            el.setAttribute("src", "./images/3.png");
+            break;
+        case 'delete failed':
+            el.setAttribute("src", "./images/5.png");
+            break;
+        default:
+            console.log('error');
+    }
+    
+    el.setAttribute("style","position: fixed;left: 50%;top: 50%;transform: translate(-50%, -50%);align-items:center;justify-content:center;text-align:center;font-size: 16px;width:200px;height:200px;border-radius:100px;");
     setTimeout(function(){
         el.parentNode.removeChild(el);
     },duration);
     document.body.appendChild(el);
 }
 
-function buy(goodid){
-	$.post("goods_buy", {goodsid:goodid}, function(data){
+function buy(bookid){
+	$.post("books_buy", {booksid:bookid}, function(data){
 		if(data=="ok") {
-            setTimeout('popupMsg("成功新增至購物車", 1000);', 0);
+            setTimeout('popupMsg("add", 1000);', 0);
             setTimeout('location.reload();', 1100);
         }
 		else if(data=="fail")
 		{
-            popupMsg("庫存不足,請致電工作人員!", 1000);
+            popupMsg("out of stock", 1000);
 		}
 	});
 }
 /**
- * 將商品購買數減1
+ * 將書本購買數減1
  */
-function lessen(goodsid){
-    $.post("goods_lessen", {goodsid:goodsid}, function(data){
+function lessen(booksid){
+    $.post("books_lessen", {booksid:booksid}, function(data){
         if(data=="ok"){
-            setTimeout('popupMsg("成功將商品數減1", 1000);', 0);
+            setTimeout('popupMsg("lessen", 1000);', 0);
             setTimeout('location.reload();', 1100);
         }
 		else{
-			popupMsg("刪除失敗", 1000);
+			popupMsg("lessen failed", 1000);
 		}
     });
 }
 /**
- * 將商品從購物車中刪除
+ * 將書本從購物車中刪除
  */
-function deletes(goodid){
-    $.post("goods_delete", {goodsid:goodid}, function(data){
+function deletes(bookid){
+    $.post("books_delete", {booksid:bookid}, function(data){
         if(data=="ok"){
-            setTimeout('popupMsg("成功將商品從購物車中刪除", 1000);', 0);
+            setTimeout('popupMsg("delete", 1000);', 0);
             setTimeout('location.reload();', 1100);
         }
         else{
-            popupMsg("刪除失敗", 1000);
+            popupMsg("delete failed", 1000);
         }
     });
 }
