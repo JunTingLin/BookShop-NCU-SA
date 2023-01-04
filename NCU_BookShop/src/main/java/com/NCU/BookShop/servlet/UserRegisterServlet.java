@@ -22,7 +22,7 @@ import java.lang.reflect.InvocationTargetException;
 @Controller
 public class UserRegisterServlet extends HttpServlet {
     @Autowired
-    private UserService uService;
+    private UserService uService ;
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         User user = new User();
         try {

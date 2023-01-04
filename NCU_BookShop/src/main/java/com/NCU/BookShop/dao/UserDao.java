@@ -4,10 +4,12 @@ import com.NCU.BookShop.model.User;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
-import com.NCU.BookShop.utils.DBUtil;
 import org.springframework.stereotype.Repository;
+import com.NCU.BookShop.utils.DBUtil;
 
 import java.sql.SQLException;
+
+
 @Repository
 public class UserDao {
     public void addUser(User user) throws SQLException {

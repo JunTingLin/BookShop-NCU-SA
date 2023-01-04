@@ -4,7 +4,8 @@ import com.NCU.BookShop.model.Books;
 import com.NCU.BookShop.model.Recommend;
 import org.apache.commons.dbutils.*;
 import org.apache.commons.dbutils.handlers.*;
-import utils.DBUtil;
+import com.NCU.BookShop.utils.DBUtil;
+import org.springframework.stereotype.Repository;
 
 import java.sql.Connection;
 import java.sql.SQLException;

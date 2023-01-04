@@ -2,8 +2,8 @@ package com.NCU.BookShop.servlet;
 
 import com.NCU.BookShop.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.NCU.BookShop.service.UserService;
 import org.springframework.stereotype.Controller;
+import com.NCU.BookShop.service.UserService;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 import javax.servlet.ServletConfig;
@@ -36,7 +36,6 @@ public class UserLoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
-
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
         SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this,

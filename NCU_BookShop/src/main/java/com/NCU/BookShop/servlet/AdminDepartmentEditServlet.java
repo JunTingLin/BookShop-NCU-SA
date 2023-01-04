@@ -42,7 +42,6 @@ public class AdminDepartmentEditServlet extends HttpServlet {
         // TODO Auto-generated method stub
         doGet(request, response);
     }
-
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
         SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this,

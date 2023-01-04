@@ -1,8 +1,6 @@
 package com.NCU.BookShop.listener;
 
 import com.NCU.BookShop.service.DepartmentService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -15,8 +13,7 @@ import javax.servlet.http.HttpSessionListener;
 @WebListener()
 public class ApplicationListener implements ServletContextListener,
         HttpSessionListener, HttpSessionAttributeListener {
-
-    DepartmentService depService = new DepartmentService();
+    DepartmentService depService=new DepartmentService();
     // Public constructor is required by servlet spec
     public ApplicationListener() {
     }

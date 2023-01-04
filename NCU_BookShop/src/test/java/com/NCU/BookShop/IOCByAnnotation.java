@@ -11,7 +11,7 @@ public class IOCByAnnotation {
     @Test
     public void testAutowireByAnnotation() {
         ApplicationContext ac = new
-                ClassPathXmlApplicationContext("spring.xml");
+                ClassPathXmlApplicationContext("spring-ioc-annotation.xml");
         UserLoginServlet userController = ac.getBean(UserLoginServlet.class);
         System.out.println(userController);
         UserService userService = ac.getBean(UserService.class);

@@ -19,7 +19,6 @@ import java.lang.reflect.InvocationTargetException;
 @WebServlet(name = "user_changeaddress",urlPatterns = "/user_changeaddress")
 @Controller
 public class UserChangeAddressServlet extends HttpServlet {
-
     @Autowired
     private UserService uService;
 

@@ -17,6 +17,7 @@ import java.io.IOException;
 @WebServlet(name = "books_detail",urlPatterns = "/books_detail")
 @Controller
 public class BooksDetailServlet extends HttpServlet {
+
     @Autowired
     private BooksService bService;
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
