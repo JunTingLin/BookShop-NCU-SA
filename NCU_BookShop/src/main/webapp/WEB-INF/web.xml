@@ -6,5 +6,15 @@
   <welcome-file-list>
     <welcome-file>index</welcome-file>
   </welcome-file-list>
+  <!--配置Spring的監聽器，在伺服器啟動時載入Spring的配置檔-->
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+
+  <!--設置Spring配置檔自定義的位置和名稱-->
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:spring.xml</param-value>
+  </context-param>
 </web-app>
 

@@ -5,12 +5,14 @@ import com.NCU.BookShop.model.Recommend;
 import org.apache.commons.dbutils.*;
 import org.apache.commons.dbutils.handlers.*;
 import com.NCU.BookShop.utils.DBUtil;
+import org.springframework.stereotype.Repository;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 
+@Repository
 public class BooksDao {
 
     // 橫幅列表(recommend type==1)、新品列表(recommend type==2)

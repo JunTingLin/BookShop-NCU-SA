@@ -5,12 +5,13 @@ import com.NCU.BookShop.model.OrderItem;
 import org.apache.commons.dbutils.*;
 import org.apache.commons.dbutils.handlers.*;
 import com.NCU.BookShop.utils.DBUtil;
+import org.springframework.stereotype.Repository;
 
 import java.math.BigInteger;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
-
+@Repository
 public class OrderDao {
     public void insertOrder(Connection con, Order order) throws SQLException {
         QueryRunner r = new QueryRunner();

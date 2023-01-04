@@ -4,11 +4,12 @@ import com.NCU.BookShop.model.Order;
 import com.NCU.BookShop.model.OrderItem;
 import com.NCU.BookShop.dao.OrderDao;
 import com.NCU.BookShop.utils.DBUtil;
+import org.springframework.stereotype.Service;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
-
+@Service
 public class OrderService {
     private OrderDao oDao = new OrderDao();
     private BooksService booksService = new BooksService();

@@ -1,7 +1,11 @@
 package com.NCU.BookShop.servlet;
 
 import com.NCU.BookShop.service.BooksService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,11 +16,13 @@ import java.util.List;
 import java.util.Map;
 
 @WebServlet(name = "IndexServlet",urlPatterns = "/index")
+@Controller
 public class IndexServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
-    private BooksService bService=new BooksService();
+    @Autowired
+    private BooksService bService;
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //        Map<String,Object> ScrollBook=bService.getScrollBook();
 //        request.setAttribute("scroll",ScrollBook);
@@ -32,5 +38,11 @@ public class IndexServlet extends HttpServlet {
         request.getRequestDispatcher("index.jsp").forward(request,response);
 
 
+    }
+
+    public void init(ServletConfig config) throws ServletException {
+        super.init(config);
+        SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this,
+                config.getServletContext());
     }
 }

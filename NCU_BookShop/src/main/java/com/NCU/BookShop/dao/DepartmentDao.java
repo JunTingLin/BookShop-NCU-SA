@@ -5,10 +5,11 @@ import com.NCU.BookShop.utils.DBUtil;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
+import org.springframework.stereotype.Repository;
 
 import java.sql.SQLException;
 import java.util.List;
-
+@Repository
 public class DepartmentDao
 {
     public List<Department> GetAllDepartment() throws SQLException {

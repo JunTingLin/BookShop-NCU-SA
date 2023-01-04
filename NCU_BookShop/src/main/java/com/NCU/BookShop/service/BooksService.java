@@ -2,14 +2,17 @@ package com.NCU.BookShop.service;
 
 import com.NCU.BookShop.model.Books;
 import com.NCU.BookShop.dao.BooksDao;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
-
+@Service
 public class BooksService {
-    private BooksDao bDao=new BooksDao();
+    @Autowired
+    private BooksDao bDao;
     public List<Map<String,Object>> getBooksList(int recommendType) {
         List<Map<String,Object>> list=null;
         try {

@@ -4,7 +4,11 @@ import com.NCU.BookShop.model.Books;
 import com.NCU.BookShop.model.Department;
 import com.NCU.BookShop.service.BooksService;
 import com.NCU.BookShop.service.DepartmentService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,9 +18,12 @@ import java.io.IOException;
 import java.util.List;
 
 @WebServlet(name = "books_List",urlPatterns = "/books_list")
+@Controller
 public class BooksListServlet extends HttpServlet {
-    private BooksService bService=new BooksService();
-    private DepartmentService depService=new DepartmentService();
+    @Autowired
+    private BooksService bService;
+    @Autowired
+    private DepartmentService depService;
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
@@ -40,5 +47,11 @@ public class BooksListServlet extends HttpServlet {
         request.setAttribute("list",list);
 //        request.setAttribute("id",String.valueOf(id));
         request.getRequestDispatcher("/books_list.jsp").forward(request,response);
+    }
+
+    public void init(ServletConfig config) throws ServletException {
+        super.init(config);
+        SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this,
+                config.getServletContext());
     }
 }
