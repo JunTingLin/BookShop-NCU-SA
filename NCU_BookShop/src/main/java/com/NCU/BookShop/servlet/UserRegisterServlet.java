@@ -5,10 +5,6 @@ import com.NCU.BookShop.service.UserService;
 import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-<<<<<<<< HEAD:NCU_BookShop/src/main/java/com/NCU/BookShop/servlet/UserRegisterServlet.java
-========
-import service.UserService;
->>>>>>>> 78c626e5f67dccdccf59cadcb3c8262c7cd76022:NCU_BookShop/src/main/java/servlet/UserRegisterServlet.java
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

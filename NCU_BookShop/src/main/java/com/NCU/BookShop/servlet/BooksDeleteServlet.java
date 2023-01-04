@@ -9,21 +9,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-<<<<<<<< HEAD:NCU_BookShop/src/main/java/com/NCU/BookShop/servlet/BooksDeleteServlet.java
 @WebServlet(name = "books_delete",urlPatterns = "/books_delete")
 public class BooksDeleteServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Order o = (Order) request.getSession().getAttribute("order");
         int booksid = Integer.parseInt(request.getParameter("booksid"));
         o.delete(booksid);
-========
-@WebServlet(name = "books_lessen",urlPatterns = "/books_lessen")
-public class BooksLessenServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Order o = (Order) request.getSession().getAttribute("order");
-        int booksid = Integer.parseInt(request.getParameter("booksid"));
-        o.lessen(booksid);
->>>>>>>> 78c626e5f67dccdccf59cadcb3c8262c7cd76022:NCU_BookShop/src/main/java/servlet/BooksLessenServlet.java
         response.getWriter().print("ok");
     }
 

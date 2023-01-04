@@ -1,13 +1,8 @@
 package com.NCU.BookShop.servlet;
 
-<<<<<<<< HEAD:NCU_BookShop/src/main/java/com/NCU/BookShop/servlet/OrderConfirmServlet.java
 import com.NCU.BookShop.model.Order;
 import com.NCU.BookShop.model.User;
 import com.NCU.BookShop.service.OrderService;
-========
-import model.Order;
-import model.User;
->>>>>>>> 78c626e5f67dccdccf59cadcb3c8262c7cd76022:NCU_BookShop/src/main/java/servlet/OrderConfirmServlet.java
 import org.apache.commons.beanutils.BeanUtils;
 
 import javax.servlet.ServletException;

@@ -1,18 +1,10 @@
 package com.NCU.BookShop.dao;
 
-<<<<<<<< HEAD:NCU_BookShop/src/main/java/com/NCU/BookShop/dao/OrderDao.java
 import com.NCU.BookShop.model.Order;
 import com.NCU.BookShop.model.OrderItem;
 import org.apache.commons.dbutils.*;
 import org.apache.commons.dbutils.handlers.*;
 import com.NCU.BookShop.utils.DBUtil;
-========
-import model.Order;
-import model.OrderItem;
-import org.apache.commons.dbutils.*;
-import org.apache.commons.dbutils.handlers.*;
-import utils.DBUtil;
->>>>>>>> 78c626e5f67dccdccf59cadcb3c8262c7cd76022:NCU_BookShop/src/main/java/dao/OrderDao.java
 
 import java.math.BigInteger;
 import java.sql.Connection;

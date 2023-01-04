@@ -1,18 +1,11 @@
 package com.NCU.BookShop.service;
 
-<<<<<<<< HEAD:NCU_BookShop/src/main/java/com/NCU/BookShop/service/UserService.java
 import com.NCU.BookShop.dao.UserDao;
 import com.NCU.BookShop.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-========
-import dao.UserDao;
-import model.User;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
->>>>>>>> 78c626e5f67dccdccf59cadcb3c8262c7cd76022:NCU_BookShop/src/main/java/service/UserService.java
 
 import java.sql.SQLException;
 
