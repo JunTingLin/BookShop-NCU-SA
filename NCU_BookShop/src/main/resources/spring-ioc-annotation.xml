@@ -6,4 +6,5 @@
 
         <!-- 組件掃描 -->
         <context:component-scan base-package="com.NCU.BookShop"></context:component-scan>
+
 </beans>
