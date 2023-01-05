@@ -26,36 +26,47 @@
 		<!--products-->
 		<div class="products">
 			<div class="container">
-				<h2 style="height: 50px;"> 查詢 ‘${param.keyword }’相關結果 </h2>
+				<div class="row">
+					<h2 class="recommend-title">
+						<i class="bi bi-search"></i>
+						<c:choose>
+							<c:when test="${empty param.keyword}">所有商品結果</c:when>
+							<c:otherwise>查詢「${param.keyword }」的相關結果</c:otherwise>
+						</c:choose>
 
-				<div class="col-md-12 product-model-sec">
+					</h2>
 
-					<c:forEach items="${ list }" var="b">
-						<div class="product-grid">
-							<a href="${pageContext.request.contextPath }/books_detail?id=${b.id}">
-								<div class="more-product"><span> </span></div>
-								<div class="product-img">
-									<img src="${pageContext.request.contextPath }${b.cover}" class="img-responsive" alt="${b.name }" width="225" height="300">
-								</div>
-							</a>
-							<div class="product-info simpleCart_shelfItem">
-								<div class="product-info-cust prt_name">
-									<h4><a href="/books_detail?id=${b.id}">${b.name}</a></h4>
-									<div class="view-info">
-										<span class="item_price">NT$ ${b.price}</span>
-										<div class="items-info">
-											<a class="buying-detail2" href="/books_detail?id=${b.id}" style="font-family: 'Zen Antique', serif">
-												<i class="bi-eye" aria-hidden="true"></i>
-												查看詳情
-											</a>
-										</div>
+					<div class="col-md-12 product-model-sec">
+
+						<c:forEach items="${ list }" var="b">
+							<div class="product-grid">
+								<a href="${pageContext.request.contextPath }/books_detail?id=${b.id}">
+									<div class="more-product"><span> </span></div>
+									<div class="product-img">
+										<img src="${pageContext.request.contextPath }${b.cover}" class="img-responsive" alt="${b.name }" width="225" height="300">
 									</div>
-									<input type="button" class="item_add items" style="margin-left: 260px;" value="加入購物車" onclick="buy(${b.id})">
-									<div class="clearfix"> </div>
+								</a>
+								<div class="product-info">
+									<div class="product-info-cust prt_name">
+										<h4><a href="/books_detail?id=${b.id}">${b.name}</a></h4>
+										<div class="view-info">
+											<span class="item_price">NT$ ${b.price}</span>
+											<div class="items-info">
+												<a href="/books_detail?id=${b.id}" class="search-detail">
+													<i class="bi-eye" aria-hidden="true"></i>
+													查看詳情
+												</a>
+											</div>
+										</div>
+										<div class="buy">
+											<a class="add-search" href="javascript:;" onclick="buy(${b.id})">加入購物車</a>
+										</div>
+										<div class="clearfix"> </div>
+									</div>
 								</div>
 							</div>
-						</div>
-					</c:forEach>
+						</c:forEach>
+					</div>
 				</div>
 			</div>
 		</div>

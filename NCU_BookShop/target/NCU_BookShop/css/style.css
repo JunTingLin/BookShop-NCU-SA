@@ -403,42 +403,61 @@ span.center-text{
 }
 /*橫幅結尾*/
 
-/*新品推薦區*/
-.buying_now2 {
-    margin-top: 20px;
-    padding-top: 2px;
-    margin-left: 10px;
-    border: 2px solid #67686b;
-    padding-left: 2px;
-    padding-right: 2px;
-    width: 90px;
+/*新品推薦區*//**書本列表**/
+.detail {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.6em 1.6em;
+    font-size: 0.9em;
+    display: inline-block;
     border-radius: 5px;
-    font-size: 16px;
-    background-color: #d7f5fc;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin: 1.3em 10px 0px 0px;
+    background: #001385;
+    border: 1px solid rgba(0, 45, 72, 0.64);
+    outline: none;
+    width: 125px;
+    font-family: 'Zen Antique', serif;
 }
-.buying-detail {
-    margin-top: 20px;
-    margin-left: 165px;
-    padding-left: 2px;
-    padding-top: 2px;
-    font-size: 16px;
-    border: 2px solid #67686b;
-    width: 90px;
-    border-radius: 5px;
-    background-color: #d7f5fc;
+.detail:hover{
+    background: none;
 }
-.buying-detail2 {
-    margin-top: 20px;
-    margin-left: 85px;
-    padding-left: 2px;
-    padding-top: 2px;
-    font-size: 16px;
-    border: 2px solid #b7b6b6;
-    width: 100px;
+.search-detail {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.6em 1.6em;
+    font-size: 0.9em;
+    display: inline-block;
     border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin: 1.3em 10px 0px 15px;
+    background: #001385;
+    border: 1px solid rgba(0, 45, 72, 0.64);
+    outline: none;
+    width: 125px;
+    font-family: 'Zen Antique', serif;
+}
+.search-detail:hover {
+    background: none;
 }
 .recommend {
-    padding: 2em 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.recommend-title {
+    margin-left: 10px;
+    font-family: 'Zen Antique', serif;
+    width: 1060px;
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    background-color: #9cd3eb;
+    color:rgb(12, 74, 146);
+    font-size: 35px;
 }
 .new_product{
     background-color: #9cd3eb;
@@ -446,7 +465,6 @@ span.center-text{
     font-size: 24px;
     padding: 20px;
     border-radius: 10px;
-    margin-bottom: 20px;
 }
 span.bi-eye {
     top: 3px;
@@ -461,47 +479,24 @@ span.bi-eye {
     margin-bottom: 2em;
     max-width:100%;
 }
-.items .recommend-new{
-    max-width:350px;
-    margin: 0px 10px;
-}
 .items-info{
     display: inline-block;
-    font-size: 1em;
+    font-size: 0.9em;
     color: #000000;
     background-color: #9cd3eb;
     height: 50px;
     width: 350px;
     padding-top: 15px;
 }
-.items .items-info p{
-    margin-left:10px;
-}
-.items .items-info .buying_now{
-    font-size: 1em;
-    font-weight: 100;
-    padding: 0.2em 0.1em 0.2em 0.1em;
-    border: 2px solid #000000;
-    margin-left: 140px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 1em;
-    background-color: #fff;
-}
 .items .view-info{
     display:flex;
     margin-top: 20px;
 }
-.items .view-info p{
-    width: 265px;
-}
-/*新品推薦區結尾*/
-/**書本列表**/
 .products{
     padding: 2em 0;
 }
 .product-model-sec {
-    margin: 2em 0 0 0;
+    margin: 0.5em 0 0 0;
     float: right;
 }
 .product-grid {
@@ -513,7 +508,8 @@ span.bi-eye {
     -moz-transition: 0.5s all;
     -o-transition: 0.5s all;
     min-height: 200px;
-    border:2px solid #fff;
+    border: 1px solid #fff;
+    max-width: 330px;
 }
 .product-grid:hover {
     z-index: 1;
@@ -524,7 +520,9 @@ span.bi-eye {
     text-decoration:none;
 }
 .product-img img {
-    width: 100%;
+    width: 225px;
+    height: 300px;
+    margin-left: 45px;
     padding:1em 1em 0;
 }
 .product-info-cust {
@@ -551,10 +549,31 @@ span.bi-eye {
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     -o-border-radius: 5px;
-    margin: 1.5em 16px 0px 0px;
+    margin: 1.5em 27px 0px 0px;
     background: #189df0a2;
     border: 1px solid #189df0a2;
     outline: none;
+    width: 125px;
+}
+.add-search {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1.6em;
+    font-size: 0.9em;
+    display: inline-block;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin: 1.5em 0px 0px 15px;
+    background: #189df0a2;
+    border: 1px solid #189df0a2;
+    outline: none;
+    width: 125px;
+}
+.add-search:hover {
+    background: none;
+    color: #189df0a2;
 }
 .prt_name{
     padding: 0.8em 1.2em;
@@ -611,7 +630,7 @@ span.item_price{
     color: #000;
     font-size: 1em;
     font-weight: 600;
-    margin: 10px 0 5px;
+    margin: 0px 0 0px;
     display:block;
 }
 /*書本詳情*/
@@ -620,6 +639,8 @@ span.item_price{
 }
 .single .img-responsive{
     margin-top:30px;
+    width: 225px;
+    height: 300px;
 }
 .single-grids {
     padding: 4em 0;
@@ -798,4 +819,15 @@ span.item_price{
 .pay_option {
     margin-left: 20px;
     margin-right: 20px;
+}
+.new-title {
+    margin-left: 0px;
+    font-family: 'Zen Antique', serif;
+    width: 1000px;
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    background-color: #9cd3eb;
+    color:rgb(12, 74, 146);
+    font-size: 35px;
 }

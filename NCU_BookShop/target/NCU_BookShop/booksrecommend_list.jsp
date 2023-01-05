@@ -28,7 +28,7 @@
         <!--products-->
         <div class="products">
             <div class="container">
-                <h2 class="list-title">
+                <h2 class="new-title">
                     <i class="bi bi-bell"></i>
                     <c:choose>
                         <c:when test="${t==2}">新品書本</c:when>
@@ -50,8 +50,10 @@
                                         <div class="view-info">
                                             <span class="item_price">NT$ ${b.price}</span>
                                             <div class="items-info">
-                                                <i class="bi-eye" aria-hidden="true"></i>
-                                                <a href="/books_detail?id=${b.id}">&ensp;查看詳情</a>
+                                                <a href="/books_detail?id=${b.id}" class="detail">
+                                                    <i class="bi-eye" aria-hidden="true"></i>
+                                                    查看詳情
+                                                </a>
                                             </div>
                                         </div>
                                         <div class="buy">

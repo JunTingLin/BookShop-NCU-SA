@@ -80,9 +80,12 @@
         <div class="recommend">
             <div class="container">
                 <div class="row">
-                    <h4 class="new_product">新品推薦</h4>
+                    <h2 class="recommend-title">
+                        <i class="bi bi-bell"></i>
+                        新品推薦
+                    </h2>
                     <c:forEach items="${newList}" var="b">
-                        <div class="col-6 col-sm-4 product-model-sec">
+                        <div class="col-3 col-sm-4 product-model-sec">
                             <div class="product-grid">
                                 <a href="/books_detail?id=${b.id}">
                                     <div class="product-img">
@@ -95,9 +98,9 @@
                                         <div class="view-info">
                                             <span class="item_price">NT$ ${b.price}</span>
                                             <div class="items-info">
-                                                <a href="/books_detail?id=${b.id}">
+                                                <a href="/books_detail?id=${b.id}" class="detail">
                                                     <i class="bi-eye" aria-hidden="true"></i>
-                                                    &ensp;   查看詳情
+                                                    查看詳情
                                                 </a>
                                             </div>
                                         </div>

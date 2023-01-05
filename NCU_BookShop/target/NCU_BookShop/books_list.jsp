@@ -56,9 +56,8 @@
                                         <div class="view-info">
                                             <span class="item_price">NT$ ${b.price}</span>
                                             <div class="items-info">
-                                                <a href="/books_detail?id=${b.id}">
-                                                    <i class="bi-eye" aria-hidden="true"></i>
-                                                &ensp;   查看詳情
+                                                <a href="/books_detail?id=${b.id}" class="detail">
+                                                    <i class="bi-eye" aria-hidden="true"></i>查看詳情
                                                 </a>
                                             </div>
                                         </div>
@@ -71,7 +70,6 @@
                     </c:forEach>
                 </div>
             </div>
-        </div>
         </div>
         <!--//products-->
 
