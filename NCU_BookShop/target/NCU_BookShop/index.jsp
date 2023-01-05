@@ -82,7 +82,7 @@
                 <div class="row">
                     <h4 class="new_product">新品推薦</h4>
                     <c:forEach items="${newList}" var="b">
-                        <div class="recommend-new">
+                        <div class="col-6 col-sm-4 product-model-sec">
                             <div class="product-grid">
                                 <a href="/books_detail?id=${b.id}">
                                     <div class="product-img">
