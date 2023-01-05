@@ -695,7 +695,17 @@ span.item_price{
     font-size:0.65em;
     font-weight:400;
 }
-
+.cart-title {
+    margin-left: 30px;
+    font-family: 'Zen Antique', serif;
+    width: 1000px;
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    background-color: #9cd3eb;
+    color:rgb(12, 74, 146);
+    font-size: 35px;
+}
 /*footer*/
 .footer {
     padding-top: 20px;
