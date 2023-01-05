@@ -26,7 +26,7 @@
 		<!--products-->
 		<div class="products">
 			<div class="container">
-				<h2> 查詢 ‘${param.keyword }’相關結果 </h2>
+				<h2 style="height: 50px;"> 查詢 ‘${param.keyword }’相關結果 </h2>
 
 				<div class="col-md-12 product-model-sec">
 
@@ -51,16 +51,15 @@
 										</div>
 									</div>
 									<input type="button" class="item_add items" style="margin-left: 260px;" value="加入購物車" onclick="buy(${b.id})">
+									<div class="clearfix"> </div>
 								</div>
 							</div>
 						</div>
 					</c:forEach>
 				</div>
-
 			</div>
 		</div>
 		<!--//products-->
-
 		<jsp:include page="/footer.jsp"></jsp:include>
 
 	</body>
