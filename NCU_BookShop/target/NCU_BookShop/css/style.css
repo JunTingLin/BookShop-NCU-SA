@@ -405,7 +405,7 @@ span.center-text{
     margin-top: 20px;
     padding-top: 2px;
     margin-left: 10px;
-    border: 2px solid #212529;
+    border: 2px solid #67686b;
     padding-left: 2px;
     padding-right: 2px;
     width: 90px;
@@ -419,10 +419,20 @@ span.center-text{
     padding-left: 2px;
     padding-top: 2px;
     font-size: 16px;
-    border: 2px solid #212529;
+    border: 2px solid #67686b;
     width: 90px;
     border-radius: 5px;
     background-color: #d7f5fc;
+}
+.buying-detail2 {
+    margin-top: 20px;
+    margin-left: 85px;
+    padding-left: 2px;
+    padding-top: 2px;
+    font-size: 16px;
+    border: 2px solid #b7b6b6;
+    width: 100px;
+    border-radius: 5px;
 }
 /*橫幅結尾*/
 

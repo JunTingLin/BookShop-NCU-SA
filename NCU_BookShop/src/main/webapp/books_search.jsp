@@ -35,7 +35,7 @@
 							<a href="${pageContext.request.contextPath }/books_detail?id=${b.id}">
 								<div class="more-product"><span> </span></div>
 								<div class="product-img">
-									<img src="${pageContext.request.contextPath }${b.cover}" class="img-responsive" alt="${b.name }" width="240" height="240">
+									<img src="${pageContext.request.contextPath }${b.cover}" class="img-responsive" alt="${b.name }" width="225" height="300">
 								</div>
 							</a>
 							<div class="product-info simpleCart_shelfItem">
@@ -44,18 +44,17 @@
 									<div class="view-info">
 										<span class="item_price">NT$ ${b.price}</span>
 										<div class="items-info">
-											<i class="bi-eye" aria-hidden="true"></i>
-											<a href="/books_detail?id=${b.id}">查看詳情</a>
+											<a class="buying-detail2" href="/books_detail?id=${b.id}" style="font-family: 'Zen Antique', serif">
+												<i class="bi-eye" aria-hidden="true"></i>
+												查看詳情
+											</a>
 										</div>
 									</div>
-									<input type="button" class="item_add items" value="加入購物車" onclick="buy(${b.id})">
-									<div class="clearfix"> </div>
+									<input type="button" class="item_add items" style="margin-left: 260px;" value="加入購物車" onclick="buy(${b.id})">
 								</div>
 							</div>
 						</div>
 					</c:forEach>
-
-					<div class="clearfix"> </div>
 				</div>
 
 			</div>

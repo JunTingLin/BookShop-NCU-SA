@@ -50,7 +50,9 @@
 									<a class="btn btn-warning" href="javascript:lessen(${item.key});">減少</a>
 									<a class="btn btn-danger" href="javascript:deletes(${item.key});">刪除</a>
 								</div>
+								<div class="clearfix"></div>
 							</div>
+							<div class="clearfix"> </div>
 						</div>
 					</c:forEach>
 
@@ -66,6 +68,7 @@
 						<a class="btn btn-success btn-lg" style="margin-left:74%" href="/order_submit">提交訂單</a>
 					</div>
 				</div>
+				<div class="clearfix"> </div>
 			</div>
 		</div>
 		<!--//cart-items-->
