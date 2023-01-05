@@ -14,7 +14,8 @@ import java.util.List;
 public class OrderService {
     @Autowired
     private OrderDao oDao;
-    private BooksService booksService = new BooksService();
+    @Autowired
+    private BooksService booksService;
     public void addOrder(Order order) {
         Connection con = null;
         try {

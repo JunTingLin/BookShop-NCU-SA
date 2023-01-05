@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class DepartmentService {
     @Autowired
-    DepartmentDao tDao = new DepartmentDao();
+    DepartmentDao tDao;
     public List<Department> GetAllDepartment()
     {
         List<Department> list=null;

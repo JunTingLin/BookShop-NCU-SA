@@ -1,6 +1,8 @@
 package com.NCU.BookShop.listener;
 
 import com.NCU.BookShop.service.DepartmentService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -13,7 +15,8 @@ import javax.servlet.http.HttpSessionListener;
 @WebListener()
 public class ApplicationListener implements ServletContextListener,
         HttpSessionListener, HttpSessionAttributeListener {
-    DepartmentService depService=new DepartmentService();
+    @Autowired
+    DepartmentService depService;
     // Public constructor is required by servlet spec
     public ApplicationListener() {
     }
@@ -26,6 +29,8 @@ public class ApplicationListener implements ServletContextListener,
          initialized(when the Web application is deployed).
          You can initialize servlet context related data here.
       */
+        //在ServletContextListener 的實現類中注入Spring bean
+        SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext(this);
         sce.getServletContext().setAttribute("departmentList",depService.GetAllDepartment());
 
     }
