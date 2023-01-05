@@ -72,7 +72,6 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-
         </div>
 
         <!--//banner-->
@@ -80,32 +79,39 @@
         <!--recommend-->
         <div class="recommend">
             <div class="container">
-                <div class="new_product">新品推薦</div>
-                <div class="row align-items-start items">
+                <div class="row">
+                    <h4 class="new_product">新品推薦</h4>
                     <c:forEach items="${newList}" var="b">
-                        <div class="col recommend-new">
-                            <a href="/books_detail?id=${b.id}">
-                                <img src="${b.cover}" class="img-responsive" alt="${b.name}" width="225" height="300" style="margin-left: 50px;"/>
-                            </a>
-                            <div class="items-info">
-                                <a class="buying-detail" href="/books_detail?id=${b.id}" style="font-family: 'Zen Antique', serif">
-                                    <i class="bi-eye" aria-hidden="true"></i>
-                                    查看詳情
+                        <div class="recommend-new">
+                            <div class="product-grid">
+                                <a href="/books_detail?id=${b.id}">
+                                    <div class="product-img">
+                                        <img src="${b.cover}" class="img-responsive" alt="${b.name}" width="225" height="300">
+                                    </div>
                                 </a>
-                                <a class="buying_now2" href="javascript:;" onclick="buy(${b.id})">立刻購買</a>
-                            </div>
-                            <div class="view-info">
-                                <p><a href="books_list?departmentid=${b.departmentID}">${b.departmentName}</a> > <a href="/books_detail?id=${b.id}">${b.name}</a></p>
-                                <div class="prices">
-                                    <h6 class="item_price">$ ${b.price}</h6>
+                                <div class="product-info">
+                                    <div class="product-info-cust prt_name">
+                                        <h4><a href="/books_detail?id=${b.id}">${b.name}</a></h4>
+                                        <div class="view-info">
+                                            <span class="item_price">NT$ ${b.price}</span>
+                                            <div class="items-info">
+                                                <a href="/books_detail?id=${b.id}">
+                                                    <i class="bi-eye" aria-hidden="true"></i>
+                                                    &ensp;   查看詳情
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <input type="button" class="item_add items" value="加入購物車" onclick="buy(${b.id})">
+                                        <div class="clearfix"> </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </c:forEach>
                 </div>
-
             </div>
         </div>
+
         <!--//recommend-->
 
         <!--footer-->

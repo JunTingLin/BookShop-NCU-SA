@@ -401,6 +401,9 @@ span.center-text{
     border: 7px solid #5D4B33;
     background-color: #fff;
 }
+/*橫幅結尾*/
+
+/*新品推薦區*/
 .buying_now2 {
     margin-top: 20px;
     padding-top: 2px;
@@ -434,11 +437,8 @@ span.center-text{
     width: 100px;
     border-radius: 5px;
 }
-/*橫幅結尾*/
-
-/*新品推薦區*/
 .recommend {
-    padding: 5em 0;
+    padding: 2em 0;
 }
 .new_product{
     background-color: #9cd3eb;
@@ -446,6 +446,7 @@ span.center-text{
     font-size: 24px;
     padding: 20px;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 span.bi-eye {
     top: 3px;
@@ -473,7 +474,7 @@ span.bi-eye {
     width: 350px;
     padding-top: 15px;
 }
-itens .items-info p{
+.items .items-info p{
     margin-left:10px;
 }
 .items .items-info .buying_now{
@@ -500,7 +501,7 @@ itens .items-info p{
     padding: 2em 0;
 }
 .product-model-sec {
-    margin: 4em 0 0 0;
+    margin: 2em 0 0 0;
     float: right;
 }
 .product-grid {
