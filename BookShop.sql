@@ -74,7 +74,7 @@ CREATE TABLE `department` (
 
 LOCK TABLES `department` WRITE;
 /*!40000 ALTER TABLE `department` DISABLE KEYS */;
-INSERT INTO `department` VALUES (1,'英美語文學系'),(2,'物理學系'),(3,'機械工程學系'),(4,'資訊管理學系(棒棒'),(5,'資訊工程學系'),(6,'大氣科學學系'),(9,'俊霆哈哈系');
+INSERT INTO `department` VALUES (1,'英美語文學系'),(2,'物理學系'),(3,'機械工程學系'),(4,'資訊管理學系'),(5,'資訊工程學系'),(6,'大氣科學學系');
 /*!40000 ALTER TABLE `department` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -108,7 +108,7 @@ CREATE TABLE `order` (
 
 LOCK TABLES `order` WRITE;
 /*!40000 ALTER TABLE `order` DISABLE KEYS */;
-INSERT INTO `order` VALUES (75,28,1,4,2,'管理員','1333333333','美國','2022-10-07 12:31:07',1),(76,600,2,1,1,'vili','1344444444','美國','2022-12-03 13:31:29',2),(78,72,2,3,1,'林俊霆','電話不給','地址不想給','2022-12-10 13:40:21',41),(79,64,2,2,2,'vili','1344444444','美國','2022-12-10 13:49:45',2),(80,36,1,4,2,'管理員','1333333333','美國','2022-12-31 15:35:38',1),(81,28,1,4,1,'管理員','1333333333','美國','2022-12-31 15:36:02',1),(82,36,1,2,3,'管理員','1333333333','美國','2022-12-31 15:36:44',1),(83,299,1,2,3,'管理員','1333333333','美國','2022-12-31 15:38:10',1);
+INSERT INTO `order` VALUES (75,28,1,4,2,'管理員','0912345678','台灣','2022-10-07 12:31:07',1),(76,600,2,1,1,'billy','0905123456','台灣','2022-12-03 13:31:29',2),(79,64,2,2,2,'billy','0905123456','台灣','2022-12-10 13:49:45',2),(80,36,1,4,2,'管理員','0912345678','台灣','2022-12-31 15:35:38',1),(81,28,1,4,1,'管理員','0912345678','台灣','2022-12-31 15:36:02',1),(82,36,1,2,3,'管理員','0912345678','台灣','2022-12-31 15:36:44',1),(83,299,1,2,3,'管理員','0912345678','台灣','2022-12-31 15:38:10',1);
 /*!40000 ALTER TABLE `order` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -139,7 +139,7 @@ CREATE TABLE `orderitem` (
 
 LOCK TABLES `orderitem` WRITE;
 /*!40000 ALTER TABLE `orderitem` DISABLE KEYS */;
-INSERT INTO `orderitem` VALUES (78,28,1,55,75),(79,300,2,15,76),(81,36,2,55,78),(82,28,1,114,79),(83,36,1,55,79),(84,36,1,55,80),(85,28,1,114,81),(86,36,1,55,82),(87,299,1,82,83);
+INSERT INTO `orderitem` VALUES (78,28,1,55,75),(79,300,2,15,76),(82,28,1,114,79),(83,36,1,55,79),(84,36,1,55,80),(85,28,1,114,81),(86,36,1,55,82),(87,299,1,82,83);
 /*!40000 ALTER TABLE `orderitem` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -171,30 +171,6 @@ INSERT INTO `recommend` VALUES (9,1,15),(10,1,25),(11,1,40),(13,1,82),(14,2,114)
 UNLOCK TABLES;
 
 --
--- Table structure for table `type`
---
-
-DROP TABLE IF EXISTS `type`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `type` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `type`
---
-
-LOCK TABLES `type` WRITE;
-/*!40000 ALTER TABLE `type` DISABLE KEYS */;
-INSERT INTO `type` VALUES (1,'英美語文學系'),(2,'物理學系'),(3,'機械工程學系'),(4,'資訊管理學系'),(5,'資訊工程學系'),(6,'大氣科學學系');
-/*!40000 ALTER TABLE `type` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `user`
 --
 
@@ -222,7 +198,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'admin','admin@gmail.com','$2a$10$FdNRmAeG9VTPy7.m7.CXmu5opagl1v876xqHS6n8dTW1/6SK1blra','管理員','1333333333','美國',_binary ''),(2,'vili','vili@gmail.com','$2a$10$6sJrle/zbgNmqehRhtdbq.9KV23ULH8DpjaVadzGhroWlxQxVE9Wq','vili','1344444444','美國',_binary '\0'),(41,'junting','junting@ncu.edu.tw','$2a$10$G1gDeimORybHlXLOqVgnBe/sZdR1/LjR28FNikFdKFT2IjoaWMDJm','','','',_binary '\0');
+INSERT INTO `user` VALUES (1,'admin','admin@gmail.com','$2a$10$FdNRmAeG9VTPy7.m7.CXmu5opagl1v876xqHS6n8dTW1/6SK1blra','管理員','0912345678','台灣',_binary ''),(2,'billy','billy@gmail.com','$2a$10$6sJrle/zbgNmqehRhtdbq.9KV23ULH8DpjaVadzGhroWlxQxVE9Wq','billy','0905123456','台灣',_binary '\0'),(41,'junting','junting@ncu.edu.tw','$2a$10$G1gDeimORybHlXLOqVgnBe/sZdR1/LjR28FNikFdKFT2IjoaWMDJm','','','',_binary '\0');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
