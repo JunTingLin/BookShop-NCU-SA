@@ -41,7 +41,7 @@
 						<label for="input_author">作者</label>
 					</div>
 					<div class="form-floating mb-3">
-						<input type="text" class="form-control" id="input_intro" name="intro" required="required">
+						<textarea class="form-control" style="height: 300px;" id="input_intro" name="intro" required="required" maxlength="300"></textarea>
 						<label for="input_intro">介紹</label>
 					</div>
 					<div class="form-floating mb-3">

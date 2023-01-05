@@ -297,6 +297,7 @@ h4.center-title-2 {
 div.center-input {
     margin-top: 20px;
     margin-bottom: 20px;
+    font-family: 'Zen Antique', serif;
 }
 div.center-input input {
     position: absolute;
@@ -697,6 +698,36 @@ span.item_price{
 
 /*footer*/
 .footer {
-    padding: 5em 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
     background-color: #f2f6f7;
+}
+/*order_list*/
+.order-list {
+    margin-left: 100px;
+    font-family: 'Zen Antique', serif;
+    width: 1000px;
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    background-color: #9cd3eb;
+    color:rgb(12, 74, 146);
+    font-size: 35px;
+}
+.frame-order {
+    margin-left: 100px;
+    width: 1000px;
+    margin-bottom: 30px;
+    font-family: 'Zen Antique', serif;
+}
+.list-title {
+    margin-left: 30px;
+    font-family: 'Zen Antique', serif;
+    width: 1060px;
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    background-color: #9cd3eb;
+    color:rgb(12, 74, 146);
+    font-size: 35px;
 }

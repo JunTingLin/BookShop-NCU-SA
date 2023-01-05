@@ -7,7 +7,7 @@ public class Order {
     private int total;//總價
     private int amount;// 商品總數
     private int status;//1=未付款/2已付款/3已發貨/4已完成
-    private int paytype;//1 LinePay/2 ApplePay /3貨到付款
+    private int paytype;//1 LinePay/2 ApplePay/3貨到付款
     private String name;
     private String phone;
     private String address;

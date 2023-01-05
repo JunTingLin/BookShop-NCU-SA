@@ -11,31 +11,32 @@
 		<link rel="stylesheet" href="css/bootstrap.css"/>
 		<link type="text/css" rel="stylesheet" href="css/style.css">
 		<link href="https://fonts.googleapis.com/css2?family=Rampart+One&family=Zen+Antique&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 	</head>
 	<body>
 		<jsp:include page="/admin/header.jsp">
 			<jsp:param name="flag" value="3"></jsp:param>
 		</jsp:include>
-			<div class="container-fluid">
+		<div class="container-fluid">
 			<br><br>
-
-			<form class="form-horizontal" action="/admin/department_edit" method="post">
-				<input type="hidden" name="id" value="${param.id }">
-				<div class="form-group">
-					<label for="input_name" class="col-sm-1 control-label">科系名稱</label>
-					<div class="col-sm-6">
-						<input type="text" class="form-control" id="input_name" name="name" value="${param.name }" required="required">
+			<div class="edit-title">
+				<h3 class="edit-dep">
+					<i class="bi bi-pencil-square"></i>
+					編輯科系
+				</h3>
+			</div>
+			<div class="frame-dep">
+				<form class="form-horizontal" action="/admin/department_edit" method="post">
+					<input type="hidden" name="id" value="${param.id }">
+					<div class="form-floating mb-3">
+						<input type="text" class="form-control" id="input_name" name="name" required="required" value="${param.name }">
+						<label for="input_name">科系名稱</label>
 					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-offset-1 col-sm-10">
+					<div class="mb-3" style="margin-left: 600px;">
 						<button type="submit" class="btn btn-success">提交修改</button>
 					</div>
-				</div>
-			</form>
-
-			<span style="color:red;"></span>
-
+				</form>
+			</div>
 		</div>
 	</body>
 </html>

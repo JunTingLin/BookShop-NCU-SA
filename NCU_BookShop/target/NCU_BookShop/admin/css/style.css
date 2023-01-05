@@ -184,3 +184,69 @@ span.books_num {
     display: inline-block;
     margin-bottom: 10px;
 }
+/*books_list*/
+.book-list {
+    margin-left: 100px;
+    font-family: 'Zen Antique', serif;
+    width: 1100px;
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    background-color: #9cd3eb;
+    color:rgb(12, 74, 146);
+    font-size: 35px;
+}
+.frame-list {
+    margin-left: 100px;
+    width: 1100px;
+    margin-bottom: 30px;
+    font-family: 'Zen Antique', serif;
+}
+/*dep_list*/
+.dep-list {
+    margin-left: 100px;
+    font-family: 'Zen Antique', serif;
+    width: 700px;
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    background-color: #9cd3eb;
+    color:rgb(12, 74, 146);
+    font-size: 35px;
+}
+.frame-dep {
+    margin-left: 100px;
+    width: 700px;
+    margin-bottom: 30px;
+    font-family: 'Zen Antique', serif;
+}
+/*dep_edit*/
+.edit-dep {
+    margin-left: 100px;
+    font-family: 'Zen Antique', serif;
+    width: 700px;
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    background-color: #9cd3eb;
+    color:rgb(12, 74, 146);
+    font-size: 35px;
+}
+/*order_list*/
+.order-list {
+    margin-left: 100px;
+    font-family: 'Zen Antique', serif;
+    width: 1000px;
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    background-color: #9cd3eb;
+    color:rgb(12, 74, 146);
+    font-size: 35px;
+}
+.frame-order {
+    margin-left: 100px;
+    width: 1000px;
+    margin-bottom: 30px;
+    font-family: 'Zen Antique', serif;
+}
