@@ -28,7 +28,11 @@
 				</h3>
 			</div>
 			<div class="frame">
-				<form class="form-control" action="/admin/books_add" method="post" enctype="multipart/form-data">
+				<form class="form-control" action="/admin/books_edit" method="post" enctype="multipart/form-data">
+					<input type="hidden" name="id" value="${b.id }"/>
+					<input type="hidden" name="cover" value="${b.cover }"/>
+					<input type="hidden" name="type" value="${param.type }"/>
+					<%--<C:out> 測試 param 內容 ${param}</C:out>--%>
 					<div class="form-floating mb-3">
 						<input type="text" class="form-control" id="input_name" name="name" required="required" value="${b.name}">
 						<label for="input_name">書名</label>
