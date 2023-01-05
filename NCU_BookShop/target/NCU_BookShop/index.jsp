@@ -43,7 +43,7 @@
                             <a class="buying_now" href="javascript:;" onclick="buy(${scrollList.get(0).id})">立刻購買</a>
                             <div class="banner-text">
                                 <a href="/books_detail?id=${scrollList.get(0).id}">
-                                    <img src="${scrollList.get(0).cover}" alt="${scrollList.get(0).name}" width="350" height="350">
+                                    <img src="${scrollList.get(0).cover}" alt="${scrollList.get(0).name}" width="262.5" height="350">
                                 </a>
                             </div>
                         </div>
@@ -56,7 +56,7 @@
                                 <a class="buying_now" href="javascript:;" onclick="buy(${b.id})">立刻購買</a>
                                 <div class="banner-text">
                                     <a href="/books_detail?id=${b.id}">
-                                        <img src="${b.cover}" alt="${b.name}" width="350" height="350">
+                                        <img src="${b.cover}" alt="${b.name}" width="262.5" height="350">
                                     </a>
                                 </div>
                             </div>
@@ -85,15 +85,14 @@
                     <c:forEach items="${newList}" var="b">
                         <div class="col recommend-new">
                             <a href="/books_detail?id=${b.id}">
-                                <img src="${b.cover}" class="img-responsive" alt="${b.name}" width="350" height="350"/>
+                                <img src="${b.cover}" class="img-responsive" alt="${b.name}" width="225" height="300" style="margin-left: 50px;"/>
                             </a>
                             <div class="items-info">
-                                <p>
-                                    <span><i class="bi-eye" aria-hidden="true"></i></span>
-                                    <a href="/books_detail?id=${b.id}">查看詳情</a>
-                                </p>
-                                <a class="buying_now" href="javascript:;" onclick="buy(${b.id})">立刻購買</a>
-                                <div class="clearfix"></div>
+                                <a class="buying-detail" href="/books_detail?id=${b.id}" style="font-family: 'Zen Antique', serif">
+                                    <i class="bi-eye" aria-hidden="true"></i>
+                                    查看詳情
+                                </a>
+                                <a class="buying_now2" href="javascript:;" onclick="buy(${b.id})">立刻購買</a>
                             </div>
                             <div class="view-info">
                                 <p><a href="books_list?departmentid=${b.departmentID}">${b.departmentName}</a> > <a href="/books_detail?id=${b.id}">${b.name}</a></p>

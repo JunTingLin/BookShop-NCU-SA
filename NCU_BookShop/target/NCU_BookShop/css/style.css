@@ -401,6 +401,29 @@ span.center-text{
     border: 7px solid #5D4B33;
     background-color: #fff;
 }
+.buying_now2 {
+    margin-top: 20px;
+    padding-top: 2px;
+    margin-left: 10px;
+    border: 2px solid #212529;
+    padding-left: 2px;
+    padding-right: 2px;
+    width: 90px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #d7f5fc;
+}
+.buying-detail {
+    margin-top: 20px;
+    margin-left: 165px;
+    padding-left: 2px;
+    padding-top: 2px;
+    font-size: 16px;
+    border: 2px solid #212529;
+    width: 90px;
+    border-radius: 5px;
+    background-color: #d7f5fc;
+}
 /*橫幅結尾*/
 
 /*新品推薦區*/
@@ -409,6 +432,8 @@ span.center-text{
 }
 .new_product{
     background-color: #9cd3eb;
+    font-family: 'Zen Antique', serif;
+    font-size: 24px;
     padding: 20px;
     border-radius: 10px;
 }
@@ -429,16 +454,14 @@ span.bi-eye {
     max-width:350px;
     margin: 0px 10px;
 }
-.items img{
-
-}
 .items-info{
-    display: flex;
+    display: inline-block;
     font-size: 1em;
     color: #000000;
     background-color: #9cd3eb;
     height: 50px;
     width: 350px;
+    padding-top: 15px;
 }
 itens .items-info p{
     margin-left:10px;
@@ -461,7 +484,6 @@ itens .items-info p{
 .items .view-info p{
     width: 265px;
 }
-
 /*新品推薦區結尾*/
 /**書本列表**/
 .products{
