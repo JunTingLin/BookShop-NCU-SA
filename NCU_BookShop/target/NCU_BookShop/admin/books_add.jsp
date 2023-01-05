@@ -33,7 +33,7 @@
 						<label for="input_name">書名</label>
 					</div>
 					<div class="form-floating mb-3">
-						<input type="text" class="form-control" id="input_price" name="price" required="required" pattern="[1-9]+[0-9]*">
+						<input type="text" class="form-control" id="input_price" name="price" required="required" pattern="^[0-9]*$">
 						<label for="input_price">價格</label>
 					</div>
 					<div class="form-floating mb-3">
@@ -45,7 +45,7 @@
 						<label for="input_intro">介紹</label>
 					</div>
 					<div class="form-floating mb-3">
-						<input type="text" class="form-control" id="input_stock" name="stock" required="required" pattern="[1-9]+[0-9]*">
+						<input type="text" class="form-control" id="input_stock" name="stock" required="required" pattern="^[0-9]*$">
 						<label for="input_stock">庫存</label>
 					</div>
 					<div class="form-floating mb-3">
