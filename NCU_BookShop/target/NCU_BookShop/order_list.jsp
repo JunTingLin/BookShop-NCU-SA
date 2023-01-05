@@ -81,8 +81,8 @@
 							<td>
 								<p>
 
-									<c:if test="${order.paytype==1 }">信用卡付款</c:if>
-									<c:if test="${order.paytype==2 }">銀行轉帳</c:if>
+									<c:if test="${order.paytype==1 }">LinePay</c:if>
+									<c:if test="${order.paytype==2 }">ApplePay</c:if>
 									<c:if test="${order.paytype==3 }">貨到付款</c:if>
 
 								</p>
