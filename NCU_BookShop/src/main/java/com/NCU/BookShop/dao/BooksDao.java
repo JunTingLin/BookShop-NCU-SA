@@ -18,7 +18,7 @@ public class BooksDao {
     // 橫幅列表(recommend type==1)、新品列表(recommend type==2)
     public List<Map<String,Object>> getBooksList(int recommendType) throws SQLException {
         QueryRunner r = new QueryRunner(DBUtil.getDataSource());
-        String sql="select b.id,b.name,b.cover,b.price,b.author,dep.name departmentname from recommend r,books b,department dep where type=? and r.books_id=b.id and b.department_id=dep.id";
+        String sql="select b.id,b.name,b.cover,b.price,b.author,dep.name departmentname,dep.id departmentID from recommend r,books b,department dep where type=? and r.books_id=b.id and b.department_id=dep.id";
         return r.query(sql, new MapListHandler(),recommendType);
     }
 

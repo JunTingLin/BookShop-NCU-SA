@@ -52,12 +52,14 @@
                                 </a>
                                 <div class="product-info">
                                     <div class="product-info-cust prt_name">
-                                        <h4>${b.name}</h4>
+                                        <h4><a href="/books_detail?id=${b.id}">${b.name}</a></h4>
                                         <div class="view-info">
                                             <span class="item_price">NT$ ${b.price}</span>
                                             <div class="items-info">
-                                                <i class="bi-eye" aria-hidden="true"></i>
-                                                <a href="/books_detail?id=${b.id}">&ensp;查看詳情</a>
+                                                <a href="/books_detail?id=${b.id}">
+                                                    <i class="bi-eye" aria-hidden="true"></i>
+                                                &ensp;   查看詳情
+                                                </a>
                                             </div>
                                         </div>
                                         <input type="button" class="item_add items" value="加入購物車" onclick="buy(${b.id})">

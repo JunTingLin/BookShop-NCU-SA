@@ -731,3 +731,28 @@ span.item_price{
     color:rgb(12, 74, 146);
     font-size: 35px;
 }
+/*order_submit*/
+.frame {
+    margin-left: 30px;
+    width: 1000px;
+    margin-bottom: 30px;
+}
+.submit-title {
+    margin-left: 30px;
+    font-family: 'Zen Antique', serif;
+    width: 1000px;
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    background-color: #9cd3eb;
+    color:rgb(12, 74, 146);
+    font-size: 35px;
+}
+.pay {
+    display: inline-block;
+    height: 250px;
+}
+.pay_option {
+    margin-left: 20px;
+    margin-right: 20px;
+}
