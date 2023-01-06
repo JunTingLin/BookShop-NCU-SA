@@ -4,57 +4,57 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-	<title>用戶修改</title>
-	<meta charset="utf-8"/>
-	<link rel="stylesheet" href="css/bootstrap.css"/>
-</head>
-<body>
-<div class="container-fluid">
+	<head>
+		<title>用戶修改</title>
+		<meta charset="utf-8"/>
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="css/bootstrap.css"/>
+		<link type="text/css" rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Rampart+One&family=Zen+Antique&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+	</head>
+	<body>
+		<jsp:include page="/admin/header.jsp">
+			<jsp:param name="flag" value="4"></jsp:param>
+		</jsp:include>
 
-	<jsp:include page="/admin/header.jsp">
-		<jsp:param name="flag" value="4"></jsp:param>
-	</jsp:include>
 
-	<br><br>
-
-	<form class="form-horizontal" action="/admin/user_edit" method="post">
-		<input type="hidden" name="id" value="${u.id }">
-		<div class="form-group">
-			<label for="input_name" class="col-sm-1 control-label">用戶名字</label>
-			<div class="col-sm-5">${u.username }</div>
-		</div>
-		<div class="form-group">
-			<label for="input_name" class="col-sm-1 control-label">電子信箱</label>
-			<div class="col-sm-5">${u.email }</div>
-		</div>
-		<div class="form-group">
-			<label for="input_name" class="col-sm-1 control-label">收件人</label>
-			<div class="col-sm-6">
-				<input type="text" class="form-control" id="input_name" name="name" value="${u.name }">
+		<div class="container-fluid">
+			<br><br>
+			<div class="edit-title">
+				<h3 class="edit-user">
+					<i class="bi bi-pencil-square"></i>
+					會員資料修改
+				</h3>
+			</div>
+			<div class="frame-user">
+				<form class="form-horizontal" action="/admin/user_edit" method="post">
+					<input type="hidden" name="id" value="${u.id }">
+					<div class="form-floating mb-3">
+						<input type="text" class="form-control" id="user_name" name="name" readonly="readonly" value="${u.username }">
+						<label for="user_name">會員姓名</label>
+					</div>
+					<div class="form-floating mb-3">
+						<input type="text" class="form-control" id="user_email" name="email" readonly="readonly" value="${u.email }">
+						<label for="user_email">電子信箱</label>
+					</div>
+					<div class="form-floating mb-3">
+						<input type="text" class="form-control" id="receiver" name="receiver" required="required" value="${u.name }">
+						<label for="receiver">收件人姓名</label>
+					</div>
+					<div class="form-floating mb-3">
+						<input type="text" class="form-control" id="user_phone" name="phone" required="required" value="${u.phone }">
+						<label for="user_phone">收件人電話</label>
+					</div>
+					<div class="form-floating mb-3">
+						<input type="text" class="form-control" id="user_address" name="address" required="required" value="${u.address }">
+						<label for="user_phone">收件人地址</label>
+					</div>
+					<div class="mb-3" style="margin-left: 575px;">
+						<button type="submit" class="btn btn-success">儲存修改資料</button>
+					</div>
+				</form>
 			</div>
 		</div>
-		<div class="form-group">
-			<label for="input_name" class="col-sm-1 control-label">電話</label>
-			<div class="col-sm-6">
-				<input type="text" class="form-control" id="input_phone" name="phone" value="${u.phone }">
-			</div>
-		</div>
-		<div class="form-group">
-			<label for="input_name" class="col-sm-1 control-label">地址</label>
-			<div class="col-sm-6">
-				<input type="text" class="form-control" id="input_address" name="address" value="${u.address }">
-			</div>
-		</div>
-		<div class="form-group">
-			<div class="col-sm-offset-1 col-sm-10">
-				<button type="submit" class="btn btn-success">儲存修改結果</button>
-			</div>
-		</div>
-	</form>
-
-	<span style="color:red;"></span>
-
-</div>
-</body>
+	</body>
 </html>

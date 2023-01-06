@@ -105,16 +105,13 @@
 
 									<c:if test="${order.paytype==1 }">LinePay</c:if>
 									<c:if test="${order.paytype==2 }">ApplePay</c:if>
-									<c:if test="${order.paytype==3 }">超商付款</c:if>
+									<c:if test="${order.paytype==3 }">貨到付款</c:if>
 
 								</p>
 							</td>
 							<td><p>${order.user.username }</p></td>
 							<td><p>${order.datetime }</p></td>
 							<td>
-								<c:if test="${order.status==1 }">
-									<a class="btn btn-success" href="/admin/order_status?id=${order.id }&status=2">付款</a>
-								</c:if>
 								<c:if test="${order.status==2 }">
 									<a class="btn btn-success" href="/admin/order_status?id=${order.id }&status=3">發貨</a>
 								</c:if>
