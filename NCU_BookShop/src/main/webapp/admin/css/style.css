@@ -254,3 +254,32 @@ span.books_num {
 .nav nav-tabs{
     margin-left: 100px;
 }
+/*user admin*/
+.edit-user {
+    margin-left: 100px;
+    font-family: 'Zen Antique', serif;
+    width: 700px;
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    background-color: #9cd3eb;
+    color:rgb(12, 74, 146);
+    font-size: 35px;
+}
+.frame-user {
+    margin-left: 100px;
+    width: 700px;
+    margin-bottom: 30px;
+    font-family: 'Zen Antique', serif;
+}
+.user-list {
+    margin-left: 100px;
+    font-family: 'Zen Antique', serif;
+    width: 1100px;
+    padding-left: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    background-color: #9cd3eb;
+    color:rgb(12, 74, 146);
+    font-size: 35px;
+}

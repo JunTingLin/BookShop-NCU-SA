@@ -4,69 +4,62 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-	<title>新增用戶</title>
-	<meta charset="utf-8" />
-	<link rel="stylesheet" href="css/bootstrap.css" />
-</head>
-<body>
-<div class="container-fluid">
+	<head>
+		<title>新增用戶</title>
+		<meta charset="utf-8" />
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="css/bootstrap.css"/>
+		<link type="text/css" rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Rampart+One&family=Zen+Antique&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+	</head>
 
-
-
-	<jsp:include page="/admin/header.jsp">
-		<jsp:param name="flag" value="4"></jsp:param>
-	</jsp:include>
-	<c:if test="${!empty failMsg }">
-		<div class="alert alert-danger">${failMsg }</div>
-	</c:if>
-	<br><br>
-	<form class="form-horizontal" action="/admin/user_add" method="post">
-		<div class="form-group">
-			<label for="input_name" class="col-sm-1 control-label">用戶名字</label>
-			<div class="col-sm-6">
-				<input type="text" class="form-control" id="input_username" name="username" required="required" value="${u.username }" />
+	<body>
+		<jsp:include page="/admin/header.jsp">
+			<jsp:param name="flag" value="4"></jsp:param>
+		</jsp:include>
+		<div class="container-fluid">
+			<c:if test="${!empty failMsg }">
+				<div class="alert alert-danger">${failMsg }</div>
+			</c:if>
+			<br><br>
+			<div class="user-title">
+				<h3 class="edit-user">
+					<i class="bi bi-person-plus-fill"></i>
+					新增會員
+				</h3>
+			</div>
+			<div class="frame-user">
+				<form class="form-horizontal" action="/admin/user_add" method="post">
+					<div class="form-floating mb-3">
+						<input type="text" class="form-control" id="input_username" name="username" required="required" value="${u.username }">
+						<label for="input_username">帳號</label>
+					</div>
+					<div class="form-floating mb-3">
+						<input type="text" class="form-control" id="email" name="email" required="required" value="${u.email }">
+						<label for="email">電子信箱</label>
+					</div>
+					<div class="form-floating mb-3">
+						<input type="password" class="form-control" id="pwd" name="pwd" required="required" value="${u.password }">
+						<label for="email">密碼</label>
+					</div>
+					<div class="form-floating mb-3">
+						<input type="text" class="form-control" id="input_name" name="name" required="required" value="${u.name }">
+						<label for="input_name">收件人姓名</label>
+					</div>
+					<div class="form-floating mb-3">
+						<input type="text" class="form-control" id="phone" name="phone" required="required" value="${u.phone }">
+						<label for="phone">電話</label>
+					</div>
+					<div class="form-floating mb-3">
+						<input type="text" class="form-control" id="address" name="address" required="required" value="${u.address }">
+						<label for="address">地址</label>
+					</div>
+					<div class="mb-3" style="margin-left: 575px;">
+						<button type="submit" class="btn btn-success">儲存修改資料</button>
+					</div>
+				</form>
 			</div>
 		</div>
-		<div class="form-group">
-			<label for="input_name" class="col-sm-1 control-label">電子信箱</label>
-			<div class="col-sm-6">
-				<input type="text" class="form-control" id="input_email" name="email" required="required" value="${u.email }"/>
-			</div>
-		</div>
-		<div class="form-group">
-			<label for="input_name" class="col-sm-1 control-label">密碼</label>
-			<div class="col-sm-6">
-				<%--	value="${u.password } 刪除，不然郵箱帳號重複時，會撈回長長的密文			--%>
-				<input type="password" class="form-control" id="input_password" name="password" required="required" "/>
-			</div>
-		</div>
-		<div class="form-group">
-			<label for="input_name" class="col-sm-1 control-label">收件人</label>
-			<div class="col-sm-6">
-				<input type="text" class="form-control" id="input_name" name="name" value="${u.name }"/>
-			</div>
-		</div>
-		<div class="form-group">
-			<label for="input_name" class="col-sm-1 control-label">電話</label>
-			<div class="col-sm-6">
-				<input type="text" class="form-control" id="input_phone" name="phone" value="${u.phone }" />
-			</div>
-		</div>
-		<div class="form-group">
-			<label for="input_name" class="col-sm-1 control-label">地址</label>
-			<div class="col-sm-6">
-				<input type="text" class="form-control" id="input_address" name="address" value="${u.address }"/>
-			</div>
-		</div>
-		<div class="form-group">
-			<div class="col-sm-offset-1 col-sm-10">
-				<button type="submit" class="btn btn-success">儲存</button>
-			</div>
-		</div>
-	</form>
-
-	<span style="color:red;"></span>
-</div>
-</body>
+	</body>
 </html>
