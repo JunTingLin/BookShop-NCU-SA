@@ -55,8 +55,8 @@
 						<input type="text" class="form-control" id="address" name="address" required="required" value="${u.address }">
 						<label for="address">地址</label>
 					</div>
-					<div class="mb-3" style="margin-left: 575px;">
-						<button type="submit" class="btn btn-success">儲存修改資料</button>
+					<div class="mb-3" style="margin-left: 610px;">
+						<button type="submit" class="btn btn-success">新增會員</button>
 					</div>
 				</form>
 			</div>
