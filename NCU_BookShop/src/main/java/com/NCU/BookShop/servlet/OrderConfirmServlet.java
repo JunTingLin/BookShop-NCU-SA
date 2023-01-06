@@ -35,7 +35,7 @@ public class OrderConfirmServlet extends HttpServlet {
             e.printStackTrace();
         }
         o.setDatetime(new Date());
-        if(o.getPaytype() == 3){ //假如是貨到付款
+        if(o.getPaytype() == 3){ //假如是超商付款
             o.setStatus(1); //未付款
         }else{
             o.setStatus(2); //已付款

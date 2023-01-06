@@ -77,7 +77,7 @@
 
 									<c:if test="${order.paytype==1 }">LinePay</c:if>
 									<c:if test="${order.paytype==2 }">ApplePay</c:if>
-									<c:if test="${order.paytype==3 }">貨到付款</c:if>
+									<c:if test="${order.paytype==3 }">超商付款</c:if>
 
 								</p>
 							</td>

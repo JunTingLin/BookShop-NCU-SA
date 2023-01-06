@@ -37,7 +37,8 @@
 		<div class="form-group">
 			<label for="input_name" class="col-sm-1 control-label">密碼</label>
 			<div class="col-sm-6">
-				<input type="password" class="form-control" id="input_password" name="password" required="required" value="${u.password }"/>
+				<%--	value="${u.password } 刪除，不然郵箱帳號重複時，會撈回長長的密文			--%>
+				<input type="password" class="form-control" id="input_password" name="password" required="required" "/>
 			</div>
 		</div>
 		<div class="form-group">

@@ -65,7 +65,7 @@
 							<label class="pay_option">
 									<div class="thumbnail">
 										<input type="radio" name="paytype" value="3"  />
-										<img src="images/delivery.jpg" alt="貨到付款" width="80" height="80">
+										<img src="images/delivery.jpg" alt="超商付款" width="80" height="80">
 									</div>
 							</label>
 							<div class="mb-3">

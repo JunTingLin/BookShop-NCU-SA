@@ -37,13 +37,13 @@
 		<div class="form-group">
 			<label for="input_name" class="col-sm-1 control-label">電話</label>
 			<div class="col-sm-6">
-				<input type="text" class="form-control" id="input_name" name="phone" value="${u.phone }">
+				<input type="text" class="form-control" id="input_phone" name="phone" value="${u.phone }">
 			</div>
 		</div>
 		<div class="form-group">
 			<label for="input_name" class="col-sm-1 control-label">地址</label>
 			<div class="col-sm-6">
-				<input type="text" class="form-control" id="input_name" name="address" value="${u.address }">
+				<input type="text" class="form-control" id="input_address" name="address" value="${u.address }">
 			</div>
 		</div>
 		<div class="form-group">
