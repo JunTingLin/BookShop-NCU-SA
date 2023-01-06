@@ -54,7 +54,7 @@
 						<label for="input_stock">庫存</label>
 					</div>
 					<div class="form-floating mb-3" style="display: inline-block">
-						<input type="file" class="form-control" id="input_file" name="cover" accept=".png, .jpg, .jpeg" value="${b.cover }">
+						<input type="file" class="form-control" id="input_file" name="cover" accept=".png, .jpg, .jpeg" value="${b.cover }"  style="width: 800px;">
 						<label for="input_file">右圖為原封面圖(推薦尺寸:225*300)無更動則無需選擇</label>
 					</div>
 					<img class="edit_img" src="${pageContext.request.contextPath }${b.cover }" width="135" height="180"/>
