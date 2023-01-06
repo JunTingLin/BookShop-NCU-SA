@@ -3,11 +3,13 @@ package com.NCU.BookShop.dao;
 import com.NCU.BookShop.model.User;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
 import org.springframework.stereotype.Repository;
 import com.NCU.BookShop.utils.DBUtil;
 
 import java.sql.SQLException;
+import java.util.List;
 
 
 @Repository
@@ -67,6 +69,11 @@ public class UserDao {
         QueryRunner r = new QueryRunner(DBUtil.getDataSource());
         String sql = "select count(*) from user";
         return r.query(sql, new ScalarHandler<Long>()).intValue();
+    }
+    public List selectUserList() throws SQLException {
+        QueryRunner r = new QueryRunner(DBUtil.getDataSource());
+        String sql = "select * from user";
+        return r.query(sql, new BeanListHandler<User>(User.class));
     }
 
     public void delete(int id) throws SQLException {

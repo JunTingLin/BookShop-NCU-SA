@@ -8,6 +8,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.sql.SQLException;
+import java.util.List;
 
 @Service
 public class UserService {
@@ -91,5 +92,16 @@ public class UserService {
             e.printStackTrace();
             return false;
         }
+    }
+    public List getUserList() {
+        List list=null;
+        try {
+            list = uDao.selectUserList();
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        return list;
     }
 }
