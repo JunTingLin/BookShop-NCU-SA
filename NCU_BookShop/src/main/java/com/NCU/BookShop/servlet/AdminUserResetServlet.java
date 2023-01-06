@@ -4,6 +4,8 @@ import com.NCU.BookShop.model.User;
 import org.apache.commons.beanutils.BeanUtils;
 import com.NCU.BookShop.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
@@ -28,6 +30,11 @@ public class AdminUserResetServlet extends HttpServlet {
         User u = new User();
         try {
             BeanUtils.copyProperties(u, request.getParameterMap());
+            //重新把user物件內的密碼換成密文
+            PasswordEncoder pe = new BCryptPasswordEncoder();
+            String encodePassword = pe.encode(u.getPassword());
+            u.setPassword(encodePassword);
+
         } catch (IllegalAccessException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

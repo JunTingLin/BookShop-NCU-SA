@@ -30,7 +30,7 @@
 		<div class="form-group">
 			<label for="input_name" class="col-sm-1 control-label">密碼</label>
 			<div class="col-sm-6">
-				<input type="text" class="form-control" id="input_name" name="password" value="" required="required">
+				<input type="password" class="form-control" id="input_name" name="password" value="" required="required">
 			</div>
 		</div>
 		<div class="form-group">
