@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="NCU_BookShop:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/NCU_BookShop_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="NCU_BookShop" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="c3p0-0.9.5.2" />
+          <element id="library" level="project" name="jstl-1.2" />
+          <element id="library" level="project" name="commons-beanutils-1.9.3" />
+          <element id="library" level="project" name="commons-logging-1.2" />
+          <element id="library" level="project" name="commons-fileupload-1.3.3" />
+          <element id="library" level="project" name="commons-io-2.6" />
+          <element id="library" level="project" name="mysql-connector-java-5.1.40-bin" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/spring-security-crypto-3.2.10.RELEASE.jar" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="NCU_BookShop/web/Web" />
+    </root>
+  </artifact>
+</component>
