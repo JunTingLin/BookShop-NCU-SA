@@ -31,23 +31,23 @@
 				<form class="form-horizontal" action="/admin/user_edit" method="post">
 					<input type="hidden" name="id" value="${u.id }">
 					<div class="form-floating mb-3">
-						<input type="text" class="form-control" id="user_name" name="name" readonly="readonly" value="${u.username }">
+						<input type="text" class="form-control" id="user_name" name="name" readonly="readonly" value="${u.username }" pattern="[^0-9!@#$%^&*()_]*">
 						<label for="user_name">會員姓名</label>
 					</div>
 					<div class="form-floating mb-3">
-						<input type="text" class="form-control" id="user_email" name="email" readonly="readonly" value="${u.email }">
+						<input type="email" class="form-control" id="user_email" name="email" readonly="readonly" value="${u.email }">
 						<label for="user_email">電子信箱</label>
 					</div>
 					<div class="form-floating mb-3">
-						<input type="text" class="form-control" id="receiver" name="receiver" required="required" value="${u.name }">
+						<input type="text" class="form-control" id="receiver" name="receiver" required="required" value="${u.name }" pattern="[^0-9!@#$%^&*()_]*">
 						<label for="receiver">收件人姓名</label>
 					</div>
 					<div class="form-floating mb-3">
-						<input type="text" class="form-control" id="user_phone" name="phone" required="required" value="${u.phone }">
+						<input type="text" class="form-control" id="user_phone" name="phone" required="required" value="${u.phone }" pattern="09[0-9]{8}">
 						<label for="user_phone">收件人電話</label>
 					</div>
 					<div class="form-floating mb-3">
-						<input type="text" class="form-control" id="user_address" name="address" required="required" value="${u.address }">
+						<input type="text" class="form-control" id="user_address" name="address" required="required" value="${u.address }" pattern="[^!@#$%^&*()_]*">
 						<label for="user_phone">收件人地址</label>
 					</div>
 					<div class="mb-3" style="margin-left: 575px;">
