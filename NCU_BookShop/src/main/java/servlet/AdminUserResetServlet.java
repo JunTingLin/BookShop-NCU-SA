@@ -19,7 +19,7 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 
 @WebServlet(name = "admin_user_reset",urlPatterns = "/admin/user_reset")
-@Controller
+
 public class AdminUserResetServlet extends HttpServlet {
     
     private UserService uService = new UserService();
@@ -45,9 +45,5 @@ public class AdminUserResetServlet extends HttpServlet {
         uService.updatePwd(u);
         request.getRequestDispatcher("/admin/user_list").forward(request, response);
     }
-    public void init(ServletConfig config) throws ServletException {
-        super.init(config);
-        SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this,
-                config.getServletContext());
-    }
+
 }

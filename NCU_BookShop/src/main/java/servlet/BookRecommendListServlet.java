@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.util.List;
 
 @WebServlet(name = "bookrecommendList",urlPatterns = "/booksrecommend_list")
-@Controller
+
 public class BookRecommendListServlet extends HttpServlet {
     
     private BooksService bService = new BooksService();
@@ -31,9 +31,5 @@ public class BookRecommendListServlet extends HttpServlet {
         request.getRequestDispatcher("booksrecommend_list.jsp").forward(request, response);
     }
 
-    public void init(ServletConfig config) throws ServletException {
-        super.init(config);
-        SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this,
-                config.getServletContext());
-    }
+
 }

@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "user_login",urlPatterns = "/user_login")
-@Controller
+
 public class UserLoginServlet extends HttpServlet {
     
     private UserService uService = new UserService();
@@ -36,9 +36,5 @@ public class UserLoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
-    public void init(ServletConfig config) throws ServletException {
-        super.init(config);
-        SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this,
-                config.getServletContext());
-    }
+
 }

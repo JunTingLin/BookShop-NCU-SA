@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "admin_user_delete",urlPatterns = "/admin/user_delete")
-@Controller
+
 public class AdminUserDeleteServlet extends HttpServlet {
     
     private UserService uService = new UserService();
@@ -39,9 +39,5 @@ public class AdminUserDeleteServlet extends HttpServlet {
         // TODO Auto-generated method stub
         doGet(request, response);
     }
-    public void init(ServletConfig config) throws ServletException {
-        super.init(config);
-        SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this,
-                config.getServletContext());
-    }
+
 }

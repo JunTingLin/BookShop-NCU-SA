@@ -12,7 +12,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 
-@Repository
+
 public class UserDao {
     public void addUser(User user) throws SQLException {
         QueryRunner r = new QueryRunner(DBUtil.getDataSource());

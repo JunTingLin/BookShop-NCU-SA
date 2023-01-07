@@ -12,7 +12,7 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 
-@Repository
+
 public class BooksDao {
 
     // 橫幅列表(recommend type==1)、新品列表(recommend type==2)

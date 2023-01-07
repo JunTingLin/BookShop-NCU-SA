@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.util.List;
 
 @WebServlet(name = "admi_department_list",urlPatterns = "/admin/department_list")
-@Controller
+
 public class AdminDepartmentListServlet extends HttpServlet {
     
     private DepartmentService depService = new DepartmentService();
@@ -39,9 +39,5 @@ public class AdminDepartmentListServlet extends HttpServlet {
         doGet(request, response);
     }
 
-    public void init(ServletConfig config) throws ServletException {
-        super.init(config);
-        SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this,
-                config.getServletContext());
-    }
+
 }

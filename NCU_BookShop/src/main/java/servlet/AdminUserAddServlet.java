@@ -19,7 +19,7 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 
 @WebServlet(name = "admin_user_add",urlPatterns = "/admin/user_add")
-@Controller
+
 public class AdminUserAddServlet extends HttpServlet {
     
     private UserService uService = new UserService();
@@ -51,9 +51,5 @@ public class AdminUserAddServlet extends HttpServlet {
             request.getRequestDispatcher("/admin/user_add.jsp").forward(request, response);
         }
     }
-    public void init(ServletConfig config) throws ServletException {
-        super.init(config);
-        SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this,
-                config.getServletContext());
-    }
+
 }

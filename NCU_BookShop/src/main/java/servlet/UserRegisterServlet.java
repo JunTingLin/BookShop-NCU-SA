@@ -19,7 +19,7 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 
 @WebServlet(name = "user_register",urlPatterns = "/user_rigister")
-@Controller
+
 public class UserRegisterServlet extends HttpServlet {
     
     private UserService uService = new UserService();
@@ -52,9 +52,5 @@ public class UserRegisterServlet extends HttpServlet {
 
     }
 
-    public void init(ServletConfig config) throws ServletException {
-        super.init(config);
-        SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this,
-                config.getServletContext());
-    }
+
 }

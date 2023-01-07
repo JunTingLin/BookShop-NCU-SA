@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "admin_order_status",urlPatterns = "/admin/order_status")
-@Controller
+
 public class AdminOrderStatusServlet extends HttpServlet {
     
     private OrderService oService = new OrderService();
@@ -26,9 +26,5 @@ public class AdminOrderStatusServlet extends HttpServlet {
         response.sendRedirect("/admin/order_list?status=" +status);
     }
 
-    public void init(ServletConfig config) throws ServletException {
-        super.init(config);
-        SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this,
-                config.getServletContext());
-    }
+
 }

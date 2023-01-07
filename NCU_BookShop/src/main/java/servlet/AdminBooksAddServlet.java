@@ -23,7 +23,7 @@ import java.util.Date;
 import java.util.List;
 
 @WebServlet(name = "admin_books_add",urlPatterns = "/admin/books_add")
-@Controller
+
 public class AdminBooksAddServlet extends HttpServlet {
     
     private BooksService bService = new BooksService();
@@ -98,9 +98,5 @@ public class AdminBooksAddServlet extends HttpServlet {
         doGet(request, response);
     }
 
-    public void init(ServletConfig config) throws ServletException {
-        super.init(config);
-        SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this,
-                config.getServletContext());
-    }
+
 }

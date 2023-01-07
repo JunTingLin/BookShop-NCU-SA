@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 
 @WebServlet(name = "user_changeaddress",urlPatterns = "/user_changeaddress")
-@Controller
+
 public class UserChangeAddressServlet extends HttpServlet {
     
     private UserService uService = new UserService();
@@ -44,9 +44,5 @@ public class UserChangeAddressServlet extends HttpServlet {
 
     }
 
-    public void init(ServletConfig config) throws ServletException {
-        super.init(config);
-        SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this,
-                config.getServletContext());
-    }
+
 }

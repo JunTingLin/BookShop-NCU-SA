@@ -17,7 +17,7 @@ import java.net.URLEncoder;
 import java.util.List;
 
 @WebServlet(name = "books_search",urlPatterns = "/books_search")
-@Controller
+
 public class BooksSearchServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -34,10 +34,6 @@ public class BooksSearchServlet extends HttpServlet {
         request.getRequestDispatcher("/books_search.jsp").forward(request, response);
     }
 
-    public void init(ServletConfig config) throws ServletException {
-        super.init(config);
-        SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this,
-                config.getServletContext());
-    }
+
 
 }

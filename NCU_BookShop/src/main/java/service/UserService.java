@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.sql.SQLException;
 import java.util.List;
 
-@Service
+
 public class UserService {
     
     private UserDao uDao = new UserDao();

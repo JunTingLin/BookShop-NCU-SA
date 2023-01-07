@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "books_buy",urlPatterns = "/books_buy")
-@Controller
+
 public class BooksBuyServlet extends HttpServlet {
     
     private BooksService bService = new BooksService();
@@ -46,9 +46,5 @@ public class BooksBuyServlet extends HttpServlet {
 
     }
 
-    public void init(ServletConfig config) throws ServletException {
-        super.init(config);
-        SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this,
-                config.getServletContext());
-    }
+
 }

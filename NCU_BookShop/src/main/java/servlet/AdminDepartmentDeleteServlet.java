@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "admin_department_delete",urlPatterns = "/admin/department_delete")
-@Controller
+
 public class AdminDepartmentDeleteServlet extends HttpServlet {
     
     private DepartmentService depService = new DepartmentService();
@@ -40,9 +40,5 @@ public class AdminDepartmentDeleteServlet extends HttpServlet {
         doGet(request, response);
     }
 
-    public void init(ServletConfig config) throws ServletException {
-        super.init(config);
-        SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this,
-                config.getServletContext());
-    }
+
 }

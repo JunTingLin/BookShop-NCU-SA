@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "user_changepwd",urlPatterns = "/user_changepwd")
-@Controller
+
 public class UserChangePwd extends HttpServlet {
     
     private UserService uService = new UserService();
@@ -43,9 +43,5 @@ public class UserChangePwd extends HttpServlet {
 
     }
 
-    public void init(ServletConfig config) throws ServletException {
-        super.init(config);
-        SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this,
-                config.getServletContext());
-    }
+
 }

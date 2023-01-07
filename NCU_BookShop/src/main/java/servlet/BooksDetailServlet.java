@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "books_detail",urlPatterns = "/books_detail")
-@Controller
+
 public class BooksDetailServlet extends HttpServlet {
 
     
@@ -30,9 +30,5 @@ public class BooksDetailServlet extends HttpServlet {
         request.getRequestDispatcher("/books_detail.jsp").forward(request, response);
     }
 
-    public void init(ServletConfig config) throws ServletException {
-        super.init(config);
-        SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this,
-                config.getServletContext());
-    }
+
 }

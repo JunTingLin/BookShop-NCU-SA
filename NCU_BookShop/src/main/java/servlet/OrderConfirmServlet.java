@@ -19,7 +19,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
 
 @WebServlet(name = "order_confirm",urlPatterns = "/order_confirm")
-@Controller
+
 public class OrderConfirmServlet extends HttpServlet {
     
     private OrderService oService = new OrderService();
@@ -52,9 +52,5 @@ public class OrderConfirmServlet extends HttpServlet {
 
     }
 
-    public void init(ServletConfig config) throws ServletException {
-        super.init(config);
-        SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this,
-                config.getServletContext());
-    }
+
 }
