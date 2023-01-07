@@ -55,7 +55,7 @@
                     </div>
                     <div class="register-input">
                         <span class="register-text">■&ensp;收貨地址(address)</span>
-                        <input type="text" name="address" placeholder="請輸入收貨地址" pattern="[^0-9!@#$%^&*()_]*">
+                        <input type="text" name="address" placeholder="請輸入收貨地址" pattern="[^!@#$%^&*()_]*">
                     </div>
                 </div>
                 <div class="register-btn">
