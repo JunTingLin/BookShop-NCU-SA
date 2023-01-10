@@ -47,7 +47,7 @@
 						<th style="width: 90px;padding-left: 25px;">收貨訊息</th>
 						<th style="width: 80px;padding-left: 13px;">訂單狀態</th>
 						<th style="width: 90px;padding-left: 13px;">付款方式</th>
-						<th style="width: 80px;padding-left: 13px;">下單會員</th>
+						<th style="width: 80px;padding-left: 13px;">下單時間</th>
 					</tr>
 					</thead>
 					<c:forEach items="${orderList }" var="order">
