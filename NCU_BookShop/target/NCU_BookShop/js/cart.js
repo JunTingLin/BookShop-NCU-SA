@@ -7,7 +7,7 @@ function popupMsg(msg,duration)
     var el = document.createElement("img");
     switch (msg) {
         case 'add':
-            el.setAttribute("src", "./images/2.png");
+            el.setAttribute("src", "./images/2.png").style.zIndex="20";
             break;
         case 'out of stock':
             el.setAttribute("src", "./images/1.png");
