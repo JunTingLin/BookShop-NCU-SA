@@ -7,7 +7,7 @@ function popupMsg(msg,duration)
     var el = document.createElement("img");
     switch (msg) {
         case 'add':
-            el.setAttribute("src", "./images/2.png").style.zIndex="20";
+            el.setAttribute("src", "./images/2.png");
             break;
         case 'out of stock':
             el.setAttribute("src", "./images/1.png");
@@ -28,7 +28,7 @@ function popupMsg(msg,duration)
             console.log('error');
     }
     
-    el.setAttribute("style","position: fixed;left: 50%;top: 50%;transform: translate(-50%, -50%);align-items:center;justify-content:center;text-align:center;font-size: 16px;width:200px;height:200px;border-radius:100px;");
+    el.setAttribute("style","z-index: 20;position: fixed;left: 50%;top: 50%;transform: translate(-50%, -50%);align-items:center;justify-content:center;text-align:center;font-size: 16px;width:200px;height:200px;border-radius:100px;");
     setTimeout(function(){
         el.parentNode.removeChild(el);
     },duration);

@@ -36,7 +36,7 @@
 						<label for="user_email">電子信箱</label>
 					</div>
 					<div class="form-floating mb-3">
-						<input type="password" class="form-control" id="input_pwd" name="password" required="required" value="">
+						<input type="password" class="form-control" id="input_pwd" name="password" required="required" value="" pattern="[a-zA-Z0-9!@#$%^&*()_]{8,}">
 						<label for="input_pwd">欲重設的密碼</label>
 					</div>
 					<div class="mb-3" style="margin-left: 600px;">

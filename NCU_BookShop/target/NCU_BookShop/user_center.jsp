@@ -46,7 +46,7 @@
 						</div>
 						<div class="center-input">
 							<span class="center-text">收貨地址</span>
-							<input type="text" name="address" value="${user.address }" placeholder="請輸入地址" pattern="[^0-9!@#$%^&*()_]*">
+							<input type="text" name="address" value="${user.address }" placeholder="請輸入地址" pattern="[^!@#$%^&*()_]*">
 						</div>
 						<div class="center-btn text-center">
 						   <input type="submit" value="更新資料">
