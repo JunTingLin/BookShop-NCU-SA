@@ -50,7 +50,7 @@
 						<label for="input_intro">介紹</label>
 					</div>
 					<div class="form-floating mb-3">
-						<input type="text" class="form-control" id="input_stock" name="stock" required="required" pattern="[1-9]+[0-9]*" value="${b.stock}">
+						<input type="text" class="form-control" id="input_stock" name="stock" required="required" pattern="0|[1-9]+[0-9]*" value="${b.stock}">
 						<label for="input_stock">庫存</label>
 					</div>
 					<div class="form-floating mb-3" style="display: inline-block">

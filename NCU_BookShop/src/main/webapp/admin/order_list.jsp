@@ -113,10 +113,10 @@
 							<td><p>${order.datetime }</p></td>
 							<td>
 								<c:if test="${order.status==1 }">
-									<a class="btn btn-success" href="/admin/order_status?id=${order.id }&status=2">付款</a>
+									<a class="btn btn-success" href="/admin/order_status?id=${order.id }&status=2">確認收款</a>
 								</c:if>
 								<c:if test="${order.status==2 }">
-									<a class="btn btn-success" href="/admin/order_status?id=${order.id }&status=3">發貨</a>
+									<a class="btn btn-info" href="/admin/order_status?id=${order.id }&status=3">發貨</a>
 								</c:if>
 								<c:if test="${order.status==3 }">
 									<a class="btn btn-warning" href="/admin/order_status?id=${order.id }&status=4">完成</a>
