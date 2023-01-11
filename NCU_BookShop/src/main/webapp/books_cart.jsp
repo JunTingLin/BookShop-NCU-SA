@@ -17,6 +17,10 @@
 		<script type="text/javascript" src="js/cart.js"></script>
 	</head>
 	<body>
+		<c:if test="${empty order.getItemMap()}">
+			<jsp:forward page="/index"></jsp:forward>
+		</c:if>
+
 		<!--header-->
 		<jsp:include page="header.jsp">
 			<jsp:param name="flag" value="7"></jsp:param>
