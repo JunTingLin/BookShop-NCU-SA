@@ -50,17 +50,25 @@
                     <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
                 </form>
                 <div>
-                    <a href="books_cart.jsp">
-                        <i class="d-flex bi bi-cart2" id="cart"></i>
-                    </a>
-                    <a href="books_cart.jsp">
-                        <span class="books_num">
-                            <c:choose>
-                                <c:when test="${empty order}">0</c:when>
-                                <c:otherwise>${order.amount}</c:otherwise>
-                            </c:choose>
-                        </span>
-                    </a>
+                    <c:choose>
+                        <c:when test="${empty order.getItemMap()}">
+                            <i class="d-flex bi bi-cart2" id="cart"></i>
+                            <span class="books_num">
+                                0
+                            </span>
+                        </c:when>
+                        <c:otherwise>
+                            <a href="books_cart.jsp">
+                                <i class="d-flex bi bi-cart2" id="cart"></i>
+                            </a>
+                            <a href="books_cart.jsp">
+                                <span class="books_num">
+                                        ${order.amount}
+                                </span>
+                            </a>
+                        </c:otherwise>
+                    </c:choose>
+
                 </div>
             </div>
         </div>
