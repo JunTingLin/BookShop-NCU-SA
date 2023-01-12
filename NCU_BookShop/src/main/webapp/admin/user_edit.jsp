@@ -39,15 +39,15 @@
 						<label for="user_email">電子信箱</label>
 					</div>
 					<div class="form-floating mb-3">
-						<input type="text" class="form-control" id="receiver" name="receiver" required="required" value="${u.name }" pattern="[^0-9!@#$%^&*()_]*">
+						<input type="text" class="form-control" id="receiver" name="receiver"  value="${u.name }" pattern="[^0-9!@#$%^&*()_]*">
 						<label for="receiver">收件人姓名</label>
 					</div>
 					<div class="form-floating mb-3">
-						<input type="text" class="form-control" id="user_phone" name="phone" required="required" value="${u.phone }" pattern="09[0-9]{8}">
+						<input type="text" class="form-control" id="user_phone" name="phone"  value="${u.phone }" pattern="09[0-9]{8}">
 						<label for="user_phone">收件人電話</label>
 					</div>
 					<div class="form-floating mb-3">
-						<input type="text" class="form-control" id="user_address" name="address" required="required" value="${u.address }" pattern="[^!@#$%^&*()_]*">
+						<input type="text" class="form-control" id="user_address" name="address"  value="${u.address }" pattern="[^!@#$%^&*()_]*">
 						<label for="user_phone">收件人地址</label>
 					</div>
 					<div class="mb-3" style="margin-left: 575px;">

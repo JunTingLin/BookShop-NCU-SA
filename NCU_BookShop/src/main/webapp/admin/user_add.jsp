@@ -32,7 +32,7 @@
 			<div class="frame-user">
 				<form class="form-horizontal" action="/admin/user_add" method="post">
 					<div class="form-floating mb-3">
-						<input type="text" class="form-control" id="input_username" name="username" required="required" value="${u.username }">
+						<input type="text" class="form-control" id="input_username" name="username" required="required" pattern="[a-zA-Z0-9]+"  value="${u.username }">
 						<label for="input_username">帳號</label>
 					</div>
 					<div class="form-floating mb-3">
@@ -40,19 +40,19 @@
 						<label for="email">電子信箱</label>
 					</div>
 					<div class="form-floating mb-3">
-						<input type="password" class="form-control" id="pwd" name="pwd" required="required" value="${u.password }" pattern="[a-zA-Z0-9!@#$%^&*()_]{8,}">
+						<input type="password" class="form-control" id="pwd" name="password" required="required" value="${u.password }" pattern="[a-zA-Z0-9!@#$%^&*()_]{8,}">
 						<label for="email">密碼</label>
 					</div>
 					<div class="form-floating mb-3">
-						<input type="text" class="form-control" id="input_name" name="name" required="required" value="${u.name }" pattern="[^0-9!@#$%^&*()_]*">
+						<input type="text" class="form-control" id="input_name" name="name"  value="${u.name }" pattern="[^0-9!@#$%^&*()_]*">
 						<label for="input_name">收件人姓名</label>
 					</div>
 					<div class="form-floating mb-3">
-						<input type="text" class="form-control" id="phone" name="phone" required="required" value="${u.phone }" pattern="09[0-9]{8}">
+						<input type="text" class="form-control" id="phone" name="phone"  value="${u.phone }" pattern="09[0-9]{8}">
 						<label for="phone">電話</label>
 					</div>
 					<div class="form-floating mb-3">
-						<input type="text" class="form-control" id="address" name="address" required="required" value="${u.address }" pattern="[^!@#$%^&*()_]*">
+						<input type="text" class="form-control" id="address" name="address"  value="${u.address }" pattern="[^!@#$%^&*()_]*">
 						<label for="address">地址</label>
 					</div>
 					<div class="mb-3" style="margin-left: 610px;">
