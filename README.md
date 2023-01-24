@@ -4,5 +4,7 @@
 
 *註: 此專案並非一開始就使用版本控制*
 
-提醒: SQL檔也有更新後(此資訊是暫時的，大家有甚麼要注意的也可以寫在這邊)
+## 系統架構
+![image](https://user-images.githubusercontent.com/92431095/214366949-44f74930-13b3-438d-8a6f-ceff695e8c37.png)
 
+![image](https://user-images.githubusercontent.com/92431095/214366995-d97c500d-19e2-4b68-8fb5-fe35b72c636c.png)
