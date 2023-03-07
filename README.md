@@ -64,5 +64,65 @@
 後台-會員管理
 ![image](https://user-images.githubusercontent.com/92431095/214370106-b4beb4c8-b95a-4c4c-a6a0-abb57f7a160e.png)
 
+# 補充
+
+## maria_db資料庫
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+	<!-- 默認配置，只可以出現一次 -->
+	<default-config>
+		<property name="driverClass">org.mariadb.jdbc.Driver</property>
+		<property name="jdbcUrl">
+			<![CDATA[jdbc:mariadb://localhost:3306/bookshop?useUnicode=true&characterEncoding=UTF-8&useSSL=false]]>
+		</property>
+		<property name="user">root</property>
+		<property name="password">root</property>
+	</default-config>
+</c3p0-config>
+```
+c3p0-config.xml
+<hr>
+
+```
+<dependency>
+    <groupId>org.mariadb.jdbc</groupId>
+    <artifactId>mariadb-java-client</artifactId>
+    <version>3.1.2</version>
+</dependency>
+```
+pox.xml (part)
+
+
+## mysql_db資料庫
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+	<!-- 默認配置，只可以出現一次 -->
+	<default-config>
+		<property name="driverClass">com.mysql.jdbc.Driver</property>
+		<property name="jdbcUrl">
+			<![CDATA[jdbc:mysql://localhost:3306/bookshop?useUnicode=true&characterEncoding=UTF-8&useSSL=false]]>
+		</property>
+		<property name="user">root</property>
+		<property name="password">root</property>
+	</default-config>
+</c3p0-config>
+
+```
+c3p0-config.xml
+<hr>
+
+```
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>5.1.4</version>
+</dependency>
+```
+pox.xml (part)
+
+
 
 
