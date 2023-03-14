@@ -6,6 +6,9 @@
 
 *註: 此專案並非一開始就使用版本控制*
 
+## The website now is runing on Nas server
+http://140.115.123.246:7070/
+
 ## 系統架構
 ![image](https://user-images.githubusercontent.com/92431095/214366949-44f74930-13b3-438d-8a6f-ceff695e8c37.png)
 
