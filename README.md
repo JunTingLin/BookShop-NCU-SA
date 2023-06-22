@@ -34,6 +34,9 @@ http://140.115.123.246:7070/
 首頁
 ![image](https://user-images.githubusercontent.com/92431095/214369246-e97d7584-dc9f-4531-b9d2-a441896f19a6.png)
 
+全部類別
+<img width="953" alt="image" src="https://github.com/JunTingLin/BookShop-NCU-SA/assets/92431095/8868356b-2ebe-4666-8b0b-7e1693864394">
+
 書本詳情
 ![image](https://user-images.githubusercontent.com/92431095/214370195-29d3fa88-7041-440f-9455-faf5f882a1e0.png)
 
